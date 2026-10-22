@@ -1,0 +1,56 @@
+name: Importa immagini AstroSonico
+on:
+  push:
+    paths:
+      - .github/workflows/astrosonico-import-images.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  import-images:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Scarica immagini pubbliche di proprieta e foto Pexels
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/astro-img assets/img
+          curl --retry 3 --fail --location --silent --show-error --max-time 70 'https://static.wixstatic.com/media/436eaf_7e86ae28d1464c0fb291b1b2eedbd687~mv2.png' -o /tmp/astro-img/business.png
+          curl --retry 3 --fail --location --silent --show-error --max-time 70 'https://static.wixstatic.com/media/436eaf_81b6aed6b3834a8282c489338c41504a~mv2.jpg' -o /tmp/astro-img/tarocchi.jpg
+          curl --retry 3 --fail --location --silent --show-error --max-time 70 'https://images.pexels.com/photos/7222053/pexels-photo-7222053.jpeg?auto=compress&cs=tinysrgb&w=1400' -o /tmp/astro-img/tema-natale.jpg
+          file /tmp/astro-img/*
+      - name: Ottimizza in WebP per velocita e qualita
+        shell: bash
+        run: |
+          python3 -m pip -q install --user Pillow
+          python3 - <<'PY'
+          from PIL import Image,ImageOps
+          from pathlib import Path
+          sources=[
+           ('business.png','astro-business-editoriale.webp',1600),
+           ('tarocchi.jpg','astro-tarocchi-sessione.webp',1300),
+           ('tema-natale.jpg','tema-natale-repertorio.webp',1200)
+          ]
+          for src,name,max_w in sources:
+           image=Image.open(Path('/tmp/astro-img')/src)
+           image=ImageOps.exif_transpose(image).convert('RGB')
+           image.thumbnail((max_w,1800),Image.Resampling.LANCZOS)
+           out=Path('assets/img')/name
+           image.save(out,'WEBP',quality=84,method=6)
+           print(name,image.size,out.stat().st_size,flush=True)
+          PY
+      - name: Salva gli asset nel repository
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/img/astro-business-editoriale.webp assets/img/astro-tarocchi-sessione.webp assets/img/tema-natale-repertorio.webp
+          if git diff --cached --quiet; then
+            echo 'Immagini gia presenti'
+            exit 0
+          fi
+          git commit -m 'Aggiungi foto originali AstroSonico e riferimento Tema Natale ottimizzati'
+          git push origin HEAD:main
