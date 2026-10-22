@@ -1,0 +1,54 @@
+name: Importa dettagli fotografici AstroSonico
+on:
+  push:
+    paths:
+      - .github/workflows/astrosonico-import-details.yml
+permissions:
+  contents: write
+jobs:
+  import-details:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Trasferisci fotografie in miniatura
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp assets/img
+          curl --retry 3 -fLsS --max-time 35 'https://media.canva.com/v2/image-resize/format:JPG/height:200/quality:75/uri:ifs%3A%2F%2FM%2F562e2966-5f02-489f-9a1d-e9dae91bcbba/watermark:F/width:133?csig=AAAAAAAAAAAAAAAAAAAAAPrf9_M_t7oJE-_n7qTo0GYbTWTBVGMHoSYONgHh7OHR&exp=1792706077&osig=AAAAAAAAAAAAAAAAAAAAAGXVqju-BUeH3LlERhEdDqqJoWSzkLTOea402diOnuNZ&signer=media-rpc&token=AAIAAU0AJDU2MmUyOTY2LTVmMDItNDg5Zi05YTFkLWU5ZGFlOTFiY2JiYQAAAAABoWWb4UgoqskM5criWaNub1yDvzpaEWz9uuWAqKk5oB1TO5INGw&x-canva-quality=thumbnail' -o /tmp/photo-0.jpg
+          curl --retry 3 -fLsS --max-time 35 'https://media.canva.com/v2/image-resize/format:JPG/height:200/quality:75/uri:ifs%3A%2F%2FM%2Ff3323945-2c6e-44ff-935b-33abd96da4a3/watermark:F/width:133?csig=AAAAAAAAAAAAAAAAAAAAAKgRLkx0gVo2AvjjK-qCqsJnbgKkXlPepZN7Wqki6I3-&exp=1792707584&osig=AAAAAAAAAAAAAAAAAAAAAHv8YDm1dwPyPGLDbMCXtcYoKHcgO8kSwaDQRk5_bqvg&signer=media-rpc&token=AAIAAU0AJGYzMzIzOTQ1LTJjNmUtNDRmZi05MzViLTMzYWJkOTZkYTRhMwAAAAABoWWy4ABXwSCVNbsMj-wJDeGnZUYRDo7IXdFMdFdc--CjZi0c9A&x-canva-quality=thumbnail' -o /tmp/photo-1.jpg
+          curl --retry 3 -fLsS --max-time 35 'https://media.canva.com/v2/image-resize/format:JPG/height:133/quality:75/uri:ifs%3A%2F%2FM%2F729524ab-337c-46f7-8b51-bda4a5421b8a/watermark:F/width:200?csig=AAAAAAAAAAAAAAAAAAAAANilXXlhS_G9y9mNdJOksWiN7n6pN7z8H9HO2kU3qoPu&exp=1792708197&osig=AAAAAAAAAAAAAAAAAAAAAJPPTcoC2IhsNEYYw_z7Z8QQAdEm194Bufzq9nqd6Kq3&signer=media-rpc&token=AAIAAU0AJDcyOTUyNGFiLTMzN2MtNDZmNy04YjUxLWJkYTRhNTQyMWI4YQAAAAABoWW8OohBVuzTTqMvRnmJs4qDV0vgoMXvIzOl24z6xSXEIrSGiA&x-canva-quality=thumbnail' -o /tmp/photo-2.jpg
+          curl --retry 3 -fLsS --max-time 35 'https://media.canva.com/v2/image-resize/format:JPG/height:200/quality:75/uri:ifs%3A%2F%2FM%2F8666039c-5de5-40b7-a461-2800b4947653/watermark:F/width:133?csig=AAAAAAAAAAAAAAAAAAAAAMk5jUbbIq5Qy4mx5xyRZUPmMiRhxNo72qSEz2xDgomi&exp=1792706563&osig=AAAAAAAAAAAAAAAAAAAAAI-qufOPHAEMOWB9PoN6Yswju8xkwDkL6kI_HKkrkeOk&signer=media-rpc&token=AAIAAU0AJDg2NjYwMzljLTVkZTUtNDBiNy1hNDYxLTI4MDBiNDk0NzY1MwAAAAABoWWjS7iJj9-w6uEWega4gVBXWI7ESri89v5ljbiaIyRZ2QRF5A&x-canva-quality=thumbnail' -o /tmp/photo-3.jpg
+          curl --retry 3 -fLsS --max-time 35 'https://media.canva.com/v2/image-resize/format:JPG/height:200/quality:75/uri:ifs%3A%2F%2FM%2F93ca1187-0cae-488a-9a3a-de41a5aabe13/watermark:F/width:133?csig=AAAAAAAAAAAAAAAAAAAAACotYeVJ9lU428xCVXaR2kFEFYgYwrgbM8kTopnRPDg_&exp=1792707346&osig=AAAAAAAAAAAAAAAAAAAAAOZiBCq0pR0luYgEAFh42tUhS5dTd4rIzm-CL3PTEBFm&signer=media-rpc&token=AAIAAU0AJDkzY2ExMTg3LTBjYWUtNDg4YS05YTNhLWRlNDFhNWFhYmUxMwAAAAABoWWvPlC9XEdAbb-5cItGGldxAdFnfuhL5WIwnGt1v1o9KauXdQ&x-canva-quality=thumbnail' -o /tmp/photo-4.jpg
+          curl --retry 3 -fLsS --max-time 35 'https://media.canva.com/v2/image-resize/format:JPG/height:200/quality:75/uri:ifs%3A%2F%2FM%2Fd632a252-08a3-4d33-937c-fe08ff05832e/watermark:F/width:133?csig=AAAAAAAAAAAAAAAAAAAAAC45yDdJBKgHTJWZ5DfZ5hb0uH-sHzsoOGOrk3cc5wsH&exp=1792705414&osig=AAAAAAAAAAAAAAAAAAAAAAnMfXWCxtQSDXha6LOoPdTUacIjIQB0ue9NU50fseOx&signer=media-rpc&token=AAIAAU0AJGQ2MzJhMjUyLTA4YTMtNGQzMy05MzdjLWZlMDhmZjA1ODMyZQAAAAABoWWRw3CW8pQW_BIuKOi_64k_aAGn7wTIq6mSfxwvEhBrAvdfdw&x-canva-quality=thumbnail' -o /tmp/photo-5.jpg
+          curl --retry 3 -fLsS --max-time 35 'https://media.canva.com/v2/image-resize/format:JPG/height:200/quality:75/uri:ifs%3A%2F%2FM%2Fb48c984a-a418-4ef6-9166-e72c3f26d7a2/watermark:F/width:158?csig=AAAAAAAAAAAAAAAAAAAAAG6cSZe5PM1dzUVj9Si-quyvTgr2GtNqdd6DieC4V3wU&exp=1792705608&osig=AAAAAAAAAAAAAAAAAAAAAEd6JeEZggKZoeqFU87xdqsT4hduqEEvkDUtg8ucxjgB&signer=media-rpc&token=AAIAAU0AJGI0OGM5ODRhLWE0MTgtNGVmNi05MTY2LWU3MmMzZjI2ZDdhMgAAAAABoWWUuUB8tyO3oU-57QHHb6fSn44b980s8iojnr_6hutuK45AWQ&x-canva-quality=thumbnail' -o /tmp/photo-6.jpg
+      - name: Salva copie WebP leggere
+        run: |
+          python3 -m pip -q install --user Pillow
+          python3 - <<'PY'
+          from PIL import Image
+          from pathlib import Path
+          for source,name in [
+           ('photo-0.jpg','albero-francesca-mini.webp'),
+           ('photo-1.jpg','fiore-palmo-mini.webp'),
+           ('photo-2.jpg','ramo-fiorito-mini.webp'),
+           ('photo-3.jpg','tarocchi-mani-mini.webp'),
+           ('photo-4.jpg','ritratto-bn-occhiali-mini.webp'),
+           ('photo-5.jpg','ritratto-bn-ritratto-mini.webp'),
+           ('photo-6.jpg','ritratto-caldo-mini.webp')
+          ]:
+           im=Image.open('/tmp/'+source).convert('RGB')
+           p=Path('assets/img')/name
+           im.save(p,format='WEBP',quality=91,method=6)
+           print(name,im.size,p.stat().st_size,flush=True)
+          PY
+      - name: Inserisci gli asset in Github
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/img/albero-francesca-mini.webp assets/img/fiore-palmo-mini.webp assets/img/ramo-fiorito-mini.webp assets/img/tarocchi-mani-mini.webp assets/img/ritratto-bn-occhiali-mini.webp assets/img/ritratto-bn-ritratto-mini.webp assets/img/ritratto-caldo-mini.webp
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Aggiungi dettagli fotografici originali AstroSonico per gallery editoriali'
+          git push origin HEAD:main
