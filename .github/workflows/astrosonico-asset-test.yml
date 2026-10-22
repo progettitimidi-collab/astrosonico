@@ -1,0 +1,17 @@
+name: Verifica asset AstroSonico
+on:
+  push:
+    paths:
+      - .github/workflows/astrosonico-asset-test.yml
+jobs:
+  test-assets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verifica originali e resa web
+        shell: bash
+        run: |
+          set +e
+          curl -L --max-time 25 -sS -o /tmp/small.jpg -w 'small:%{http_code} %{size_download}\n' 'https://media.canva.com/v2/image-resize/format:JPG/height:200/quality:75/uri:ifs%3A%2F%2FM%2F562e2966-5f02-489f-9a1d-e9dae91bcbba/watermark:F/width:133?csig=AAAAAAAAAAAAAAAAAAAAAPrf9_M_t7oJE-_n7qTo0GYbTWTBVGMHoSYONgHh7OHR&exp=1792706077&osig=AAAAAAAAAAAAAAAAAAAAAGXVqju-BUeH3LlERhEdDqqJoWSzkLTOea402diOnuNZ&signer=media-rpc&token=AAIAAU0AJDU2MmUyOTY2LTVmMDItNDg5Zi05YTFkLWU5ZGFlOTFiY2JiYQAAAAABoWWb4UgoqskM5criWaNub1yDvzpaEWz9uuWAqKk5oB1TO5INGw&x-canva-quality=thumbnail'
+          file /tmp/small.jpg
+          curl -L --max-time 25 -sS -o /tmp/large.jpg -w 'large:%{http_code} %{size_download}\n' 'https://media.canva.com/v2/image-resize/format:JPG/height:1200/quality:82/uri:ifs%3A%2F%2FM%2F562e2966-5f02-489f-9a1d-e9dae91bcbba/watermark:F/width:800?csig=AAAAAAAAAAAAAAAAAAAAAPrf9_M_t7oJE-_n7qTo0GYbTWTBVGMHoSYONgHh7OHR&exp=1792706077&osig=AAAAAAAAAAAAAAAAAAAAAGXVqju-BUeH3LlERhEdDqqJoWSzkLTOea402diOnuNZ&signer=media-rpc&token=AAIAAU0AJDU2MmUyOTY2LTVmMDItNDg5Zi05YTFkLWU5ZGFlOTFiY2JiYQAAAAABoWWb4UgoqskM5criWaNub1yDvzpaEWz9uuWAqKk5oB1TO5INGw&x-canva-quality=thumbnail'
+          file /tmp/large.jpg
