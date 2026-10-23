@@ -16,12 +16,12 @@
 .ev-kicker{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#785f7f}
 .ev-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:27px}
 .ev-card{background:#fff;border:1px solid var(--line);border-radius:25px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 12px 32px rgba(38,30,42,.045)}
-.ev-cover{background:#e9d1c5;position:relative;overflow:hidden;aspect-ratio:4/5}
+.ev-cover{background:#e9d1c5;position:relative;overflow:hidden;width:100%;aspect-ratio:auto;line-height:0}
 .ev-cover--anc{background:linear-gradient(125deg,#cfa38f,#f2d0bb)}
 .ev-cover--tar{background:linear-gradient(135deg,#e7dbcf,#eee9e1)}
-.ev-cover img{width:100%;height:100%;object-fit:cover;object-position:center;position:absolute;inset:0}
+.ev-cover img{display:block;width:100%;max-width:none;height:auto;aspect-ratio:4/5;object-fit:fill;position:relative;inset:auto;margin:0;padding:0}
 .ev-fallback{font-family:var(--serif);font-size:clamp(36px,4.3vw,63px);line-height:1.05;color:#593b39;text-align:center;position:absolute;inset:0;display:flex;justify-content:center;align-items:center;padding:28px}
-.ev-cover--tar .ev-fallback{color:#a33230}
+.ev-cover--tar .ev-fallback{color:#a33230}.ev-cover:has(img[style*="display: none"]){aspect-ratio:4/5}
 .ev-cover img:not([src=""]){z-index:1}
 .ev-card-body{padding:clamp(25px,3vw,37px);display:flex;flex-direction:column;flex:1}
 .ev-meta{font-size:11px;text-transform:uppercase;font-weight:750;letter-spacing:.13em;color:#7c6381;display:flex;gap:12px;flex-wrap:wrap;margin-bottom:15px}
@@ -71,8 +71,8 @@
 .ev-mini-banner p{font-size:13px;color:#e9dfe9;line-height:1.75;margin:0}
 .ev-closure{padding:75px 0;background:#eee5f0;text-align:center}
 .ev-closure h2{font-family:var(--serif);font-size:clamp(32px,4vw,50px);font-weight:400;letter-spacing:-.04em;margin:10px 0 19px}
-@media(max-width:950px){.ev-hero-inner,.ev-detail-grid{grid-template-columns:1fr}.ev-hero-inner{gap:30px}.ev-side-note{max-width:600px}.ev-facts{max-width:700px}.ev-grid{grid-template-columns:1fr;max-width:700px;margin-inline:auto}.ev-cover{aspect-ratio:4/5}}
-@media(max-width:630px){.ev-section-heading{display:block}.ev-section-heading p{margin-top:16px}.ev-form-row,.ev-schedule{grid-template-columns:1fr}.ev-cover{aspect-ratio:4/5}.ev-hero h1{font-size:clamp(51px,13vw,74px)}.ev-detail h2{font-size:clamp(48px,10vw,66px)}}
+@media(max-width:950px){.ev-hero-inner,.ev-detail-grid{grid-template-columns:1fr}.ev-hero-inner{gap:30px}.ev-side-note{max-width:600px}.ev-facts{max-width:700px}.ev-grid{grid-template-columns:1fr;max-width:700px;margin-inline:auto}}
+@media(max-width:630px){.ev-section-heading{display:block}.ev-section-heading p{margin-top:16px}.ev-form-row,.ev-schedule{grid-template-columns:1fr}.ev-hero h1{font-size:clamp(51px,13vw,74px)}.ev-detail h2{font-size:clamp(48px,10vw,66px)}}
 @media(prefers-reduced-motion:reduce){.ev-card .button{transition:none}}
 </style></head><body><a class="skip-link" href="#contenuto">Vai al contenuto</a>
 <header class="site-header"><div class="container nav-inner"><a class="brand" href="index.html" aria-label="AstroSonico, torna alla homepage"><img class="brand-logo" src="assets/img/astrosonico-logo.svg?v=20261022-logo-2" alt="AstroSonico" width="1839" height="750"></a><nav class="desktop-nav" aria-label="Navigazione principale"><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="sessioni.html">Sessioni individuali</a><a class="nav-link" href="astro-for-business.html">Astro for Business</a><a class="nav-link" href="gift-card.html">Gift Card</a><a class="nav-link" href="ritiri.html">Ritiri</a><a class="nav-link" href="eventi.html" aria-current="page">Eventi</a></nav><a class="nav-cta desktop-cta" href="mailto:cibosupersonico@gmail.com?subject=AstroSonico%20-%20richiesta%20informazioni">Scrivimi ↗</a><details class="mobile-menu"><summary aria-label="Apri il menu di navigazione"><span class="menu-glyph" aria-hidden="true">☰</span><span>Menu</span></summary><nav class="mobile-nav" aria-label="Navigazione mobile"><a href="index.html">Home</a><a href="sessioni.html">Sessioni individuali</a><a href="astro-for-business.html">Astro for Business</a><a href="gift-card.html">Gift Card</a><a href="ritiri.html">Ritiri</a><a href="eventi.html" aria-current="page">Eventi</a><a class="nav-cta" href="mailto:cibosupersonico@gmail.com?subject=AstroSonico%20-%20richiesta%20informazioni">Scrivimi ↗</a></nav></details></div></header>
