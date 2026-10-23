@@ -39,14 +39,13 @@
 </ol>
 <p class="gift-note">Puoi scegliere gli importi di riferimento di 70 €, 150 € o 160 €, oppure indicare un valore differente che verificheremo insieme prima della conferma.</p><figure class="gift-photo-moment"><img src="assets/img/fiore-palmo-mini.webp" alt="Piccolo fiore nella mano aperta di Francesca" width="200" height="200" loading="lazy" ><img src="assets/img/ramo-fiorito-mini.webp" alt="Una mano tesa verso un ramo in fiore" width="200" height="200" loading="lazy" ><figcaption>Un piccolo gesto può aprire una nuova prospettiva.</figcaption></figure>
 </div>
-<form class="gift-form" method="POST" action="https://formsubmit.co/cibosupersonico@gmail.com" accept-charset="UTF-8" aria-label="Richiesta Gift Card AstroSonico">
+<form data-astrosonico-form data-success-url="https://www.astrosonico.it/gift-card-richiesta-inviata.html" class="gift-form" method="POST" action="https://api.web3forms.com/submit" accept-charset="UTF-8" aria-label="Richiesta Gift Card AstroSonico"><input type="hidden" name="access_key" value="cd460deb-3c2c-4593-91b7-9e469632f652"><input type="hidden" name="from_name" value="AstroSonico">
 <h3>Richiedi la tua Gift Card</h3><p class="gift-form-intro">Tutti i campi sono obbligatori. Il pagamento avverrà successivamente tramite bonifico.</p><p class="gift-form-feedback" id="gift-form-feedback" role="alert" hidden></p>
-<input type="hidden" name="_subject" value="AstroSonico | Nuova richiesta Gift Card">
-<input type="hidden" name="_template" value="table">
-<input type="hidden" name="_next" value="https://www.astrosonico.it/gift-card-richiesta-inviata.html">
-<input type="hidden" name="_url" value="https://www.astrosonico.it/gift-card.html">
+<input type="hidden" name="subject" value="AstroSonico | Nuova richiesta Gift Card">
+<input type="hidden" name="redirect" value="https://www.astrosonico.it/gift-card-richiesta-inviata.html">
+<input type="hidden" name="Pagina di origine" value="https://www.astrosonico.it/gift-card.html">
 <input type="hidden" name="Servizio richiesto" value="Gift Card AstroSonico">
-<div class="gift-trap" aria-hidden="true"><label>Lascia vuoto<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
+<div class="gift-trap" aria-hidden="true"><label>Lascia vuoto<input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label></div>
 <div class="gift-fields">
 <div class="gift-field"><label for="gift-nome">Nome *</label><input id="gift-nome" type="text" name="Nome" autocomplete="given-name" maxlength="120" required></div>
 <div class="gift-field"><label for="gift-cognome">Cognome *</label><input id="gift-cognome" type="text" name="Cognome" autocomplete="family-name" maxlength="120" required></div>
@@ -55,7 +54,7 @@
 <div class="gift-field"><label for="gift-cf">Codice fiscale *</label><input id="gift-cf" type="text" name="Codice fiscale" maxlength="20" autocomplete="off" required></div>
 <div class="gift-field"><label for="gift-valore">Valore Gift Card (€) *</label><input id="gift-valore" type="number" name="Valore Gift Card (EUR)" min="1" step="1" list="gift-importi" placeholder="Es. 150" required><datalist id="gift-importi"><option value="70"></option><option value="150"></option><option value="160"></option></datalist></div>
 </div>
-<details class="gift-privacy"><summary>Informativa sul trattamento dei dati personali</summary><p>AstroSonico / Cibo Supersonico (P. IVA 03845070139; <a href="mailto:cibosupersonico@gmail.com">cibosupersonico@gmail.com</a>) utilizzerà i dati forniti per gestire la richiesta, predisporre la Gift Card e i relativi documenti fiscali. La base giuridica è la gestione di misure precontrattuali e degli obblighi fiscali. I campi obbligatori sono necessari per rispondere alla richiesta.</p><p>Per l'inoltro delle informazioni via email il modulo utilizza il servizio esterno <a href="https://formsubmit.co/" target="_blank" rel="noopener noreferrer">FormSubmit</a>. Non è prevista alcuna iscrizione automatica alla newsletter. Per esercitare i diritti relativi ai tuoi dati personali, contatta l'indirizzo email indicato.</p></details>
+<details class="gift-privacy"><summary>Informativa sul trattamento dei dati personali</summary><p>AstroSonico / Cibo Supersonico (P. IVA 03845070139; <a href="mailto:cibosupersonico@gmail.com">cibosupersonico@gmail.com</a>) utilizzerà i dati forniti per gestire la richiesta, predisporre la Gift Card e i relativi documenti fiscali. La base giuridica è la gestione di misure precontrattuali e degli obblighi fiscali. I campi obbligatori sono necessari per rispondere alla richiesta.</p><p>Per l'inoltro delle informazioni via email il modulo utilizza il servizio esterno <a href="https://web3forms.com/privacy" target="_blank" rel="noopener noreferrer">Web3Forms</a>. Non è prevista alcuna iscrizione automatica alla newsletter. Per esercitare i diritti relativi ai tuoi dati personali, contatta l'indirizzo email indicato.</p><p>Il modulo utilizza Web3Forms, che tratta le richieste anche tramite infrastrutture situate fuori dallo Spazio Economico Europeo, inclusi gli Stati Uniti. <a href="https://web3forms.com/privacy" target="_blank" rel="noopener noreferrer">Informativa del fornitore</a>.</p></details>
 <label class="gift-check" for="gift-privacy-check"><input type="checkbox" id="gift-privacy-check" name="Presa visione informativa" value="Sì" required><span>Dichiaro di aver preso visione delle informazioni sul trattamento dei miei dati personali. *</span></label>
 <button class="button button-primary" type="submit">INVIA LA RICHIESTA ↗</button>
 <p class="gift-form-fineprint">La compilazione del modulo è una richiesta e non costituisce un acquisto confermato. Riceverai una risposta via email con i passaggi successivi.</p>
@@ -94,4 +93,4 @@
  form.addEventListener('change',function(e){if(e.target&&e.target.matches('input[required]'))e.target.removeAttribute('aria-invalid')});
  form.addEventListener('submit',function(){alertBox.hidden=false;alertBox.textContent='Richiesta in invio. Verifica il messaggio di conferma prima di chiudere la pagina.';});
 })();
-</script></body></html>
+</script><script src="assets/js/forms.js" defer></script></body></html>
