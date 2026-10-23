@@ -68,3 +68,18 @@
 .service-card--recommended .eyebrow{margin-bottom:8px}
 .section-heading .h-medium em{color:var(--violet);font-weight:400}
 @media(max-width:600px){.hero-assurance{margin:-12px 0 24px;line-height:1.6}.path-recommendation,.service-highlight{font-size:10px}}
+
+/* Mobile UX compact: layout desktop unchanged */
+@media(max-width:600px){
+.hero{padding:32px 0 35px}.hero .h-display{font-size:clamp(42px,11.4vw,60px);margin:12px 0 16px}.hero-copy .text-lead{font-size:16px;line-height:1.52;margin-bottom:18px}.hero-assurance{margin:0 0 18px}.hero-visual,.astro-gallery{display:none!important}.hero .button{min-height:47px;padding:12px 16px}
+.section{padding:43px 0}.section-tight{padding:40px 0}.h-medium{font-size:clamp(32px,8vw,39px)}
+#da-dove-iniziare{padding:28px 0}#da-dove-iniziare .section-heading{margin-bottom:14px}#da-dove-iniziare .h-medium{font-size:32px;margin:8px 0 10px}#da-dove-iniziare .text-lead{font-size:15px;line-height:1.45}#da-dove-iniziare .triple-grid{gap:9px}#da-dove-iniziare .path-card{padding:17px 21px}#da-dove-iniziare .path-number{display:none}#da-dove-iniziare .path-card h3{font-size:27px;margin:7px 0}#da-dove-iniziare .path-card p{font-size:14px;line-height:1.45;margin-bottom:8px}
+.service-grid{gap:10px}.service-grid .service-card{min-height:0;padding:20px}.service-grid .h-card{font-size:31px;margin:7px 0}.service-grid .service-card p{font-size:14px;line-height:1.45;margin-bottom:14px}.service-grid .service-bottom{padding-top:12px}
+.featured-wide--business .image-side{display:none}.featured-wide--business .mini-stats{display:none}.featured-wide--business .content{padding:23px}.featured-wide--business .h-large{font-size:35px}.featured-wide--business .content p{font-size:14px;line-height:1.5}
+.section-tight.bg-sky .portrait-frame{min-height:270px;max-height:270px}.section-tight.bg-sky .split{gap:22px}.section-tight.bg-sky .h-large{font-size:40px}
+.featured-wide:not(.featured-wide--business) .image-side{display:none}.featured-wide:not(.featured-wide--business) .content{padding:22px}
+.gift-preview{display:none}.faq-list details:nth-child(n+4){display:none}
+.page-hero{padding:34px 0 30px}.page-hero .h-large{font-size:clamp(39px,10vw,53px)}.page-hero .text-lead{font-size:16px;line-height:1.5}
+.ast-visual-ribbon{display:none!important}
+#tutti-i-servizi{padding:32px 0 42px}#tutti-i-servizi .section-heading{margin-bottom:20px}#tutti-i-servizi .section-heading p{font-size:13px;line-height:1.5}#tutti-i-servizi .detail-grid{gap:11px}#tutti-i-servizi .detail-card{padding:22px}#tutti-i-servizi .detail-card h2{font-size:32px}#tutti-i-servizi .detail-card .detail-cta{gap:10px;padding-top:14px}#tutti-i-servizi .detail-card .button{min-height:48px}
+}
