@@ -53,3 +53,18 @@
 @media(max-width:350px){
 .site-header .brand-logo{width:124px}
 }
+
+/* Homepage · Priorità 2: gerarchia visiva e scansione, ottobre 2026 */
+.hero-copy .text-lead strong{font-weight:750;color:var(--ink)}
+.hero-assurance{font-size:12px;font-weight:650;letter-spacing:.015em;color:var(--ink-soft);margin:-16px 0 25px}
+.hero-assurance span{padding:0 8px;color:var(--violet)}
+.path-grid .path-card,.service-grid .service-card{position:relative}
+.path-card--recommended{border:1.5px solid #9d7d9e;background:linear-gradient(155deg,#fff 65%,#faf5f9)}
+.path-recommendation,.service-highlight{display:inline-block;width:max-content;max-width:100%;padding:5px 11px;border-radius:30px;background:#e8d9e7;color:#4b3653;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:17px}
+.path-card--recommended .path-number{padding-bottom:13px}
+.path-grid .path-card strong{color:var(--ink);font-weight:750}
+.path-grid .text-link,.service-grid .text-link{text-underline-offset:4px}
+.service-card--recommended{border:1.5px solid #9d7d9e;background:#fffdfd}
+.service-card--recommended .eyebrow{margin-bottom:8px}
+.section-heading .h-medium em{color:var(--violet);font-weight:400}
+@media(max-width:600px){.hero-assurance{margin:-12px 0 24px;line-height:1.6}.path-recommendation,.service-highlight{font-size:10px}}
