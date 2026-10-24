@@ -67,7 +67,11 @@
   main .afb-hero .afb-lead-secondary { margin-bottom: 15px; }
   main .afb-hero .afb-actions { gap: 10px; }
   main .afb-history-timeline { display: none !important; } /* Includes 'Dal XIV secolo' */
-  main .afb-photo-spread { display: none !important; } /* Repetitive editorial image */
+  /* Brand visual is essential: preserve the full artwork without cropping on phones. */
+  main .afb-photo-spread { display: block !important; padding: 12px 0 0 !important; }
+  main .afb-photo-spread figure { overflow: hidden; border-radius: 14px; }
+  main .afb-photo-spread img { display: block; width: 100%; height: auto !important;
+    max-height: none !important; object-fit: contain !important; }
   main .afb-section { padding: 40px 0 !important; }
   main .afb-section-heading { margin-bottom: 22px; }
   main .afb-section-heading .h-medium { margin-bottom: 11px; }
