@@ -1,0 +1,158 @@
+/* AstroSonico | Mobile refinement, 24 October 2026
+   Overrides only phone-sized viewports. Loaded after page-local styles.
+   Desktop layout and content are intentionally unchanged. */
+@media screen and (max-width: 640px) {
+  /* Consistent reading rhythm */
+  body { font-size: 15px; line-height: 1.48; }
+  main p, main li { line-height: 1.47 !important; }
+  main p { margin-bottom: 0.82rem; }
+  main h1 { font-size: clamp(36px, 9.8vw, 44px) !important; line-height: 1.08 !important; margin-top: 10px; margin-bottom: 15px; }
+  main h2 { font-size: clamp(28px, 8vw, 34px) !important; line-height: 1.14 !important; margin-top: 10px; margin-bottom: 15px; }
+  main h3 { font-size: clamp(23px, 6.4vw, 28px) !important; line-height: 1.2 !important; margin-top: 8px; margin-bottom: 10px; }
+  main :is(.text-lead, .afb-lead, .afb-lead-secondary, .afb-section-heading p,
+    .afb-text-block p, .afb-history-layout > div > p, .afb-wealth-content p,
+    .afb-program-aside p, .radici-intro, .radici-body p,
+    .radici-location-grid p, .radici-themes-grid p, .radici-transition p,
+    .annual-lead, .annual-section-heading > p, .annual-fit-copy > p,
+    .annual-image-pause-grid p, .ev-lead, .ev-detail p,
+    .gift-request-intro p) { font-size: 15px !important; }
+  main .eyebrow, main .kicker, main .afb-kicker, main .annual-kicker,
+  main .radici-kicker { font-size: 11px; line-height: 1.34; letter-spacing: .13em; }
+  main .button, main .nav-cta { font-size: 13px; line-height: 1.28; }
+  main .small, main .disclaimer, main .on-dark-note { line-height: 1.48 !important; }
+  main .section, main .section-tight { padding-top: 35px; padding-bottom: 35px; }
+  main .section-heading { margin-bottom: 19px; }
+  main .section-heading .h-medium { margin-bottom: 11px; }
+  main :is(.triple-grid, .double-grid, .feature-list, .gift-options, .flow-row) { gap: 12px; }
+  main :is(.path-card, .service-card, .detail-card, .gift-option, .soft-card) { padding: 21px; }
+  main .path-card .path-number { padding-bottom: 9px; }
+  main .faq-list details { padding: 11px 0; }
+  main .faq-list summary { line-height: 1.35; font-size: 15px; }
+
+  /* Home: an existing practical note becomes a slim lavender callout */
+  main .hero { padding: 28px 0 31px; }
+  main .hero-copy .text-lead { font-size: 15px !important; margin-bottom: 15px; }
+  main .hero-assurance { margin: 0 0 15px; padding: 10px 13px;
+    background: #ece3f1; border-left: 3px solid #9d80a4;
+    border-radius: 10px; font-size: 12px; line-height: 1.38; }
+  main #da-dove-iniziare { padding-top: 27px; padding-bottom: 28px; }
+  main #da-dove-iniziare .h-medium { margin-bottom: 8px; }
+  main #da-dove-iniziare .path-card { padding: 17px 19px; }
+  main #da-dove-iniziare .path-card h3 { margin: 5px 0 7px; }
+  main .service-grid .service-card { min-height: 0; padding: 19px 20px; }
+  main .service-grid .service-card p { font-size: 14px; }
+  main .featured-wide .content { padding: 22px; }
+  main .featured-wide .mini-stats { display: none; }
+  main .section-tight.bg-sky .split { gap: 20px; }
+  main .section-tight.bg-sky .portrait-frame { min-height: 235px; max-height: 235px; }
+  main .banner { padding: 26px 22px; }
+  main .footer { padding-top: 40px; }
+
+  /* Sessioni: price and booking controls remain fully visible */
+  main .page-hero { padding: 28px 0 26px; }
+  main #tutti-i-servizi { padding: 28px 0 38px; }
+  main #tutti-i-servizi .section-heading p { font-size: 13px !important; }
+  main #tutti-i-servizi .detail-card { padding: 20px; }
+  main #tutti-i-servizi .detail-card ul { margin-bottom: 12px; }
+  main #tutti-i-servizi .detail-card .detail-cta { padding-top: 14px; }
+  main .flow-row .flow-step:first-child { background: #f0e8f3;
+    padding: 17px 18px; border: 0; border-radius: 14px; }
+  main .flow-row .flow-step h3 { font-size: 23px !important; }
+  main .flow-row .flow-step p { font-size: 14px !important; }
+
+  /* Business: remove editorial redundancy without touching desktop */
+  main .afb-hero { padding: 29px 0 37px !important; }
+  main .afb-hero-note { display: none !important; }
+  main .afb-hero .afb-lead { margin-bottom: 13px; }
+  main .afb-hero .afb-lead-secondary { margin-bottom: 15px; }
+  main .afb-hero .afb-actions { gap: 10px; }
+  main .afb-history-timeline { display: none !important; } /* Includes 'Dal XIV secolo' */
+  main .afb-photo-spread { display: none !important; } /* Repetitive editorial image */
+  main .afb-section { padding: 40px 0 !important; }
+  main .afb-section-heading { margin-bottom: 22px; }
+  main .afb-section-heading .h-medium { margin-bottom: 11px; }
+  main .afb-history-layout { gap: 15px; }
+  main .afb-history-layout > div > p { margin-bottom: 12px; }
+  main .afb-manifesto { margin-bottom: 24px; padding: 23px 21px; border-radius: 17px; }
+  main .afb-manifesto-line { font-size: 29px !important; line-height: 1.14 !important; }
+  main .afb-founder-panel { padding: 21px; }
+  main .afb-founder-quote { font-size: 23px !important; line-height: 1.28 !important; margin-bottom: 13px; }
+  main .afb-founder-small { font-size: 14px !important; margin-bottom: 14px; }
+  main .afb-portraits { display: none; }
+  main .afb-card, main .afb-method-card { padding: 19px 20px; min-height: 0; }
+  main .afb-card-symbol { color: #82658b !important; font-size: 27px; margin-bottom: 11px; }
+  main .afb-two-cards, main .afb-method-grid { gap: 12px; }
+  main .afb-program-item { padding: 16px 0; gap: 12px; grid-template-columns: 33px 1fr; }
+  main .afb-program-item h3 { font-size: 19px !important; line-height: 1.26 !important; }
+  main .afb-program-item .afb-num { font-size: 24px; color: #8b7196; }
+  main .afb-program-index { gap: 9px; margin-top: 18px; }
+  main .afb-program-index div { padding: 12px; }
+  main .afb-program-index strong { font-size: 29px; }
+  main .afb-wealth { padding: 38px 0; }
+  main .afb-serif-quote { margin: 20px 0 0; padding: 21px 21px;
+    border: 0; border-left: 3px solid #9479a0; border-radius: 15px;
+    background: #f0e8f3; font-size: 23px !important; line-height: 1.28 !important; }
+  main .afb-cta { padding: 39px 0; }
+  main .afb-cta-price { padding: 21px; }
+  main .afb-faq details { padding: 12px 0; }
+
+  /* Retreat: fewer long paragraphs and one intentional color anchor */
+  main .radici-hero { padding: 32px 0; }
+  main .radici-section { padding: 40px 0 !important; }
+  main .radici-form-section { padding: 40px 0; }
+  main .radici-hero-photo { height: 230px; }
+  main .radici-body p, main .radici-location-grid p { margin-bottom: 12px; }
+  main .radici-verse { font-size: 23px !important; line-height: 1.28 !important; margin: 16px 0 18px; }
+  main .radici-transition-quote { font-size: 23px !important; line-height: 1.27 !important;
+    margin: 18px 0; padding: 19px 20px; border-left: 3px solid #97799e;
+    border-radius: 15px; background: #f0e7f1; }
+  main .radici-photo-story { padding-top: 20px; padding-bottom: 10px; }
+  main .radici-photo-story figure img { height: 112px; }
+  main .radici-benefits li, main .radici-for-list li { padding-top: 11px; padding-bottom: 11px; }
+  main .radici-included-card { padding: 21px; }
+  main .radici-form { padding: 20px; }
+
+  /* Annual reading: compact cards, keep a single quote panel */
+  main .annual-hero { padding: 32px 0 37px; }
+  main .annual-section, main .annual-request-section { padding: 39px 0 !important; }
+  main .annual-section-heading { margin-bottom: 23px; }
+  main .annual-value-card { min-height: 0; padding: 20px; }
+  main .annual-value-card .marker { font-size: 28px; color: #8b7196; margin-bottom: 10px; }
+  main .annual-quote-block { padding: 19px 21px; margin-top: 20px;
+    font-size: 22px !important; line-height: 1.31 !important;
+    background: #f0e8f3; border-radius: 15px; }
+  main .annual-image-pause-grid img { height: 205px; }
+  main .annual-form { padding: 20px; }
+  main .annual-fit-list li { padding-top: 11px; padding-bottom: 11px; }
+
+  /* Gift card / events: shorter paragraphs, no reduction of form input targets */
+  main .gift-request { padding-top: 38px; padding-bottom: 38px; }
+  main .gift-request-grid { gap: 20px; }
+  main .gift-request .gift-note { background: #f0e8f3; border-radius: 12px;
+    padding: 13px 15px; color: #54465c; }
+  main .gift-form { padding: 20px; }
+  main .ev-hero { padding: 32px 0 28px; }
+  main .ev-section { padding: 39px 0; }
+  main .ev-detail { padding-top: 39px; padding-bottom: 39px; }
+  main .ev-card-body { padding: 20px; }
+  main .ev-card h3 { margin-bottom: 10px; }
+  main .ev-detail .ev-intro { font-size: 22px !important; line-height: 1.3 !important; }
+  main .ev-side-note { padding: 12px 16px; background: #f0e8f3;
+    border-left: 3px solid #997ba5; border-radius: 12px; }
+  main .ev-schedule-card { padding: 18px; }
+  main .ev-mini-banner { padding: 20px; }
+  main .ev-form { padding: 20px; }
+
+  /* Esoteric, palette-coherent markers instead of generic arrow/check symbols */
+  main .afb-fit-list li::before,
+  main .annual-fit-list li::before,
+  main .radici-for-list li::before { content: "✧"; color: #8a6997 !important;
+    font-family: Georgia, serif; font-size: 17px; }
+  main .radici-benefits li::before { content: "☼"; color: #8a6997 !important; }
+  main :is(.afb-card-symbol, .annual-value-card .marker, .annual-price-card::before) { color: #9075a0 !important; }
+  main ul:not([class]) li::marker { color: #8a6997; }
+
+  /* Forms: retain 44px+ touch areas */
+  main :is(input:not([type="checkbox"]):not([type="radio"]), select, textarea) { min-height: 46px; }
+  main :is(.radici-form, .gift-form, .annual-form, .ev-form) :is(p, li) { line-height: 1.48 !important; }
+}
