@@ -170,4 +170,23 @@
   .footer-top { padding-bottom: 30px; }
   .footer-bottom { line-height: 1.43; }
 
+  /* Homepage mobile: one primary route, no repeated navigational actions */
+  main .hero-copy > .eyebrow, main .hero-assurance { display: none !important; }
+  main .hero .button-row > a[href="sessioni.html#tema-natale"] { display: none !important; }
+  main .hero .button-row .mobile-quick-choice {
+    display: inline-flex !important;
+    color: #fff; background: #27212d; border-color: #27212d;
+  }
+  main #sessioni-in-evidenza .section-heading > .text-link { display: none !important; }
+  main .section-tight.bg-sky a.text-link[href="sessioni.html"] { display: none !important; }
+  main .mobile-home-retreats .section-heading > a.text-link[href="ritiri.html"] {
+    display: none !important;
+  }
+
+  /* Decorative directional glyphs only: maintain all button targets and labels */
+  a .mobile-action-glyph, button .mobile-action-glyph,
+  main .button [aria-hidden="true"], main .text-link [aria-hidden="true"],
+  .nav-cta [aria-hidden="true"] { display: none !important; }
+  .mobile-menu .menu-glyph { display: none !important; }
+
 }
