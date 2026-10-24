@@ -83,3 +83,6 @@
 .ast-visual-ribbon{display:none!important}
 #tutti-i-servizi{padding:32px 0 42px}#tutti-i-servizi .section-heading{margin-bottom:20px}#tutti-i-servizi .section-heading p{font-size:13px;line-height:1.5}#tutti-i-servizi .detail-grid{gap:11px}#tutti-i-servizi .detail-card{padding:22px}#tutti-i-servizi .detail-card h2{font-size:32px}#tutti-i-servizi .detail-card .detail-cta{gap:10px;padding-top:14px}#tutti-i-servizi .detail-card .button{min-height:48px}
 }
+
+/* Keep decorative link glyphs visually identical on desktop; mobile hides them separately. */
+a .mobile-action-glyph,button .mobile-action-glyph{display:contents}
