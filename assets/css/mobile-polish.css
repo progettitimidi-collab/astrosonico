@@ -155,4 +155,19 @@
   /* Forms: retain 44px+ touch areas */
   main :is(input:not([type="checkbox"]):not([type="radio"]), select, textarea) { min-height: 46px; }
   main :is(.radici-form, .gift-form, .annual-form, .ev-form) :is(p, li) { line-height: 1.48 !important; }
+  /* Replace repetitive orientation cards with a direct mobile route to prices */
+  main #da-dove-iniziare { display: none !important; }
+  main .mobile-desktop-choice { display: none !important; }
+  main .mobile-quick-choice { display: inline-flex !important; }
+  main #sessioni-in-evidenza { scroll-margin-top: 80px; padding-top: 30px; }
+  /* The founder's note is already conveyed by the preceding personal quote */
+  main .afb-founder-small, main .afb-history-layout > div > p:nth-of-type(5) {
+    display: none !important;
+  }
+  /* Footer rhythm follows the rest of the mobile experience */
+  .footer { line-height: 1.45; padding-top: 39px; }
+  .footer p { font-size: 13px; line-height: 1.46; margin-top: 12px; }
+  .footer-top { padding-bottom: 30px; }
+  .footer-bottom { line-height: 1.43; }
+
 }
