@@ -890,3 +890,19 @@
   main .annual-fit-copy p.reading-detail {color:#514D49!important}
   main .mobile-founder-copy .h-large {margin-bottom:17px!important}
 }
+
+/* Single-paragraph page introductions: a restrained intermediate reading level. */
+@media screen and (max-width:640px) {
+  main .page-hero p.text-lead,
+  main .ev-hero p.ev-lead,
+  main .annual-hero p.annual-lead,
+  main .call-intro p.call-lead,
+  main .radici-hero p.radici-intro {
+    font-family:var(--sans)!important;
+    font-size:17px!important;
+    font-weight:500!important;
+    line-height:1.47!important;
+    letter-spacing:-.01em!important;
+    max-width:65ch;
+  }
+}
