@@ -794,4 +794,52 @@
   @media(prefers-reduced-motion:reduce) {
     *,*::before,*::after {animation:none!important;transition:none!important;scroll-behavior:auto!important}
   }
+  /* 2026-10-26: homepage-only refinements. Desktop preserved. */
+  main .hero .editorial-mobile-hero-photo img {
+    object-fit:cover!important;object-position:center 37%!important;
+    width:100%!important;
+  }
+  /* The actual DOM is text, then image: same order for reading and display. */
+  main .mobile-founder-copy .split {
+    display:grid!important;grid-template-columns:minmax(0,1fr)!important;
+    gap:19px!important;
+  }
+  main .mobile-founder-copy .split > div {min-width:0}
+  main .mobile-founder-copy .split > .portrait-frame {order:initial!important}
+  /* The large RADICI poster is the only visual in the retreat mobile card. */
+  main .mobile-home-retreats {background:#F7F4EF!important;padding:37px 0 43px!important}
+  main .mobile-home-retreats .section-heading {display:none!important}
+  main .mobile-home-retreats .featured-wide {
+    display:block!important;background:transparent!important;
+    border:0!important;box-shadow:none!important;
+  }
+  main .mobile-home-retreats .featured-wide .content {
+    display:block!important;padding:0!important;max-width:none!important;
+  }
+  main .mobile-home-retreats .featured-wide .content > .eyebrow:not(.mobile-retreat-kicker),
+  main .mobile-home-retreats .featured-wide .content > h3,
+  main .mobile-home-retreats .featured-wide .content > p,
+  main .mobile-home-retreats .featured-wide .image-side {
+    display:none!important;
+  }
+  main .mobile-home-retreats .mobile-retreat-kicker {
+    display:block!important;margin:0 0 15px!important;
+    font-size:12px!important;font-weight:800!important;
+    text-transform:uppercase!important;letter-spacing:.15em!important;
+    color:#8E4B3E!important;
+  }
+  main .mobile-home-retreats .mobile-radici-poster {
+    display:block!important;width:100%!important;
+    max-width:480px!important;margin:0 auto 24px!important;
+    padding:0!important;
+  }
+  main .mobile-home-retreats .mobile-radici-poster img {
+    display:block!important;width:100%!important;max-width:none!important;
+    height:auto!important;object-fit:contain!important;
+    border-radius:3px!important;box-shadow:none!important;
+  }
+  main .mobile-home-retreats a.button[href="ritiri.html"] {
+    display:inline-flex!important;min-height:49px!important;
+  }
+
 }
