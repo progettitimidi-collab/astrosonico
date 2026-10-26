@@ -382,3 +382,68 @@
     animation:none!important;transition:none!important;transform:none!important
   }
 }
+
+/* Final desktop palette pass: remove residual violet-tinted copy and modules
+   from legacy page-local CSS while preserving warm contrast and form states. */
+@media screen and (min-width:641px) {
+  main :is(.afb-section,.afb-history,.afb-deep,.afb-program,.afb-wealth,
+    .radici-section,.radici-location,.radici-themes,.radici-for,
+    .radici-included,.radici-transition,.ev-section,.ev-detail,
+    .annual-section,.annual-journey,.annual-request-section,
+    .call-section,.ab-section,.gift-request)
+    :is(p,li,small,.muted,.text-lead) {
+    color:var(--ed-muted);
+  }
+  main :is(.afb-section,.afb-history,.afb-deep,.afb-program,.afb-wealth,
+    .radici-section,.radici-location,.radici-themes,.radici-for,
+    .radici-included,.radici-transition,.ev-section,.ev-detail,
+    .annual-section,.annual-journey,.annual-request-section,
+    .call-section,.ab-section,.gift-request)
+    :is(h2,h3,h4,.h-medium,.h-large,.h-card) {
+    color:var(--ed-black);
+  }
+  main :is(.afb-section,.afb-history,.afb-deep,.afb-program,.afb-wealth,
+    .radici-section,.radici-location,.radici-themes,.radici-for,
+    .radici-included,.radici-transition,.ev-section,.ev-detail,
+    .annual-section,.annual-journey,.annual-request-section,
+    .call-section,.ab-section,.gift-request)
+    :is(.eyebrow,.kicker,.afb-kicker,.radici-eyebrow,
+      .ev-kicker,.annual-kicker,.call-kicker) {
+    color:var(--ed-oxide);
+  }
+  main :is(.ev-detail h2 em,.radici-verse em,.annual-title em,
+    .annual-quote-block,.afb-serif-quote,.ev-detail .ev-intro) {
+    color:var(--ed-oxide);
+  }
+  main .radici-transition :is(p,h2,h3){color:var(--ed-black)}
+  main .radici-transition .radici-transition-quote{color:var(--ed-black)}
+  main .afb-wealth :is(p,h2,h3){color:var(--ed-black)}
+  main .afb-deep :is(p,h2,h3){color:var(--ed-black)}
+  main .afb-program :is(p,h2,h3){color:var(--ed-black)}
+  main :is(.afb-program-index div,.afb-history-timeline,.annual-info,
+     .annual-quote-block,.ev-schedule-card,.radici-included-card) {
+    background:var(--ed-ivory);
+  }
+  main .ev-closure{background:var(--ed-stone)}
+  main .ev-closure :is(h2,p){color:var(--ed-black)}
+  main .gift-request .gift-note,
+  main .gift-request-intro p,
+  main .gift-form .gift-form-intro,
+  main .radici-form-intro p,
+  main .annual-intro>p,
+  main .call-aside p,
+  main .call-note,
+  main .ab-panel>p {
+    color:var(--ed-muted);
+  }
+  main .ab-option:has(input:checked){background:var(--ed-stone);border-color:var(--ed-oxide)}
+  main :is(.ab-total output,.ab-data strong,.ab-price,
+    .annual-price-current,.radici-cost strong,.afb-new,
+    .annual-strip-item strong,.radici-data-item strong){
+    color:var(--ed-black);
+  }
+  main .desktop-question-card--first .eyebrow,
+  main .desktop-question-card--first > a.text-link {
+    color:var(--ed-black);
+  }
+}
