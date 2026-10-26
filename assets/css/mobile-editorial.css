@@ -1181,3 +1181,59 @@
     transform:none!important;
   }
 }
+
+
+/* CELESTIAL ATLAS — decorative sky-map strip above the mobile hero headline.
+   In normal flow to avoid overlapping the copy, CTA or Francesca's portrait. */
+@media screen and (max-width:640px) {
+  main .hero .hero-copy > .hero-celestial-atlas {
+    display:block!important;
+    position:relative!important;
+    width:min(100%,420px)!important;
+    max-width:100%!important;
+    height:78px!important;
+    margin:-6px 0 5px auto!important;
+    padding:0!important;
+    overflow:hidden!important;
+    pointer-events:none!important;
+    user-select:none!important;
+    z-index:0!important;
+  }
+  main .hero .hero-copy > .hero-celestial-atlas svg {
+    display:block!important;
+    width:100%!important;
+    height:100%!important;
+    object-fit:contain!important;
+    object-position:right center!important;
+    overflow:hidden!important;
+  }
+  main .hero .hero-copy > .h-display,
+  main .hero .hero-copy > .hero-mobile-intro,
+  main .hero .hero-copy > .button-row,
+  main .hero .editorial-mobile-hero-photo {
+    position:relative!important;
+    z-index:1!important;
+  }
+  @media (max-width:350px) {
+    main .hero .hero-copy > .hero-celestial-atlas {
+      height:62px!important;
+      margin:-8px 0 2px auto!important;
+    }
+  }
+}
+@media screen and (max-width:640px) and (prefers-reduced-motion:no-preference) {
+  main .hero .hero-copy > .hero-celestial-atlas svg {
+    animation:astro-celestial-appear 900ms ease-out both;
+  }
+  @keyframes astro-celestial-appear {
+    from {opacity:0;transform:translateY(3px)}
+    to {opacity:1;transform:translateY(0)}
+  }
+}
+@media screen and (max-width:640px) and (prefers-reduced-motion:reduce) {
+  main .hero .hero-copy > .hero-celestial-atlas svg {
+    animation:none!important;
+    transform:none!important;
+    opacity:1!important;
+  }
+}
