@@ -562,7 +562,7 @@
     background:var(--ed-stone);
     border-color:var(--ed-stone);
   }
-  main #tutti-i-servizi .astro-service-card:nth-child(4) {
+  main #tutti-i-servizi .astro-service-card--year {
     background:#EDE8E0;
   }
   main #tutti-i-servizi .astro-service-card > .eyebrow {
@@ -663,35 +663,35 @@
     border-color:var(--ed-black);
     text-transform:uppercase;
   }
-  /* Fifth card has an expanded conclusion rather than a lonely half-width card. */
-  main #tutti-i-servizi .astro-service-card--synastry {
+  /* Annual programme closes the sequence as the featured full-width card. */
+  main #tutti-i-servizi .astro-service-card--year {
     grid-column:1 / -1;
   }
   @media (min-width:1050px) {
-    main #tutti-i-servizi .astro-service-card--synastry {
+    main #tutti-i-servizi .astro-service-card--year {
       display:grid;
       grid-template-columns:minmax(0,1fr) minmax(0,.92fr);
       column-gap:38px;
       align-items:start;
     }
-    main #tutti-i-servizi .astro-service-card--synastry > .eyebrow{grid-column:1;grid-row:1}
-    main #tutti-i-servizi .astro-service-card--synastry > .astro-service-art{
+    main #tutti-i-servizi .astro-service-card--year > .eyebrow{grid-column:1;grid-row:1}
+    main #tutti-i-servizi .astro-service-card--year > .astro-service-art{
       grid-column:2;grid-row:1 / span 5;
       height:100%;min-height:250px;
       margin:0;align-self:stretch;
     }
-    main #tutti-i-servizi .astro-service-card--synastry > h2{grid-column:1;grid-row:2;margin-top:12px}
-    main #tutti-i-servizi .astro-service-card--synastry > .meta{grid-column:1;grid-row:3}
-    main #tutti-i-servizi .astro-service-card--synastry > p{grid-column:1;grid-row:4}
-    main #tutti-i-servizi .astro-service-card--synastry > ul{grid-column:1;grid-row:5}
-    main #tutti-i-servizi .astro-service-card--synastry > .detail-cta{
+    main #tutti-i-servizi .astro-service-card--year > h2{grid-column:1;grid-row:2;margin-top:12px}
+    main #tutti-i-servizi .astro-service-card--year > .meta{grid-column:1;grid-row:3}
+    main #tutti-i-servizi .astro-service-card--year > p{grid-column:1;grid-row:4}
+    main #tutti-i-servizi .astro-service-card--year > ul{grid-column:1;grid-row:5}
+    main #tutti-i-servizi .astro-service-card--year > .detail-cta{
       grid-column:1 / -1;grid-row:6;
       margin-top:18px;
     }
   }
   @media (max-width:899px) {
     main #tutti-i-servizi .astro-service-grid {grid-template-columns:minmax(0,1fr);gap:17px}
-    main #tutti-i-servizi .astro-service-card--synastry{grid-column:auto}
+    main #tutti-i-servizi .astro-service-card--year{grid-column:auto}
     main #tutti-i-servizi .astro-service-card{padding:26px 25px 28px}
     main #tutti-i-servizi .astro-service-art{height:142px}
   }
