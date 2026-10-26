@@ -341,4 +341,27 @@
   @media (prefers-reduced-motion:reduce) {
     *,*::before,*::after {animation:none!important;transition:none!important;scroll-behavior:auto!important}
   }
+  /* Finish overriding legacy lavender/prugna surfaces in long-form pages. */
+  main .afb-hero .afb-pricing {background:#fff!important;color:#111!important;
+    border:1px solid #ddd!important;box-shadow:none!important}
+  main .afb-hero .afb-pricing :is(h2,h3,p,.afb-pricing-title,.afb-new,.afb-saving) {color:#111!important}
+  main .afb-hero .afb-pricing .afb-promo {background:#111!important;color:#fff!important}
+  main .afb-hero .afb-pricing .afb-old {color:#555!important}
+  main .afb-hero .afb-pricing .button {background:#ff2d96!important;
+    border-color:#ff2d96!important;color:#111!important}
+  main .afb-stats {background:#fff!important}
+  main .afb-stats .afb-stat strong {color:#111!important}
+  main .afb-season-orbit .afb-orbit-point {background:#ff2d96!important}
+  main .radici-included {background:#fff4f8!important}
+  main .radici-divider-line {background:#ff2d96!important}
+  main .radici-location-img {background:#f7c5d9!important}
+  main .gift-photo-moment img {background:#f7c5d9!important}
+  main .annual-journey {background:#fff4f8!important}
+  main .annual-step {background:#fff!important;border:1px solid #e5d6dc!important;min-height:0!important}
+  main .annual-info {background:#f7c5d9!important;color:#111!important}
+  main .annual-info :is(p,li,small,strong) {color:#111!important}
+  main .annual-image-pause {background:#fff4f8!important}
+  main .ev-facts {background:#fff!important;border-color:#ddd!important}
+  main .ev-cover--anc,main .ev-cover--tar {background-image:none!important;background-color:#f7c5d9!important}
+
 }
