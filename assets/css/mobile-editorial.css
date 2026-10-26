@@ -716,6 +716,17 @@
   main .mobile-home-retreats .featured-wide .content {padding:0!important}
   main .mobile-home-retreats .featured-wide .content>p {display:none!important}
 
+  /* Remove inherited plum surfaces in secondary product pages. */
+  main .gift-preview--photographic {background:#111!important}
+  main .gift-preview--photographic::before {
+    background:linear-gradient(0deg,rgba(17,17,17,.84),rgba(17,17,17,.08) 68%)!important
+  }
+  main .afb-stats,main .afb-stats-grid {background:#F7F4EF!important}
+  main .radici-included-card,main .ev-schedule-card {background:#fff!important;border-color:#D8D1C7!important}
+  main .radici-hero-photo {background:#D8D1C7!important}
+  main .annual-price-card::before,main .annual-value-card .marker {color:#8E4B3E!important}
+  main .afb-program-index div {background:#F7F4EF!important}
+  main .gift-request .gift-note,main .ev-side-note {color:#111!important}
   /* Gift: stone rather than pink. The card remains recognisable, not childish. */
   main .mobile-home-gift {background:#D8D1C7!important;padding:41px 0!important}
   main .mobile-home-gift .eyebrow {color:#63443C!important}
