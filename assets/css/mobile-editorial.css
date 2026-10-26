@@ -1237,3 +1237,99 @@
     opacity:1!important;
   }
 }
+
+/* Celestial motion v2 — paths draw over ~1.5s, stars appear in sequence.
+   Scoped to mobile; no animation is required for content visibility. */
+@media screen and (max-width:640px) and (prefers-reduced-motion:no-preference) {
+  main .hero .hero-copy > .hero-celestial-atlas svg {
+    animation:none!important; /* supersedes the earlier whole-SVG fade */
+  }
+  main .hero .hero-celestial-atlas .astro-atlas-draw {
+    stroke-dasharray:1;
+    stroke-dashoffset:1;
+    animation:astro-atlas-trace 1480ms cubic-bezier(.25,.68,.25,1) 70ms both;
+  }
+  main .hero .hero-celestial-atlas .astro-atlas-draw--2 {
+    animation-duration:1350ms;
+    animation-delay:160ms;
+  }
+  main .hero .hero-celestial-atlas .astro-atlas-draw--3 {
+    animation-duration:1360ms;
+    animation-delay:230ms;
+  }
+  main .hero .hero-celestial-atlas .astro-atlas-draw--stars {
+    animation-duration:900ms;
+    animation-delay:630ms;
+  }
+  main .hero .hero-celestial-atlas .astro-atlas-ellipse {
+    animation:astro-atlas-soft-appear 600ms ease-out 720ms both;
+  }
+  main .hero .hero-celestial-atlas .astro-atlas-points circle {
+    animation:astro-atlas-dot-appear 400ms ease-out both;
+  }
+  main .hero .hero-celestial-atlas .astro-atlas-points circle:nth-child(1) {animation-delay:960ms}
+  main .hero .hero-celestial-atlas .astro-atlas-points circle:nth-child(2) {animation-delay:1080ms}
+  main .hero .hero-celestial-atlas .astro-atlas-points circle:nth-child(3) {animation-delay:1200ms}
+  main .hero .hero-celestial-atlas .astro-atlas-points circle:nth-child(4) {animation-delay:1320ms}
+  main .hero .hero-celestial-atlas .astro-atlas-points circle:nth-child(5) {animation-delay:1440ms}
+  main .hero .hero-celestial-atlas .astro-atlas-star {
+    animation:astro-atlas-soft-appear 500ms ease-out 1150ms both;
+  }
+
+  @keyframes astro-atlas-trace {
+    from {stroke-dashoffset:1}
+    to {stroke-dashoffset:0}
+  }
+  @keyframes astro-atlas-dot-appear {
+    from {opacity:0;transform:scale(.65);transform-box:fill-box;transform-origin:center}
+    to {opacity:1;transform:scale(1);transform-box:fill-box;transform-origin:center}
+  }
+  @keyframes astro-atlas-soft-appear {
+    from {opacity:0}
+    to {opacity:1}
+  }
+
+  /* IntersectionObserver fallback works on browsers without scroll timelines.
+     These states are applied only after a working observer has been created. */
+  main .astro-mobile-first-step.astro-reveal-enabled .mobile-question-card {
+    opacity:.70;
+    transform:translate3d(0,13px,0);
+    transition:transform 680ms cubic-bezier(.2,.7,.2,1),
+               opacity 600ms ease;
+  }
+  main .astro-mobile-first-step.astro-reveal-enabled .mobile-question-card.astro-in-view {
+    opacity:1;
+    transform:translate3d(0,0,0);
+  }
+  main .astro-mobile-first-step.astro-reveal-enabled .mobile-question-art svg {
+    animation:none!important; /* don't mix IO reveal with scroll-timeline */
+    opacity:.78;
+    transform:translate3d(0,4px,0);
+    transition:opacity 660ms ease 90ms, transform 660ms ease 90ms;
+  }
+  main .astro-mobile-first-step.astro-reveal-enabled .mobile-question-card.astro-in-view .mobile-question-art svg {
+    opacity:1;
+    transform:translate3d(0,0,0);
+  }
+}
+@media screen and (max-width:640px) and (prefers-reduced-motion:reduce) {
+  main .hero .hero-celestial-atlas .astro-atlas-draw {
+    animation:none!important;
+    stroke-dasharray:none!important;
+    stroke-dashoffset:0!important;
+  }
+  main .hero .hero-celestial-atlas .astro-atlas-points circle,
+  main .hero .hero-celestial-atlas .astro-atlas-ellipse,
+  main .hero .hero-celestial-atlas .astro-atlas-star {
+    animation:none!important;
+    opacity:1!important;
+    transform:none!important;
+  }
+  main .astro-mobile-first-step .mobile-question-card,
+  main .astro-mobile-first-step .mobile-question-art svg {
+    animation:none!important;
+    transition:none!important;
+    opacity:1!important;
+    transform:none!important;
+  }
+}
