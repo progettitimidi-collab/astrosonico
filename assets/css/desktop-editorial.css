@@ -447,3 +447,90 @@
     color:var(--ed-black);
   }
 }
+
+
+/* Desktop homepage WCAG contrast repair — 26 Oct 2026.
+   Explicit light text on black surfaces, dark text on light cards.
+   No changes below 641px. */
+@media screen and (min-width:641px) {
+  /* The legacy theme forces hero <strong> to --ink, making bold words black
+     against the new black hero background. */
+  main .hero .hero-copy .text-lead,
+  main .hero .hero-copy .text-lead strong,
+  main .hero .hero-copy .hero-assurance,
+  main .hero .hero-copy .hero-assurance span {
+    color:var(--ed-stone);
+  }
+  main .hero .hero-copy .text-lead strong {
+    color:var(--ed-ivory);
+    font-weight:750;
+  }
+  main .hero .hero-copy .eyebrow,
+  main .hero .hero-copy .h-display em {
+    color:var(--ed-rose);
+  }
+  /* Don't propagate pale text into the white annotation card. */
+  main .hero .hero-note,
+  main .hero .hero-note :is(small,strong,span) {
+    color:var(--ed-black);
+  }
+  main .hero .hero-note small {
+    color:var(--ed-oxide);
+  }
+
+  /* Featured business content includes four stats that previously inherited
+     low-contrast dark text from the old global layout. */
+  main .mobile-home-business .featured-wide--business .content,
+  main .mobile-home-business .featured-wide--business .content > h2,
+  main .mobile-home-business .featured-wide--business .content > p,
+  main .mobile-home-business .featured-wide--business .mini-stats strong {
+    color:var(--ed-ivory);
+  }
+  main .mobile-home-business .featured-wide--business .mini-stats small {
+    color:var(--ed-stone);
+  }
+  main .mobile-home-business .featured-wide--business .content > .eyebrow {
+    color:var(--ed-rose);
+  }
+  main .mobile-home-business .featured-wide--business .mini-stats {
+    border-top-color:rgba(247,244,239,.30);
+  }
+  main .mobile-home-business .featured-wide--business .button-primary {
+    color:var(--ed-black);
+    background:var(--ed-ivory);
+    border-color:var(--ed-ivory);
+  }
+
+  /* Gift card preview and final contact panel are both on black surfaces. */
+  main .mobile-home-gift .gift-preview,
+  main .mobile-home-gift .gift-preview .gift-title,
+  main .mobile-home-gift .gift-preview .gift-footer {
+    color:var(--ed-ivory);
+  }
+  main .mobile-home-gift .gift-preview .eyebrow {
+    color:var(--ed-rose);
+  }
+  main .mobile-home-contact .banner :is(h2,.h-medium,p) {
+    color:var(--ed-ivory);
+  }
+  main .mobile-home-contact .banner .eyebrow,
+  main .mobile-home-contact .banner .eyebrow.light {
+    color:var(--ed-rose);
+  }
+  main .mobile-home-contact .banner .button-light {
+    color:var(--ed-black);
+    background:var(--ed-ivory);
+    border-color:var(--ed-ivory);
+  }
+
+  /* Original footer brandmark is dark: keep its light inversion on black. */
+  .footer .brand-logo {
+    filter:brightness(0) invert(1);
+  }
+  .footer .brand,.footer h3,.footer a:not(.brand) {
+    color:var(--ed-ivory);
+  }
+  .footer p,.footer .footer-bottom,.footer .footer-bottom a {
+    color:var(--ed-stone);
+  }
+}
