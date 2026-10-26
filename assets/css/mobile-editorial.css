@@ -1333,3 +1333,190 @@
     transform:none!important;
   }
 }
+
+
+/* Homepage mobile — 26 Oct 2026: stronger featured images, RADICI title,
+   and one consistent soft-corner system. Desktop/other pages untouched. */
+@media screen and (max-width:640px) {
+  /* Business feature: let the photograph occupy the entire card width,
+     using the actual image ratio rather than forcing a letterboxed landscape. */
+  main .mobile-home-business .featured-wide--business {
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr)!important;
+    gap:0!important;
+    width:100%!important;
+    max-width:none!important;
+    overflow:hidden!important;
+    border-radius:16px!important;
+  }
+  main .mobile-home-business .featured-wide--business > .content {
+    min-width:0!important;
+    max-width:none!important;
+    width:100%!important;
+  }
+  main .mobile-home-business .featured-wide--business > .image-side {
+    display:block!important;
+    grid-column:1 / -1!important;
+    order:2!important;
+    width:100%!important;
+    max-width:none!important;
+    min-height:0!important;
+    height:auto!important;
+    aspect-ratio:auto!important;
+    padding:0!important;
+    margin:23px 0 0!important;
+    background:#111111!important;
+    border-radius:16px!important;
+    overflow:hidden!important;
+  }
+  main .mobile-home-business .featured-wide--business > .image-side > img {
+    display:block!important;
+    position:static!important;
+    inset:auto!important;
+    width:100%!important;
+    max-width:none!important;
+    height:auto!important;
+    min-height:0!important;
+    aspect-ratio:auto!important;
+    object-fit:contain!important;
+    object-position:center center!important;
+    margin:0!important;
+    padding:0!important;
+    border-radius:16px!important;
+  }
+
+  /* Retreat: large typographic title and a tactile, inviting card. */
+  main .mobile-home-retreats .featured-wide {
+    display:block!important;
+    border:1px solid #D8D1C7!important;
+    border-radius:18px!important;
+    background:#D8D1C7!important;
+    overflow:hidden!important;
+    box-shadow:none!important;
+  }
+  main .mobile-home-retreats .featured-wide > .content {
+    display:block!important;
+    box-sizing:border-box!important;
+    width:100%!important;
+    padding:24px 20px 22px!important;
+    min-width:0!important;
+    max-width:none!important;
+  }
+  main .mobile-home-retreats .mobile-retreat-kicker {
+    display:block!important;
+    color:#8E4B3E!important;
+    margin:0 0 13px!important;
+    font-size:11px!important;
+    font-weight:800!important;
+    letter-spacing:.16em!important;
+  }
+  main .mobile-home-retreats .mobile-retreat-heading {
+    display:block!important;
+    margin:0 0 17px!important;
+    padding:0!important;
+    color:#111111!important;
+  }
+  main .mobile-home-retreats .mobile-retreat-heading > h3 {
+    display:block!important;
+    margin:0!important;
+    font-family:"Iowan Old Style","Baskerville","Palatino Linotype","Book Antiqua",Palatino,Georgia,serif!important;
+    font-size:clamp(49px,14.3vw,68px)!important;
+    font-weight:500!important;
+    font-style:italic!important;
+    letter-spacing:-.075em!important;
+    line-height:.97!important;
+    color:#111111!important;
+  }
+  main .mobile-home-retreats .mobile-retreat-subtitle {
+    font-family:var(--sans)!important;
+    font-size:17px!important;
+    font-weight:550!important;
+    letter-spacing:-.022em!important;
+    line-height:1.35!important;
+    color:#111111!important;
+    margin:12px 0 11px!important;
+  }
+  main .mobile-home-retreats .mobile-retreat-dates {
+    margin:0!important;
+    color:#5E443D!important;
+    font-family:var(--sans)!important;
+    font-size:12px!important;
+    line-height:1.45!important;
+    font-weight:700!important;
+    letter-spacing:.02em!important;
+  }
+  main .mobile-home-retreats .mobile-radici-poster {
+    display:block!important;
+    width:100%!important;
+    max-width:none!important;
+    margin:20px 0 21px!important;
+    border-radius:14px!important;
+    overflow:hidden!important;
+  }
+  main .mobile-home-retreats .mobile-radici-poster img {
+    display:block!important;
+    width:100%!important;
+    max-width:none!important;
+    height:auto!important;
+    margin:0!important;
+    border-radius:14px!important;
+  }
+  main .mobile-home-retreats .featured-wide a.button[href="ritiri.html"] {
+    display:flex!important;
+    width:100%!important;
+    min-height:50px!important;
+    align-items:center!important;
+    justify-content:center!important;
+    box-sizing:border-box!important;
+    border-radius:12px!important;
+    color:#F7F4EF!important;
+    background:#111111!important;
+    border:1px solid #111111!important;
+  }
+
+  /* Redundant final CTA removed on mobile, but kept on desktop. */
+  html body main#contenuto > .mobile-home-contact {
+    display:none!important;
+  }
+
+  /* Consistent rounded photos and cards across the homepage mobile. */
+  main .hero .editorial-mobile-hero-photo,
+  main .hero .editorial-mobile-hero-photo img,
+  main .mobile-founder-copy .portrait-frame,
+  main .mobile-founder-copy .portrait-frame img,
+  main .astro-gallery-window,
+  main .astro-gallery-item img,
+  main .editorial-mobile-tarot-photo,
+  main .editorial-mobile-tarot-photo img,
+  main .mobile-home-business .featured-wide,
+  main .mobile-home-business .featured-wide .image-side,
+  main .mobile-home-business .featured-wide .image-side img,
+  main .mobile-home-gift .mobile-only-gift-illustration,
+  main .mobile-home-gift .mobile-only-gift-illustration svg,
+  main .mobile-home-faq .faq-list details {
+    border-radius:16px!important;
+  }
+  main .astro-mobile-first-step .mobile-question-card {
+    border-radius:16px!important;
+  }
+  main .mobile-home-retreats .featured-wide {
+    border-radius:18px!important;
+  }
+  main .mobile-home-retreats .mobile-radici-poster,
+  main .mobile-home-retreats .mobile-radici-poster img {
+    border-radius:14px!important;
+  }
+  main .hero .editorial-mobile-hero-photo,
+  main .mobile-founder-copy .portrait-frame,
+  main .mobile-home-business .image-side,
+  main .mobile-home-gift .mobile-only-gift-illustration,
+  main .editorial-mobile-tarot-photo,
+  main .astro-gallery-window {
+    overflow:hidden!important;
+  }
+  @media (max-width:350px) {
+    main .mobile-home-retreats .featured-wide > .content {padding:21px 16px 19px!important}
+    main .mobile-home-retreats .mobile-retreat-heading > h3 {font-size:48px!important}
+    main .mobile-home-retreats .mobile-retreat-subtitle {font-size:16px!important}
+  }
+}
