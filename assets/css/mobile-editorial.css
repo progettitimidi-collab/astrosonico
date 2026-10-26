@@ -1551,7 +1551,7 @@
     background:#D8D1C7!important;
     border-color:#D8D1C7!important;
   }
-  main #tutti-i-servizi .astro-service-card:nth-child(4) {
+  main #tutti-i-servizi .astro-service-card--year {
     background:#EDE8E0!important;
   }
   main #tutti-i-servizi .astro-service-card > .eyebrow {
