@@ -1499,6 +1499,9 @@
   main .astro-mobile-first-step .mobile-question-card {
     border-radius:16px!important;
   }
+  main .astro-mobile-first-step .mobile-question-art {
+    border-radius:12px!important;
+  }
   main .mobile-home-retreats .featured-wide {
     border-radius:18px!important;
   }
