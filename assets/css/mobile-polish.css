@@ -193,4 +193,47 @@
   .nav-cta [aria-hidden="true"] { display: none !important; }
   .mobile-menu .menu-glyph { display: none !important; }
 
+  /* Homepage structure: personal introduction comes before services, mobile only. */
+  main .desktop-founder-block { display: none !important; }
+  main .mobile-founder-copy { display: block !important; padding: 32px 0 34px !important; }
+  main .mobile-founder-copy .split { gap: 17px; }
+  main .mobile-founder-copy .portrait-frame { min-height: 215px; max-height: 215px; border-radius: 140px 140px 15px 15px; }
+  main .mobile-founder-copy .h-large { font-size: 35px !important; line-height: 1.13 !important; margin: 8px 0 12px; }
+  main .mobile-founder-copy .text-lead { margin-bottom: 10px; }
+  main .mobile-founder-copy p { font-size: 14px !important; }
+  main .mobile-founder-copy .text-link { display: none !important; }
+
+  /* Give RADICI a breathing image break, keeping the original poster legible. */
+  main .mobile-radici-poster { display: block !important; margin: 13px 0 20px; }
+  main .mobile-radici-poster img { display: block; width: min(100%, 340px); height: auto; margin-inline: auto;
+    border-radius: 14px; background: #31281f; box-shadow: 0 12px 29px rgba(39,27,20,.15); }
+  main .mobile-home-retreats { background: #f6f0ee; }
+  main .mobile-home-retreats .featured-wide { background: #fffaf6; }
+  main .mobile-home-retreats .featured-wide .content { padding: 22px 19px; }
+
+  /* Simple vector illustration in the mobile gift-card block. */
+  main .mobile-only-gift-illustration { display: block !important; margin: 16px 0 12px; max-width: 340px; }
+  main .mobile-only-gift-illustration svg { display: block; width: 100%; height: auto; border-radius: 16px; }
+  main .mobile-home-gift { background: #e9e0ee; }
+  main .mobile-home-gift .h-medium { margin-bottom: 12px; }
+  main .mobile-home-gift .text-lead { margin-bottom: 11px; }
+
+  /* Rebuild last contact banner: high contrast, no intrusive symbol, no green. */
+  main .mobile-home-contact { background: #fcfaf9; padding: 26px 0 42px !important; }
+  main .mobile-home-contact .banner {
+    background: #f0e7f1 !important; color: #302638 !important;
+    border: 1px solid #d7c4da; border-radius: 18px; padding: 23px 21px !important;
+    box-shadow: none;
+  }
+  main .mobile-home-contact .banner::after { content: none !important; display: none !important; }
+  main .mobile-home-contact .banner .eyebrow.light { color: #71527c !important; }
+  main .mobile-home-contact .banner .h-medium { color: #2c2232 !important;
+    font-size: 29px !important; line-height: 1.15 !important; margin: 9px 0 13px; }
+  main .mobile-home-contact .banner p { color: #514657 !important; font-size: 14px !important;
+    line-height: 1.45 !important; margin-bottom: 19px; }
+  main .mobile-home-contact .banner .button-light {
+    background: #34283a !important; color: #fff !important; border-color: #34283a !important;
+    padding: 13px 20px; min-height: 48px;
+  }
+
 }
