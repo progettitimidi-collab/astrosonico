@@ -1,0 +1,384 @@
+/* AstroSonico · New Editorial desktop / tablet, October 2026.
+   Loaded only above 640 px. The approved mobile stylesheet is not touched.
+   Palette: ink #111111; ivory #F7F4EF; stone #D8D1C7;
+   dusty rose #D8B6B0; oxide #8E4B3E. */
+@media screen and (min-width:641px) {
+  :root {
+    --ink:#111111; --ink-soft:#514D49;
+    --rose:#D8D1C7; --rose-deep:#D8B6B0;
+    --sky:#D8D1C7; --lav:#F7F4EF;
+    --paper:#F7F4EF; --white:#F7F4EF;
+    --line:rgba(17,17,17,.18); --violet:#8E4B3E;
+    --radius:16px;
+    --ed-black:#111111; --ed-ivory:#F7F4EF;
+    --ed-stone:#D8D1C7; --ed-rose:#D8B6B0; --ed-oxide:#8E4B3E;
+    --ed-muted:#514D49;
+  }
+  html {scroll-behavior:smooth}
+  body {background:var(--ed-ivory);color:var(--ed-black);line-height:1.56}
+  :where(h1,h2,h3,h4,.h-display,.h-large,.h-medium,.h-card){color:var(--ed-black)}
+  .eyebrow,.kicker,.ev-kicker,.afb-kicker,.annual-kicker,.call-kicker,
+  .radici-eyebrow,.gift-request .gift-steps strong {color:var(--ed-oxide)}
+  .text-lead {color:var(--ed-muted);line-height:1.58}
+  a:focus-visible,button:focus-visible,summary:focus-visible,
+  input:focus-visible,textarea:focus-visible,select:focus-visible {
+    outline:3px solid var(--ed-oxide);outline-offset:4px;
+  }
+  .site-header{background:rgba(247,244,239,.96);border-bottom-color:var(--line)}
+  .nav-link[aria-current="page"]::after,.nav-link:hover::after{background:var(--ed-oxide)}
+  .desktop-nav a:not(.nav-cta):hover,.text-link:hover{color:var(--ed-oxide)}
+  .nav-cta{border-color:var(--ed-black);color:var(--ed-black)}
+  .nav-cta:hover{background:var(--ed-black);color:var(--ed-ivory)}
+  .button{border-radius:12px;transition:transform .25s ease,background .25s ease,border-color .25s ease}
+  .button-primary,.button-outline:hover{background:var(--ed-black);border-color:var(--ed-black);color:var(--ed-ivory)}
+  .button-primary:hover{background:var(--ed-oxide);border-color:var(--ed-oxide);color:var(--ed-ivory)}
+  .button-light{background:var(--ed-ivory);border-color:var(--ed-ivory);color:var(--ed-black)}
+  .button-outline{color:var(--ed-black);border-color:var(--ed-black)}
+  .text-link{color:var(--ed-oxide);text-underline-offset:4px}
+  .bg-sky{background:var(--ed-stone)}
+  .bg-blush{background:var(--ed-ivory)}
+  .bg-lav{background:var(--ed-stone)}
+  .section-heading .h-medium em{color:var(--ed-oxide)}
+  .section-heading .text-lead{max-width:760px}
+  .site-header .brand-logo,.footer .brand-logo{filter:none}
+  :is(.path-card,.service-card,.detail-card,.gift-option,
+      .ev-card,.ev-facts,.ev-form,.afb-card,.afb-method-card,
+      .annual-value-card,.annual-step,.annual-price-card,
+      .gift-form,.radici-included-card,.radici-form,.call-form,
+      .ab-summary,.ab-panel,.afb-pricing,.afb-founder-panel) {
+    border-radius:16px;border-color:var(--line);
+    box-shadow:none;
+  }
+  :is(.service-card,.detail-card,.gift-option,.path-card,.annual-value-card,
+      .annual-step,.afb-card,.afb-method-card) {background:var(--ed-ivory)}
+  .path-card--recommended,.service-card--recommended,.detail-card:first-child {
+    background:var(--ed-stone);border-color:var(--ed-stone);
+  }
+  .path-recommendation,.service-highlight{background:var(--ed-black);color:var(--ed-ivory)}
+  .price,.price-with-value strong,.detail-cta strong{color:var(--ed-black)}
+  .quote-display{color:var(--ed-black)}
+  .faq-list details{background:var(--ed-ivory);border-color:var(--line);border-radius:12px}
+  :where(.photo-grid .photo,.photo-grid img,.editorial-photo,.astro-gallery-window,
+     .astro-gallery-item img,.portrait-frame,.portrait-frame img,
+     .radici-gallery img,.radici-location-img,.radici-location-img img,
+     .ev-cover,.ev-cover img,.gift-preview--photographic,
+     .afb-photo-spread img,.radici-photo-story img,.annual-image-pause img,
+     .ast-ribbon-grid img,.page-hero.has-image img){
+    border-radius:16px;
+  }
+  :where(.portrait-frame,.astro-gallery-window,.ev-cover,.radici-location-img){
+    overflow:hidden;
+  }
+  .banner{background:var(--ed-black);color:var(--ed-ivory);border-radius:18px}
+  .banner p,.banner h2,.banner .h-medium{color:var(--ed-ivory)}
+  .banner .eyebrow{color:var(--ed-rose)}
+  .footer{background:var(--ed-black);color:var(--ed-ivory)}
+  .footer p,.footer small,.footer .footer-bottom{color:var(--ed-stone)}
+  .footer a:hover{color:var(--ed-rose)}
+  .footer .brand,.footer h3{color:var(--ed-ivory)}
+
+  /* Homepage: a black celestial cover with editorial portrait. */
+  main .hero{
+    background:var(--ed-black);color:var(--ed-ivory);
+    background-image:none;padding:53px 0 92px;
+  }
+  main .hero::before{display:none}
+  main .hero .hero-copy{color:var(--ed-ivory)}
+  main .hero .hero-copy .eyebrow{color:var(--ed-rose)}
+  main .hero h1,.hero .h-display{color:var(--ed-ivory);font-weight:400}
+  main .hero h1 em,.hero .h-display em{color:var(--ed-rose)}
+  main .hero .text-lead,.hero .hero-assurance{color:var(--ed-stone)}
+  main .hero .button-primary{background:var(--ed-ivory);color:var(--ed-black);border-color:var(--ed-ivory)}
+  main .hero .button-primary:hover{background:var(--ed-rose);border-color:var(--ed-rose)}
+  main .hero .button-outline{color:var(--ed-ivory);border-color:var(--ed-stone)}
+  main .hero .button-outline:hover{background:var(--ed-stone);color:var(--ed-black)}
+  main .hero .hero-photo{border-radius:18px;object-fit:cover}
+  main .hero .hero-orbit{color:var(--ed-rose)}
+  main .hero .hero-note{background:var(--ed-ivory);color:var(--ed-black);border-radius:14px}
+  main .hero .hero-copy > .hero-celestial-atlas{
+    display:block;position:relative;overflow:hidden;pointer-events:none;
+    margin:0 0 5px auto;width:min(100%,580px);height:112px;
+  }
+  main .hero .hero-celestial-atlas svg{width:100%;height:100%;display:block}
+  .astro-gallery{background:var(--ed-ivory)}
+  .astro-gallery-window{border-radius:16px}
+  .astro-gallery-item img{border-radius:12px}
+
+  /* Homepage: same approved texts and the original three mobile SVGs. */
+  main #da-dove-iniziare.desktop-first-step{background:var(--ed-ivory);padding:99px 0 103px}
+  main #da-dove-iniziare.desktop-first-step .section-heading{margin-bottom:36px}
+  main #da-dove-iniziare.desktop-first-step .section-intro{max-width:790px}
+  main #da-dove-iniziare.desktop-first-step .h-medium{
+    color:var(--ed-black);font-size:clamp(42px,4.4vw,65px);
+    line-height:1.08;max-width:760px;margin:14px 0 17px;
+  }
+  main #da-dove-iniziare.desktop-first-step .text-lead{
+    color:var(--ed-muted);font-size:19px;line-height:1.55;margin:0;
+  }
+  main .desktop-question-grid{
+    display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+    align-items:stretch;gap:20px;
+  }
+  main .desktop-question-card{
+    display:flex;flex-direction:column;position:relative;min-width:0;
+    padding:28px 25px 30px;border-radius:16px;
+    background:var(--ed-ivory);border:1px solid var(--ed-stone);
+    color:var(--ed-black);
+  }
+  main .desktop-question-card--first{background:var(--ed-stone)}
+  main .desktop-question-card--second{background:var(--ed-ivory);border-color:var(--ed-oxide)}
+  main .desktop-question-card--third{background:var(--ed-ivory);border-color:var(--ed-black)}
+  main .desktop-question-top{display:flex;flex-direction:column;min-width:0}
+  main .desktop-question-top .eyebrow{
+    color:var(--ed-oxide);font-size:11px;line-height:1.35;
+    font-weight:750;letter-spacing:.13em;text-transform:uppercase;
+  }
+  main .desktop-question-art{
+    display:block;width:100%;height:auto;overflow:hidden;
+    margin:14px 0 19px;min-width:0;border-radius:12px;
+  }
+  main .desktop-question-art svg{display:block;width:100%;height:150px;overflow:hidden}
+  main .desktop-question-card .mobile-question-art{
+    display:block;width:100%;height:158px;overflow:hidden;
+    margin:14px 0 20px;border-radius:12px;
+  }
+  main .desktop-question-card .mobile-question-art svg{
+    display:block;width:100%;height:100%;
+  }
+  main .desktop-question-card--third .mobile-question-art{background:var(--ed-black)}
+  main .desktop-question-card .h-card{
+    color:var(--ed-black);font-family:var(--serif);
+    font-size:clamp(29px,2.5vw,39px);line-height:1.13;
+    font-weight:400;letter-spacing:-.046em;margin:0 0 14px;
+    text-wrap:balance;overflow-wrap:break-word;
+  }
+  main .desktop-question-card > p{
+    color:var(--ed-muted);font-size:15px;line-height:1.6;
+    max-width:37ch;margin:0 0 28px;
+  }
+  main .desktop-question-card > a.text-link{
+    width:fit-content;max-width:100%;margin-top:auto;
+    color:var(--ed-oxide);font-size:14px;line-height:1.4;
+    border:0;padding-bottom:5px;
+    background:linear-gradient(currentColor,currentColor) left bottom/68% 1px no-repeat;
+    transition:background-size .27s ease;
+  }
+  main .desktop-question-card > a.text-link:hover,
+  main .desktop-question-card > a.text-link:focus-visible{background-size:100% 1px}
+  main .desktop-question-card--third .h-card{font-size:clamp(27px,2.25vw,36px)}
+  @supports(animation-timeline:view()) {
+    main .desktop-question-card .mobile-question-art svg{
+      animation:astro-desktop-art-reveal linear both;
+      animation-timeline:view();animation-range:entry 5% entry 80%;
+    }
+    @keyframes astro-desktop-art-reveal{
+      from{opacity:.72;transform:translateY(7px)}
+      to{opacity:1;transform:translateY(0)}
+    }
+  }
+
+  /* Homepage: services remain discoverable, including all existing prices. */
+  main #sessioni-in-evidenza{background:var(--ed-stone)}
+  main #sessioni-in-evidenza .service-card{background:var(--ed-ivory)}
+  main #sessioni-in-evidenza .service-card--recommended{background:#F7F4EF}
+  main #sessioni-in-evidenza .service-card .eyebrow{color:var(--ed-oxide)}
+  main #sessioni-in-evidenza .service-card .price{color:var(--ed-black)}
+  main .mobile-home-business{background:var(--ed-black);color:var(--ed-ivory)}
+  main .mobile-home-business .featured-wide--business{
+    background:var(--ed-black);border-radius:18px;overflow:hidden;
+    border:1px solid rgba(247,244,239,.22);
+  }
+  main .mobile-home-business .featured-wide--business .content{color:var(--ed-ivory)}
+  main .mobile-home-business :is(h2,p,.h-large){color:var(--ed-ivory)}
+  main .mobile-home-business .eyebrow{color:var(--ed-rose)}
+  main .mobile-home-business .image-side,
+  main .mobile-home-business .image-side img{border-radius:16px;overflow:hidden}
+  main .mobile-home-business .image-side img{object-fit:contain}
+  main .mobile-home-business .button-primary{background:var(--ed-ivory);border-color:var(--ed-ivory);color:var(--ed-black)}
+  main .desktop-founder-block{background:var(--ed-stone)}
+  main .desktop-founder-block .text-lead{color:var(--ed-muted)}
+  main .desktop-founder-block .portrait-frame{border-radius:18px;overflow:hidden}
+  main .desktop-founder-block .portrait-frame img{border-radius:18px}
+  main .mobile-home-retreats{background:var(--ed-ivory)}
+  main .mobile-home-retreats .featured-wide{background:var(--ed-stone);border-radius:18px}
+  main .mobile-home-retreats .image-side img{object-fit:cover}
+  main .mobile-home-retreats .mobile-radici-poster{display:none}
+  main .mobile-home-retreats .mobile-retreat-heading{display:none}
+  main .mobile-home-gift{background:var(--ed-stone)}
+  main .mobile-home-gift .h-medium{color:var(--ed-black)}
+  main .mobile-home-gift .gift-preview{background:var(--ed-black);color:var(--ed-ivory);border-radius:16px}
+  main .mobile-home-gift .gift-preview .eyebrow{color:var(--ed-rose)}
+  main .mobile-home-faq{background:var(--ed-ivory)}
+  main .mobile-home-contact{background:var(--ed-ivory)}
+  main .mobile-home-contact .banner{background:var(--ed-black);border-radius:18px}
+
+  /* Shared intro language of the inner pages. */
+  main .page-hero,
+  main .afb-hero,
+  main .radici-hero,
+  main .ev-hero,
+  main .annual-hero,
+  main .call-intro,
+  main .ab-hero{
+    background:var(--ed-black);background-image:none;color:var(--ed-ivory);
+  }
+  main :is(.page-hero,.afb-hero,.radici-hero,.ev-hero,.annual-hero,.call-intro,.ab-hero)
+  :is(h1,h2,h3,.h-large,.radici-title,.annual-title){color:var(--ed-ivory)}
+  main :is(.page-hero,.afb-hero,.radici-hero,.ev-hero,.annual-hero,.call-intro,.ab-hero)
+  :is(h1,h2,.h-large,.annual-title) em{color:var(--ed-rose)}
+  main :is(.page-hero,.afb-hero,.radici-hero,.ev-hero,.annual-hero,.call-intro,.ab-hero)
+  :is(p,.text-lead,.afb-lead,.afb-lead-secondary,.radici-intro,.radici-subtitle,
+      .radici-key,.ev-lead,.annual-lead,.call-lead){color:var(--ed-stone)}
+  main :is(.page-hero,.afb-hero,.radici-hero,.ev-hero,.annual-hero,.call-intro,.ab-hero)
+  :is(.eyebrow,.kicker,.afb-kicker,.radici-eyebrow,.annual-kicker,.call-kicker){color:var(--ed-rose)}
+  main :is(.page-hero,.afb-hero,.radici-hero,.ev-hero,.annual-hero,.call-intro,.ab-hero) .button-primary{
+    background:var(--ed-ivory);border-color:var(--ed-ivory);color:var(--ed-black)
+  }
+  main :is(.page-hero,.afb-hero,.radici-hero,.ev-hero,.annual-hero,.call-intro,.ab-hero) .button-outline{
+    border-color:var(--ed-stone);color:var(--ed-ivory)
+  }
+  main :is(.page-hero,.afb-hero,.radici-hero,.ev-hero,.annual-hero,.call-intro,.ab-hero) .button-outline:hover{
+    color:var(--ed-black);background:var(--ed-stone)
+  }
+  main .page-hero .gift-preview{background:var(--ed-stone);color:var(--ed-black);border-radius:18px}
+  main .page-hero .gift-preview .eyebrow{color:var(--ed-oxide)}
+  main .radici-hero-photo{border-radius:18px;overflow:hidden}
+  main .radici-hero .radici-link{color:var(--ed-rose);border-bottom-color:var(--ed-rose)}
+  main .ev-hero .ev-side-note{color:var(--ed-stone);border-left-color:rgba(247,244,239,.28)}
+  main .ev-hero .ev-side-note strong{color:var(--ed-rose)}
+  main .afb-hero:after{border-color:rgba(247,244,239,.17)}
+  main .afb-founder-panel{
+    background:var(--ed-stone);color:var(--ed-black);
+    border-color:var(--ed-stone);border-radius:16px;
+  }
+  main .afb-founder-panel :is(.afb-founder-quote,.afb-founder-small,.afb-founder-kicker,.afb-founder-sign){
+    color:var(--ed-black)
+  }
+  main .afb-hero .afb-hero-note{color:var(--ed-stone)}
+  main .afb-hero .afb-inline-link{color:var(--ed-rose);border-bottom-color:var(--ed-rose)}
+  main .afb-hero .afb-pricing{background:var(--ed-ivory);border-radius:16px}
+  main .afb-hero .afb-pricing :is(p,h2,.afb-new){color:var(--ed-black)}
+  main .afb-hero .afb-pricing .afb-promo{background:var(--ed-black);color:var(--ed-ivory)}
+  main .annual-hero .annual-price-card{background:var(--ed-ivory);color:var(--ed-black)}
+  main .annual-hero .annual-price-card :is(p,h2,.annual-price-current){color:var(--ed-black)}
+  main .annual-hero .annual-price-card .annual-promo-label{background:var(--ed-black);color:var(--ed-ivory)}
+  main .annual-hero .annual-facts,.annual-hero .annual-anchor{color:var(--ed-stone)}
+  main .annual-hero .annual-anchor{border-bottom-color:var(--ed-stone)}
+
+  /* Interior rhythm: ivory content, stone secondary sections, black CTAs. */
+  main :is(.afb-section,.radici-section,.ev-section,.ev-detail,.annual-section,.call-section,.ab-section) {
+    background-color:var(--ed-ivory);color:var(--ed-black)
+  }
+  main :is(.afb-deep,.afb-program,.afb-wealth,.radici-location,.radici-transition,
+     .radici-included,.ev-detail.alt,.annual-journey,.annual-request-section,
+     .gift-request,.ev-closure,.call-section){
+    background:var(--ed-stone)
+  }
+  main :is(.afb-history,.radici-themes,.radici-for){background:var(--ed-ivory)}
+  main .afb-cta{background:var(--ed-black);color:var(--ed-ivory)}
+  main .afb-cta :is(h2,p,.eyebrow){color:var(--ed-ivory)}
+  main .afb-cta-price{border-color:rgba(247,244,239,.26);border-radius:18px}
+  main .afb-cta-price .afb-new{color:var(--ed-ivory)}
+  main .afb-cta-price .button{background:var(--ed-ivory);color:var(--ed-black);border-color:var(--ed-ivory)}
+  main :is(.afb-card,.afb-method-card,.afb-synastry-callout,
+    .afb-history-timeline,.afb-founder-panel,.radici-included-card,
+    .ev-card,.ev-facts,.ev-schedule-card,.annual-value-card,.annual-step,
+    .annual-info,.gift-form,.radici-form,.ev-form,.annual-form,.call-form,.ab-panel,.ab-summary){
+    border-radius:16px;border-color:var(--line)
+  }
+  main :is(.afb-card,.afb-method-card,.afb-synastry-callout,
+    .afb-history-timeline,.radici-included-card,.ev-card,.ev-facts,
+    .ev-schedule-card,.annual-value-card,.annual-step,.annual-info,
+    .gift-form,.radici-form,.ev-form,.annual-form,.call-form,.ab-panel,.ab-summary){
+    background:var(--ed-ivory)
+  }
+  main :is(.afb-season-orbit,.afb-season-orbit::before,.afb-season-orbit::after){
+    border-color:var(--ed-oxide)
+  }
+  main .afb-season-orbit .afb-orbit-point{background:var(--ed-oxide)}
+  main :is(.afb-card-symbol,.afb-method-n,.afb-program-item .afb-num,
+    .afb-program-index strong,.afb-stat strong,.afb-founder-kicker,
+    .afb-founder-sign,.afb-season-orbit .afb-center,
+    .annual-value-card .marker,.annual-step .step-number,
+    .radici-benefits li::before,.radici-for-list li::before,
+    .radici-form-steps b,.gift-steps strong,.call-steps strong,
+    .ev-meta,.ev-fact strong,.ev-kicker,.annual-saving,.afb-saving) {
+    color:var(--ed-oxide)
+  }
+  main :is(.afb-serif-quote,.radici-verse,.radici-questions,.radici-transition-quote,
+    .annual-quote-block,.ev-detail .ev-intro){
+    color:var(--ed-black);border-color:var(--ed-oxide)
+  }
+  main :is(.afb-history-timeline,.afb-program-index div,.afb-synastry-callout,
+    .annual-quote-block,.radici-included-card,.annual-info,
+    .ev-mini-banner,.gift-privacy,.call-privacy,.privacy-note) {
+    background:var(--ed-ivory)
+  }
+  main .ev-mini-banner{border:1px solid var(--line);color:var(--ed-black)}
+  main .ev-mini-banner :is(p,h3){color:var(--ed-black)}
+  main .ev-cover--anc{background:var(--ed-stone)}
+  main .ev-cover--tar{background:var(--ed-ivory)}
+  main .ev-card .ev-cover img{width:100%;height:auto}
+  main .radici-form-section{background:var(--ed-stone)}
+  main .radici-data-strip,.annual-strip,.afb-stats{background:var(--ed-stone)}
+  main .radici-data-item strong,.annual-strip-item strong,.afb-stat strong{color:var(--ed-black)}
+  main .radici-location-img,.radici-location-img img,
+  main .radici-hero-photo,.ev-cover,.ev-cover img,
+  main .afb-photo-spread img,.annual-image-pause img,
+  main .gift-preview--photographic{border-radius:16px}
+  main .radici-title{
+    font-family:"Iowan Old Style","Baskerville","Palatino Linotype",Georgia,serif;
+    font-style:italic;letter-spacing:-.075em;color:var(--ed-ivory)
+  }
+
+  /* Forms: visible native states and oxide focus, all behavior untouched. */
+  main :is(.gift-field input,.radici-field input,.ev-form-field input,
+    .ev-form-field select,.ev-form-field textarea,.form-field input,
+    .form-field textarea,.call-field input,.ab-field input,.ab-field textarea){
+    background:var(--ed-ivory);border:1px solid var(--ed-stone);
+    border-radius:10px;color:var(--ed-black)
+  }
+  main :is(.gift-field input,.radici-field input,.ev-form-field input,
+    .ev-form-field select,.ev-form-field textarea,.form-field input,
+    .form-field textarea,.call-field input,.ab-field input,.ab-field textarea):focus{
+    border-color:var(--ed-oxide);
+    outline:3px solid rgba(142,75,62,.22);outline-offset:1px
+  }
+  main :is(.gift-privacy,.call-privacy,.privacy-note,.radici-form .privacy-info,
+    .ab-aperitivo,.ab-option) {border-color:var(--ed-stone)}
+  main :is(.ab-option:has(input:checked)){background:var(--ed-stone);border-color:var(--ed-oxide)}
+  main :is(input[type="checkbox"],input[type="radio"]){accent-color:var(--ed-oxide)}
+  main :is(.ev-form,.radici-form,.annual-form,.call-form,.gift-form,.ab-panel) .button-primary,
+  main :is(.ev-form,.radici-form,.annual-form,.call-form,.gift-form,.ab-panel) button[type="submit"]{
+    background:var(--ed-black);color:var(--ed-ivory);border-color:var(--ed-black);
+    border-radius:12px
+  }
+
+  /* Tablet shares desktop art direction but uses two readable card columns. */
+  @media (max-width:1099px) {
+    main .desktop-question-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    main .desktop-question-card--third{grid-column:1 / -1}
+    main .desktop-question-card--third .mobile-question-art{height:155px}
+    main .hero .hero-copy > .hero-celestial-atlas{height:85px}
+  }
+  @media (max-width:820px) {
+    .container{width:min(calc(100% - 40px),var(--max))}
+    main #da-dove-iniziare.desktop-first-step{padding:66px 0}
+    main .desktop-question-grid{gap:13px}
+    main .desktop-question-card{padding:23px 20px 26px}
+    main .desktop-question-card .h-card{font-size:30px}
+    main .desktop-question-card .mobile-question-art{height:125px}
+    main .hero{padding:45px 0 68px}
+  }
+  @media (max-width:720px) {
+    main .desktop-question-grid{grid-template-columns:1fr}
+    main .desktop-question-card--third{grid-column:auto}
+    main .desktop-question-card .mobile-question-art{height:146px}
+  }
+}
+@media screen and (min-width:641px) and (prefers-reduced-motion:reduce) {
+  main .desktop-question-card *,
+  main .hero .hero-celestial-atlas * {
+    animation:none!important;transition:none!important;transform:none!important
+  }
+}
