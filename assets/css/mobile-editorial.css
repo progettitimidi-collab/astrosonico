@@ -1000,3 +1000,184 @@
     main .astro-mobile-first-step .mobile-question-card .h-card {font-size:28px!important}
   }
 }
+
+
+/* AstroSonico — editorial visual language for the three mobile questions.
+   SVGs are decorative; text/links remain readable without animation or JS. */
+@media screen and (max-width:640px) {
+  main .astro-mobile-first-step {
+    padding:42px 0 48px!important;
+    background:#F7F4EF!important;
+  }
+  main .astro-mobile-first-step .mobile-question-grid {
+    gap:16px!important;
+  }
+  main .astro-mobile-first-step .mobile-question-card {
+    position:relative!important;
+    overflow:hidden!important;
+    min-width:0!important;
+    padding:24px 22px 27px!important;
+    border-radius:3px!important;
+    border:1px solid #D8D1C7!important;
+    box-shadow:none!important;
+    background:#F7F4EF!important;
+    color:#111111!important;
+    isolation:isolate;
+  }
+  main .astro-mobile-first-step .mobile-question-card--first {
+    background:#D8D1C7!important;
+    border-color:#D8D1C7!important;
+  }
+  main .astro-mobile-first-step .mobile-question-card--second {
+    background:#F7F4EF!important;
+    border-color:#8E4B3E!important;
+  }
+  main .astro-mobile-first-step .mobile-question-card--third {
+    background:#F7F4EF!important;
+    border-color:#111111!important;
+  }
+  main .astro-mobile-first-step .mobile-question-top {
+    display:flex!important;
+    flex-direction:column!important;
+    min-width:0!important;
+  }
+  main .astro-mobile-first-step .mobile-question-top .eyebrow {
+    display:inline-block!important;
+    align-self:flex-start!important;
+    font-size:11px!important;
+    font-weight:800!important;
+    line-height:1.4!important;
+    letter-spacing:.135em!important;
+    color:#8E4B3E!important;
+    text-transform:uppercase!important;
+  }
+  main .astro-mobile-first-step .mobile-question-art {
+    display:block!important;
+    width:100%!important;
+    max-width:100%!important;
+    height:124px!important;
+    margin:10px 0 15px!important;
+    padding:0!important;
+    overflow:hidden!important;
+    flex:none!important;
+  }
+  main .astro-mobile-first-step .mobile-question-art svg {
+    display:block!important;
+    width:100%!important;
+    height:100%!important;
+    max-width:100%!important;
+    overflow:visible!important;
+    transform-origin:center center;
+  }
+  main .astro-mobile-first-step .mobile-question-card--first .mobile-question-art {
+    margin-top:4px!important;
+    margin-bottom:14px!important;
+  }
+  main .astro-mobile-first-step .mobile-question-card--second .mobile-question-art {
+    margin-top:6px!important;
+    margin-bottom:14px!important;
+  }
+  main .astro-mobile-first-step .mobile-question-card--third .mobile-question-art {
+    width:calc(100% + 44px)!important;
+    max-width:none!important;
+    height:136px!important;
+    margin:15px -22px 18px!important;
+    background:#111111!important;
+  }
+  main .astro-mobile-first-step .mobile-question-card--third .mobile-question-art svg {
+    width:100%!important;
+    height:100%!important;
+    overflow:hidden!important;
+  }
+  main .astro-mobile-first-step .mobile-question-card h3.h-card {
+    max-width:100%!important;
+    font-family:var(--serif)!important;
+    font-size:clamp(29px,8.1vw,35px)!important;
+    font-weight:400!important;
+    letter-spacing:-.051em!important;
+    line-height:1.12!important;
+    color:#111111!important;
+    margin:0 0 14px!important;
+    overflow-wrap:normal!important;
+    text-wrap:balance;
+  }
+  main .astro-mobile-first-step .mobile-question-card > p {
+    font-size:15px!important;
+    line-height:1.53!important;
+    color:#45403E!important;
+    max-width:34ch!important;
+    margin:0 0 25px!important;
+  }
+  main .astro-mobile-first-step .mobile-question-card > a.text-link {
+    position:relative!important;
+    display:inline-flex!important;
+    width:auto!important;
+    border:0!important;
+    color:#8E4B3E!important;
+    padding:1px 0 5px!important;
+    font-size:14px!important;
+    line-height:1.45!important;
+    font-weight:750!important;
+    text-decoration:none!important;
+    background-image:linear-gradient(currentColor,currentColor);
+    background-repeat:no-repeat;
+    background-position:left bottom;
+    background-size:72% 1px;
+    transition:background-size 260ms ease, color 260ms ease;
+  }
+  main .astro-mobile-first-step .mobile-question-card > a.text-link:focus-visible {
+    outline:3px solid #8E4B3E!important;
+    outline-offset:5px!important;
+    background-size:100% 1px;
+  }
+  main .astro-mobile-first-step .mobile-question-card > a.text-link:active {
+    background-size:100% 1px;
+  }
+  @media (hover:hover) and (pointer:fine) {
+    main .astro-mobile-first-step .mobile-question-card > a.text-link:hover {
+      background-size:100% 1px;
+    }
+  }
+  @media (max-width:350px) {
+    main .astro-mobile-first-step .mobile-question-card {padding:21px 17px 25px!important}
+    main .astro-mobile-first-step .mobile-question-art {height:115px!important}
+    main .astro-mobile-first-step .mobile-question-card--third .mobile-question-art {
+      width:calc(100% + 34px)!important;
+      margin-left:-17px!important;
+      margin-right:-17px!important;
+      height:122px!important;
+    }
+    main .astro-mobile-first-step .mobile-question-card h3.h-card {font-size:28px!important}
+  }
+}
+@media screen and (max-width:640px) and (prefers-reduced-motion:no-preference) {
+  main .astro-mobile-first-step .mobile-question-art svg {
+    transition:transform 420ms cubic-bezier(.2,.65,.2,1), opacity 320ms ease;
+  }
+  main .astro-mobile-first-step .mobile-question-card:focus-within .mobile-question-art svg,
+  main .astro-mobile-first-step .mobile-question-card:active .mobile-question-art svg {
+    transform:translateY(-3px) scale(1.014);
+  }
+  @supports (animation-timeline:view()) {
+    main .astro-mobile-first-step .mobile-question-art svg {
+      animation-name:astro-editorial-art-arrive;
+      animation-duration:1s;
+      animation-timing-function:linear;
+      animation-fill-mode:both;
+      animation-timeline:view();
+      animation-range:entry 3% entry 80%;
+    }
+    @keyframes astro-editorial-art-arrive {
+      from{opacity:.67;transform:translateY(7px)}
+      to{opacity:1;transform:translateY(0)}
+    }
+  }
+}
+@media screen and (max-width:640px) and (prefers-reduced-motion:reduce) {
+  main .astro-mobile-first-step .mobile-question-art svg,
+  main .astro-mobile-first-step .mobile-question-card > a.text-link {
+    animation:none!important;
+    transition:none!important;
+    transform:none!important;
+  }
+}
