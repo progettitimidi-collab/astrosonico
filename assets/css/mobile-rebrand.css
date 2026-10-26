@@ -1,0 +1,342 @@
+/* ASTROSONICO | Mobile Rebrand 2026-10-26
+   Single source of truth for new mobile visual language.
+   Loaded after legacy CSS. No desktop styles are changed. */
+@media screen and (max-width:640px) {
+  :root {
+    --ink:#111111; --ink-soft:#454545; --rose:#f7c5d9;
+    --rose-deep:#ffafd1; --sky:#fff6f9; --lav:#fff7fa;
+    --paper:#ffffff; --white:#ffffff; --line:rgba(17,17,17,.17);
+    --violet:#a90057; --radius:19px;
+  }
+  html {scroll-padding-top:77px; overflow-x:clip}
+  body {background:#fff; color:#111; overflow-x:clip}
+  *, *::before, *::after {box-sizing:border-box}
+  .container {width:min(calc(100% - 34px),1190px)}
+  .site-header {background:#111!important;border-bottom:1px solid #373737!important;backdrop-filter:none}
+  .site-header .brand-logo {filter:brightness(0) invert(1)}
+  .site-header .nav-inner {min-height:70px}
+  .mobile-menu summary, .mobile-menu[open] summary {min-height:44px}
+  .mobile-menu summary {background:#111!important;color:#fff!important;border:1px solid #a0a0a0!important}
+  .mobile-menu[open] summary {background:#ff2d96!important;color:#111!important;border-color:#ff2d96!important}
+  .mobile-menu .mobile-nav {background:#111!important;border-color:#444!important;box-shadow:0 16px 35px #0005!important}
+  .mobile-menu .mobile-nav a {color:#fff!important;border-bottom-color:#444!important}
+  .mobile-menu .mobile-nav a[aria-current="page"] {color:#ff9dcb!important}
+  .mobile-menu .mobile-nav .nav-cta {background:#ff2d96!important;color:#111!important}
+  .footer {background:#111!important;color:#fff!important}
+  .footer h3 {color:#ffafd1!important}
+  .footer p,.footer-bottom {color:#e7e7e7!important}
+  .footer a {color:#fff!important}
+  .footer .brand-logo {filter:brightness(0) invert(1)}
+  main {color:#111}
+  main :is(h1,h2,h3,.h-display,.h-large,.h-medium,.h-card) {text-wrap:balance}
+  main h1 {font-size:clamp(39px,11.5vw,52px)!important;line-height:1.04!important;letter-spacing:-.052em!important}
+  main h2,.h-medium {line-height:1.13!important}
+  main p {line-height:1.48!important}
+  main .eyebrow, main .kicker {color:#9a004e!important;letter-spacing:.13em!important}
+  main .text-lead {color:#333!important}
+  main .button, main a.button,main button.button {
+    border-radius:100px!important;min-height:48px!important;
+    font-family:var(--sans)!important;font-size:13px!important;font-weight:800!important;
+    letter-spacing:.012em!important;line-height:1.25!important;
+    padding:14px 20px!important;text-decoration:none!important;
+    box-shadow:none!important;gap:7px;
+  }
+  main :is(.button-primary,.button-light,.button-outline) {
+    background:#111!important;border:1px solid #111!important;color:#fff!important;
+  }
+  main :is(.button-primary,.button-light,.button-outline):hover {
+    background:#333!important;border-color:#333!important;color:#fff!important
+  }
+  main .text-link {color:#111!important;font-size:13px!important;border-bottom-color:#111!important}
+  main .button:focus-visible,main a:focus-visible,main button:focus-visible,
+  main :is(input,textarea,select):focus-visible {
+    outline:3px solid #ff2d96!important;outline-offset:3px!important;
+  }
+  main .bg-blush {background:#f7c5d9!important}
+  main .bg-sky {background:#f7c5d9!important}
+  main :is(.path-card,.service-card,.detail-card,.gift-option,.soft-card) {
+    border-color:#ddd!important;box-shadow:none!important
+  }
+  main .faq-list summary::after {color:#111!important}
+  main .faq-list summary,main .faq-list p {color:#111!important}
+  main .banner::after {display:none!important;content:none!important}
+
+  /* Homepage: bold black introduction / single clear action. */
+  main .hero {background:#111!important;color:#fff!important;
+    padding:33px 0 42px!important;overflow:hidden;isolation:isolate}
+  main .hero::before {width:235px!important;height:235px!important;
+    top:-85px!important;right:-85px!important;border:1px solid #ff2d96!important;
+    border-radius:50%!important;background:none!important;opacity:.63;z-index:-1}
+  main .hero::after {content:"";position:absolute;right:-135px;top:28px;
+    width:250px;height:250px;border:1px solid rgba(255,45,150,.35);
+    border-radius:50%;z-index:-1;pointer-events:none}
+  main .hero-grid {grid-template-columns:1fr!important;gap:0!important}
+  main .hero .hero-copy {position:relative;z-index:1}
+  main .hero .h-display {
+    font-family:var(--sans)!important;font-style:normal!important;font-weight:800!important;
+    font-size:clamp(43px,12.3vw,64px)!important;line-height:1.01!important;
+    letter-spacing:-.065em!important;color:#fff!important;
+    max-width:540px;margin:12px 0 20px!important
+  }
+  main .hero .h-display em {font-family:var(--sans)!important;
+    color:#ff2d96!important;font-style:normal!important;font-weight:800!important}
+  main .hero .text-lead {display:none!important}
+  main .hero .hero-mobile-intro {display:block!important;
+    font-size:16px!important;color:#f4f4f4!important;line-height:1.44!important;
+    margin:0 0 24px!important;max-width:380px}
+  main .hero .hero-visual {display:none!important}
+  main .hero .button-row {margin:0!important}
+  main .hero .mobile-quick-choice {
+    width:auto!important;display:inline-flex!important;background:#ff2d96!important;
+    color:#111!important;border-color:#ff2d96!important;
+    padding:15px 25px!important;min-height:51px!important
+  }
+  main .hero .mobile-quick-choice:hover {background:#ff76b6!important;border-color:#ff76b6!important}
+  main .hero .hero-assurance,main .hero .eyebrow {display:none!important}
+  main #da-dove-iniziare {display:none!important}
+
+  /* Founder: deliberately different pink editorial section. */
+  main .mobile-founder-copy {display:block!important;background:#f7c5d9!important;
+    padding:34px 0 39px!important}
+  main .desktop-founder-block {display:none!important}
+  main .mobile-founder-copy .split {display:grid!important;gap:20px!important}
+  main .mobile-founder-copy .portrait-frame {border-radius:16px!important;
+    min-height:250px!important;max-height:250px!important;background:#f1a7c5!important}
+  main .mobile-founder-copy .portrait-frame img {object-fit:cover!important;object-position:center 31%}
+  main .mobile-founder-copy .eyebrow {color:#111!important}
+  main .mobile-founder-copy .h-large {font-family:var(--serif)!important;font-size:36px!important;
+    font-weight:400!important;color:#111!important;margin:8px 0 14px!important}
+  main .mobile-founder-copy .h-large em {font-style:italic;color:#a90057!important}
+  main .mobile-founder-copy p,main .mobile-founder-copy .text-lead {color:#111!important;
+    font-size:15px!important;line-height:1.46!important}
+  main .mobile-founder-copy .text-link {display:none!important}
+
+  /* Sessions: white space and short alternating pink/white cards. */
+  main #sessioni-in-evidenza {background:#fff!important;padding:38px 0 44px!important}
+  main #sessioni-in-evidenza .eyebrow {color:#a90057!important}
+  main #sessioni-in-evidenza .section-heading {margin-bottom:22px!important}
+  main #sessioni-in-evidenza .section-heading .h-medium {font-size:35px!important;
+    font-family:var(--serif)!important;font-weight:400!important;color:#111!important}
+  main #sessioni-in-evidenza .section-heading .h-medium em {color:#a90057!important}
+  main #sessioni-in-evidenza .service-grid {gap:13px!important}
+  main #sessioni-in-evidenza .service-card {border:1px solid #dfd8db!important;
+    background:#fff8fb!important;border-radius:18px!important;padding:22px!important}
+  main #sessioni-in-evidenza .service-card:first-child {background:#f7c5d9!important;
+    border-color:#f7c5d9!important}
+  main #sessioni-in-evidenza .service-card .eyebrow {color:#94004f!important}
+  main #sessioni-in-evidenza .service-highlight {background:#111!important;color:#fff!important}
+  main #sessioni-in-evidenza .service-card .h-card {font-family:var(--serif)!important;
+    font-size:31px!important;margin:8px 0 11px!important;color:#111!important}
+  main #sessioni-in-evidenza .service-card p {color:#333!important}
+  main #sessioni-in-evidenza .service-card .price {color:#111!important;
+    font-size:30px!important}
+  main #sessioni-in-evidenza .service-card .price small {color:#444!important}
+  main #sessioni-in-evidenza .service-bottom {border-top-color:#1113!important}
+  main #sessioni-in-evidenza .service-bottom .text-link {font-weight:800!important}
+  main #sessioni-in-evidenza .section-heading>.text-link {display:none!important}
+
+  /* Business: a black editorial interlude with an authentic brand image. */
+  main .mobile-home-business {background:#111!important;color:#fff!important;padding:40px 0!important}
+  main .mobile-home-business .featured-wide {background:#111!important;border-radius:0!important}
+  main .mobile-home-business .featured-wide .content {padding:0!important}
+  main .mobile-home-business .eyebrow {color:#ff9dcb!important}
+  main .mobile-home-business .h-large {font-family:var(--sans)!important;
+    font-weight:800!important;font-size:39px!important;line-height:1.05!important;
+    letter-spacing:-.048em!important;color:#fff!important;margin:10px 0 18px!important}
+  main .mobile-home-business p {color:#f0f0f0!important;font-size:15px!important;line-height:1.49!important}
+  main .mobile-home-business .featured-wide .image-side {display:block!important;
+    background:#111!important;order:2!important;min-height:0!important;
+    height:auto!important;margin-top:22px;border-radius:12px!important;overflow:hidden}
+  main .mobile-home-business .image-side img {display:block!important;width:100%!important;
+    height:auto!important;position:static!important;object-fit:contain!important;
+    background:#111!important;aspect-ratio:1672/941}
+  main .mobile-home-business .mini-stats {display:none!important}
+  main .mobile-home-business .button-primary {background:#ff2d96!important;
+    border-color:#ff2d96!important;color:#111!important}
+
+  /* Retreat: photographic pause with untouched user-provided poster. */
+  main .mobile-home-retreats {background:#fcf6f0!important;padding:41px 0!important}
+  main .mobile-home-retreats .section-heading {margin-bottom:18px!important}
+  main .mobile-home-retreats .section-heading .h-medium {font-size:31px!important;
+    color:#111!important}
+  main .mobile-home-retreats .featured-wide {background:transparent!important;border-radius:0!important}
+  main .mobile-home-retreats .featured-wide .content {padding:0!important}
+  main .mobile-home-retreats .featured-wide .image-side {display:none!important}
+  main .mobile-home-retreats .featured-wide h3 {font-size:28px!important;
+    color:#111!important;margin:8px 0 15px!important}
+  main .mobile-home-retreats .featured-wide .content>p {display:none!important}
+  main .mobile-radici-poster {display:block!important;margin:16px 0 23px!important}
+  main .mobile-radici-poster img {display:block!important;width:min(100%,380px)!important;
+    height:auto!important;margin-inline:auto;border-radius:13px!important;
+    background:#332d24!important;box-shadow:0 13px 24px #0002!important}
+
+  /* Gift card: confident pink block, actual vector illustration. */
+  main .mobile-home-gift {background:#f7c5d9!important;padding:41px 0!important}
+  main .mobile-home-gift .split {display:block!important}
+  main .mobile-home-gift .eyebrow {color:#111!important}
+  main .mobile-home-gift .h-medium {font-size:35px!important;color:#111!important}
+  main .mobile-home-gift .text-lead {color:#111!important}
+  main .mobile-only-gift-illustration {display:block!important;max-width:350px!important;
+    margin:18px auto 23px!important}
+  main .mobile-only-gift-illustration svg {border-radius:13px!important;width:100%!important;height:auto!important}
+  main .mobile-home-gift .gift-preview {display:none!important}
+
+  /* FAQs: intentionally light after the colored commercial blocks. */
+  main .mobile-home-faq {background:#fff!important;padding:38px 0!important}
+  main .mobile-home-faq .h-medium {font-size:32px!important;color:#111!important}
+  main .mobile-home-faq details:nth-child(n+4) {display:none!important}
+  main .mobile-home-faq .faq-list summary {color:#111!important}
+
+  /* Contact: clean, sharply contrasting black call to action. */
+  main .mobile-home-contact {background:#fff!important;padding:0 0 42px!important}
+  main .mobile-home-contact .banner {background:#111!important;color:#fff!important;
+    border:0!important;border-radius:19px!important;padding:30px 24px!important}
+  main .mobile-home-contact .banner::after {content:none!important;display:none!important}
+  main .mobile-home-contact .banner .eyebrow {color:#ff9dcb!important}
+  main .mobile-home-contact .banner .h-medium {color:#fff!important;
+    font-family:var(--sans)!important;font-weight:800!important;
+    font-size:31px!important;line-height:1.09!important}
+  main .mobile-home-contact .banner p {color:#eee!important;font-size:15px!important}
+  main .mobile-home-contact .banner .button-light {background:#ff2d96!important;
+    color:#111!important;border-color:#ff2d96!important}
+
+  /* Shared mobile inner-page palette and typographic hierarchy. */
+  main :is(.page-hero,.afb-hero,.ev-hero,.annual-hero,.call-intro,.ab-hero) {
+    background:#111!important;color:#fff!important;background-image:none!important;
+    padding:35px 0!important
+  }
+  main :is(.page-hero,.afb-hero,.ev-hero,.annual-hero,.call-intro,.ab-hero) :is(h1,h2) {
+    color:#fff!important
+  }
+  main :is(.page-hero,.afb-hero,.ev-hero,.annual-hero,.call-intro,.ab-hero) :is(.text-lead,.afb-lead,.afb-lead-secondary,.ev-lead,.annual-lead,.call-lead,p:not(.eyebrow):not(.afb-kicker):not(.annual-kicker)) {
+    color:#f0f0f0!important
+  }
+  main :is(.page-hero,.afb-hero,.ev-hero,.annual-hero,.call-intro,.ab-hero) :is(.eyebrow,.kicker,.afb-kicker,.annual-kicker,.call-kicker) {
+    color:#ffafd1!important
+  }
+  main :is(.page-hero,.afb-hero,.ev-hero,.annual-hero,.call-intro,.ab-hero) h1 em {color:#ff2d96!important}
+  main .page-hero.has-image {background:#f7c5d9!important;color:#111!important}
+  main .page-hero.has-image :is(h1,h2,.text-lead,p,.eyebrow,.kicker) {color:#111!important}
+  main .page-hero.has-image h1 em {color:#a90057!important}
+  main .page-hero.has-image .page-hero-image {background:#f4aaca!important}
+  main .detail-card {background:#fff9fb!important;border-color:#dcd0d6!important}
+  main .detail-card:first-child {background:#f7c5d9!important;border-color:#f7c5d9!important}
+  main .detail-card h2,main .detail-card strong {color:#111!important}
+  main .detail-card .pill {color:#111!important;border-color:#777!important}
+  main .detail-card p,main .detail-card li {color:#333!important}
+  main .detail-card .button {background:#111!important;color:#fff!important}
+  main .flow-row .flow-step:first-child {background:#f7c5d9!important}
+  main .bg-sky {background:#f7c5d9!important}
+
+  /* Business internal page */
+  main .afb-hero .afb-founder-panel {background:#fff!important;border:1px solid #ddd!important;
+    border-radius:18px!important}
+  main .afb-hero .afb-founder-panel :is(p,.afb-founder-quote,.afb-founder-sign,.afb-founder-small) {color:#111!important}
+  main .afb-hero .afb-actions .button-primary {background:#ff2d96!important;
+    color:#111!important;border-color:#ff2d96!important}
+  main .afb-hero .afb-inline-link {color:#ffafd1!important;border-bottom-color:#ffafd1!important}
+  main .afb-photo-spread {display:block!important;background:#fff!important}
+  main .afb-photo-spread img {width:100%!important;height:auto!important;max-height:none!important;object-fit:contain!important}
+  main .afb-manifesto {background:#111!important;color:#fff!important}
+  main .afb-manifesto-line,main .afb-manifesto-line em {color:#fff!important}
+  main .afb-manifesto-line em {color:#ff2d96!important}
+  main .afb-history,.afb-section {color:#111}
+  main .afb-section .eyebrow {color:#a90057!important}
+  main .afb-section .afb-card,main .afb-section .afb-method-card {background:#fff8fb!important;border-color:#ddd!important}
+  main .afb-card-symbol,main .afb-method-n,main .afb-num {color:#a90057!important}
+  main .afb-synastry-callout, main .afb-serif-quote {background:#f7c5d9!important;
+    border-left-color:#ff2d96!important;color:#111!important}
+  main .afb-season-orbit,main .afb-season-orbit::before,main .afb-season-orbit::after {border-color:#ff2d96!important}
+  main .afb-deep,main .afb-wealth {background:#fff!important}
+  main .afb-program {background:#fff4f8!important}
+  main .afb-program-index div {background:#fff!important;border:1px solid #edd2dc!important}
+  main .afb-program-index strong {color:#111!important}
+  main .afb-wealth-content p,main .afb-text-block p,main .afb-section p {color:#333}
+  main .afb-cta {background:#111!important;color:#fff!important}
+  main .afb-cta :is(h2,h3) {color:#fff!important}
+  main .afb-cta p {color:#f1f1f1!important}
+  main .afb-cta .eyebrow {color:#ffafd1!important}
+  main .afb-cta-price .button {background:#ff2d96!important;border-color:#ff2d96!important;
+    color:#111!important}
+  main .afb-cta-price .afb-new {color:#fff!important}
+
+  /* Gift card and checkout surfaces */
+  main .gift-request {background:#fff!important}
+  main .gift-form,main .annual-form,main .call-form,main .ab-panel {background:#fff!important;
+    color:#111!important;border-color:#ddd!important}
+  main .gift-privacy,main .privacy-note,main .radici-form .privacy-info {
+    background:#fff4f8!important;color:#222!important}
+  main .gift-request .gift-note {background:#f7c5d9!important;color:#111!important}
+  main .gift-preview--photographic {border-radius:17px!important}
+  main .gift-option {background:#fff7fa!important}
+  main .gift-option:first-child {background:#f7c5d9!important}
+  main .gift-form-feedback {background:#fff0f0!important;color:#86121e!important}
+
+  /* Retreat and events: pink/white passages, not purple gradients. */
+  main .radici-hero {background:#f7c5d9!important;background-image:none!important;color:#111!important}
+  main .radici-hero :is(.radici-title,.radici-subtitle,.radici-intro) {color:#111!important}
+  main .radici-hero .radici-eyebrow {color:#111!important}
+  main .radici-hero-photo {border-radius:15px!important}
+  main .radici-data-strip {background:#111!important;color:#fff!important}
+  main .radici-data-strip * {color:#fff!important}
+  main .radici-location,main .radici-themes {background:#fff7fa!important}
+  main .radici-transition {background:#111!important;color:#fff!important}
+  main .radici-transition :is(h2,h3,p) {color:#fff!important}
+  main .radici-transition .radici-transition-quote {background:#222!important;
+    color:#fff!important;border-left-color:#ff2d96!important}
+  main .radici-form-section {background:#fff4f8!important;background-image:none!important}
+  main .radici-form {background:#fff!important}
+  main .radici-benefits li::before,main .radici-for-list li::before {color:#a90057!important}
+  main .ev-section {background:#fff!important}
+  main .ev-detail.alt {background:#f7c5d9!important}
+  main .ev-detail.alt :is(h2,h3,p) {color:#111!important}
+  main .ev-card {border-color:#ddd!important;background:#fff!important}
+  main .ev-cover {background-color:#111!important}
+  main .ev-side-note {background:#f7c5d9!important;color:#111!important;border-left-color:#ff2d96!important}
+  main .ev-schedule-card {background:#fff7fa!important;border-color:#ddd!important}
+  main .ev-form {background:#fff!important;color:#111!important}
+  main .ev-mini-banner {background:#111!important;color:#fff!important}
+  main .ev-mini-banner p {color:#fff!important}
+  main .ev-closure {background:#111!important;color:#fff!important}
+  main .ev-closure :is(h2,h3,p) {color:#fff!important}
+
+  /* Annual transits: high contrast hero with legible white pricing card */
+  main .annual-hero .annual-price-card {background:#fff!important;color:#111!important;
+    border-color:#ddd!important}
+  main .annual-hero .annual-price-card :is(h2,p,.annual-price-current,.annual-saving) {color:#111!important}
+  main .annual-hero .annual-price-card .annual-price-old {color:#555!important}
+  main .annual-hero .annual-anchor,main .annual-hero .annual-facts {color:#ffafd1!important}
+  main .annual-hero .annual-price-card .button {background:#ff2d96!important;color:#111!important;border-color:#ff2d96!important}
+  main .annual-strip {background:#f7c5d9!important}
+  main .annual-strip * {color:#111!important}
+  main .annual-value-card {background:#fff7fa!important;border-color:#ddd!important}
+  main .annual-value-card .marker {color:#a90057!important}
+  main .annual-quote-block {background:#f7c5d9!important;border-left-color:#ff2d96!important;color:#111!important}
+  main .annual-request-section {background:#fff4f8!important}
+  main .annual-form {border-color:#ddd!important}
+  main .annual-fit-list li::before {color:#a90057!important}
+  main .annual-price-card::before {color:#a90057!important}
+
+  /* Inquiry pages and forms: keep controls legible, full width and functional */
+  main :is(.call-section,.ab-section) {background:#fff!important}
+  main .call-aside,main .ab-summary {background:#f7c5d9!important;color:#111!important}
+  main :is(.call-form,.ab-panel,.radici-form,.gift-form,.annual-form,.ev-form)
+   :is(input:not([type="checkbox"]):not([type="radio"]),textarea,select) {
+    background:#fff!important;color:#111!important;border:1px solid #777!important;
+    min-height:48px!important;border-radius:10px!important;
+  }
+  main :is(.call-form,.ab-panel,.radici-form,.gift-form,.annual-form,.ev-form)
+   :is(label,legend,.form-section-title) {color:#111!important}
+  main :is(.call-form,.ab-panel,.radici-form,.gift-form,.annual-form,.ev-form)
+    input[type="checkbox"] {accent-color:#111!important}
+  main :is(.call-section,.ab-section,.gift-request,.annual-request-section,.ev-detail,.radici-form-section)
+    button[type="submit"] {background:#111!important;color:#fff!important;
+      border-color:#111!important;min-height:50px!important}
+
+  /* Buttons have words only; decorative arrows were hidden in legacy mobile style. */
+  .mobile-action-glyph {display:none!important}
+  main .button [aria-hidden="true"],main .text-link [aria-hidden="true"] {display:none!important}
+  @media (prefers-reduced-motion:reduce) {
+    *,*::before,*::after {animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  }
+}
