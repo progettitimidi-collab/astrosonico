@@ -843,3 +843,50 @@
   }
 
 }
+
+/* Mobile editorial reading hierarchy — 26 Oct 2026.
+   Meaning first, explanation second. No changes to desktop, forms or prices. */
+@media screen and (max-width:640px) {
+  main p.reading-lead,
+  main p.text-lead.reading-lead,
+  main .mobile-founder-copy p.reading-lead,
+  main .afb-hero p.reading-lead,
+  main .afb-history p.reading-lead,
+  main .afb-wealth p.reading-lead,
+  main .radici-body p.reading-lead,
+  main .radici-themes-grid p.reading-lead,
+  main .radici-transition p.reading-lead,
+  main .annual-fit-copy p.reading-lead,
+  main .annual-section-heading p.reading-lead {
+    font-family:var(--sans)!important;
+    font-size:18px!important;
+    font-weight:500!important;
+    line-height:1.44!important;
+    letter-spacing:-.013em!important;
+    margin:0 0 18px!important;
+    max-width:65ch;
+  }
+  main p.reading-detail,
+  main .mobile-founder-copy p.reading-detail,
+  main .afb-hero p.reading-detail,
+  main .afb-wealth p.reading-detail,
+  main .radici-body p.reading-detail,
+  main .radici-themes-grid p.reading-detail,
+  main .radici-transition p.reading-detail,
+  main .annual-fit-copy p.reading-detail {
+    font-family:var(--sans)!important;
+    font-size:15px!important;
+    font-weight:400!important;
+    line-height:1.52!important;
+    letter-spacing:0!important;
+    margin:0 0 13px!important;
+    max-width:70ch;
+  }
+  main .mobile-founder-copy p.reading-detail {color:#514D49!important}
+  main .afb-hero p.reading-lead,main .afb-hero p.reading-detail,
+  main .radici-transition p.reading-lead,
+  main .radici-transition p.reading-detail {color:#F7F4EF!important}
+  main .afb-wealth p.reading-detail,
+  main .annual-fit-copy p.reading-detail {color:#514D49!important}
+  main .mobile-founder-copy .h-large {margin-bottom:17px!important}
+}
