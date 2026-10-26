@@ -192,7 +192,7 @@
   main .mobile-home-contact .banner {background:#111!important;color:#fff!important;
     border:0!important;border-radius:19px!important;padding:30px 24px!important}
   main .mobile-home-contact .banner::after {content:none!important;display:none!important}
-  main .mobile-home-contact .banner .eyebrow {color:#ff9dcb!important}
+  main .mobile-home-contact .banner .eyebrow,main .mobile-home-contact .banner .eyebrow.light {color:#ffafd1!important}
   main .mobile-home-contact .banner .h-medium {color:#fff!important;
     font-family:var(--sans)!important;font-weight:800!important;
     font-size:31px!important;line-height:1.09!important}
@@ -208,13 +208,15 @@
   main :is(.page-hero,.afb-hero,.ev-hero,.annual-hero,.call-intro,.ab-hero) :is(h1,h2) {
     color:#fff!important
   }
-  main :is(.page-hero,.afb-hero,.ev-hero,.annual-hero,.call-intro,.ab-hero) :is(.text-lead,.afb-lead,.afb-lead-secondary,.ev-lead,.annual-lead,.call-lead,p:not(.eyebrow):not(.afb-kicker):not(.annual-kicker)) {
+  main :is(.page-hero,.afb-hero,.ev-hero,.annual-hero,.call-intro,.ab-hero) :is(.text-lead,.afb-lead,.afb-lead-secondary,.ev-lead,.annual-lead,.call-lead) {
     color:#f0f0f0!important
   }
   main :is(.page-hero,.afb-hero,.ev-hero,.annual-hero,.call-intro,.ab-hero) :is(.eyebrow,.kicker,.afb-kicker,.annual-kicker,.call-kicker) {
     color:#ffafd1!important
   }
   main :is(.page-hero,.afb-hero,.ev-hero,.annual-hero,.call-intro,.ab-hero) h1 em {color:#ff2d96!important}
+  main .ab-hero > .container p,main .call-intro > .container p {color:#f0f0f0!important}
+  main .afb-hero .afb-founder-panel p,main .annual-hero .annual-price-card p {color:#111!important}
   main .page-hero.has-image {background:#f7c5d9!important;color:#111!important}
   main .page-hero.has-image :is(h1,h2,.text-lead,p,.eyebrow,.kicker) {color:#111!important}
   main .page-hero.has-image h1 em {color:#a90057!important}
