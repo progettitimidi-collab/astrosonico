@@ -1523,3 +1523,151 @@
     main .mobile-home-retreats .mobile-retreat-subtitle {font-size:16px!important}
   }
 }
+
+
+/* Sessioni individuali — service collection mobile.
+   Strictly scoped to the five illustrated cards; other pages unchanged. */
+@media screen and (max-width:640px) {
+  main #tutti-i-servizi .astro-service-grid {
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr)!important;
+    gap:16px!important;
+    align-items:stretch;
+  }
+  main #tutti-i-servizi .astro-service-card {
+    display:flex!important;
+    flex-direction:column!important;
+    min-width:0!important;
+    width:100%!important;
+    padding:23px 20px 24px!important;
+    background:#F7F4EF!important;
+    border:1px solid #D8D1C7!important;
+    border-radius:17px!important;
+    box-shadow:none!important;
+    transform:none!important;
+    overflow:hidden!important;
+  }
+  main #tutti-i-servizi .astro-service-card:first-child {
+    background:#D8D1C7!important;
+    border-color:#D8D1C7!important;
+  }
+  main #tutti-i-servizi .astro-service-card:nth-child(4) {
+    background:#EDE8E0!important;
+  }
+  main #tutti-i-servizi .astro-service-card > .eyebrow {
+    display:block!important;
+    color:#8E4B3E!important;
+    font:750 11px/1.4 var(--sans)!important;
+    letter-spacing:.14em!important;
+    margin:0 0 3px!important;
+    text-transform:uppercase!important;
+  }
+  main #tutti-i-servizi .astro-service-art {
+    display:block!important;
+    position:relative!important;
+    width:100%!important;
+    max-width:100%!important;
+    height:127px!important;
+    margin:11px 0 19px!important;
+    padding:0!important;
+    overflow:hidden!important;
+    border-radius:13px!important;
+    flex:none!important;
+    line-height:0!important;
+  }
+  main #tutti-i-servizi .astro-service-art svg {
+    display:block!important;
+    width:100%!important;
+    height:100%!important;
+    max-width:100%!important;
+    overflow:hidden!important;
+  }
+  main #tutti-i-servizi .astro-service-card > h2 {
+    color:#111111!important;
+    font:400 clamp(31px,8.5vw,39px)/1.09 var(--serif)!important;
+    letter-spacing:-.053em!important;
+    margin:0 0 15px!important;
+    text-wrap:balance;
+    overflow-wrap:break-word;
+  }
+  main #tutti-i-servizi .astro-service-card .meta {
+    display:flex!important;
+    flex-wrap:wrap!important;
+    gap:8px!important;
+    margin:0 0 18px!important;
+  }
+  main #tutti-i-servizi .astro-service-card .pill {
+    color:#49413B!important;
+    background:transparent!important;
+    border:1px solid #B9AFA5!important;
+    border-radius:100px!important;
+    padding:7px 10px!important;
+    font:650 11px/1.3 var(--sans)!important;
+    letter-spacing:.02em!important;
+  }
+  main #tutti-i-servizi .astro-service-card > p {
+    color:#514D49!important;
+    font:400 15px/1.57 var(--sans)!important;
+    margin:0 0 16px!important;
+  }
+  main #tutti-i-servizi .astro-service-card > ul {
+    color:#514D49!important;
+    padding-left:19px!important;
+    margin:0 0 23px!important;
+    font:400 14px/1.6 var(--sans)!important;
+  }
+  main #tutti-i-servizi .astro-service-card > ul li + li {margin-top:6px}
+  main #tutti-i-servizi .astro-service-card .detail-cta {
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+    gap:13px!important;
+    margin-top:auto!important;
+    padding-top:18px!important;
+    border-top:1px solid rgba(17,17,17,.18)!important;
+    min-width:0!important;
+  }
+  main #tutti-i-servizi .astro-service-card .detail-cta > strong {
+    display:block!important;
+    font:400 34px/1.1 var(--serif)!important;
+    letter-spacing:-.055em!important;
+    color:#111111!important;
+  }
+  main #tutti-i-servizi .astro-service-card .detail-cta .old-price {
+    color:#655952!important;
+    font:400 17px/1 var(--sans)!important;
+    letter-spacing:0!important;
+    margin-right:10px!important;
+  }
+  main #tutti-i-servizi .astro-service-card .detail-cta .button {
+    display:flex!important;
+    width:100%!important;
+    max-width:100%!important;
+    min-height:49px!important;
+    padding:13px 14px!important;
+    border-radius:12px!important;
+    font:750 12px/1.35 var(--sans)!important;
+    letter-spacing:.05em!important;
+    color:#F7F4EF!important;
+    background:#111111!important;
+    border:1px solid #111111!important;
+    text-align:center!important;
+    white-space:normal!important;
+  }
+  main #tutti-i-servizi .astro-service-card .detail-cta a:focus-visible {
+    outline:3px solid #8E4B3E!important;
+    outline-offset:4px!important;
+  }
+  @media (max-width:350px) {
+    main #tutti-i-servizi .astro-service-card{padding:19px 16px 22px!important}
+    main #tutti-i-servizi .astro-service-art{height:114px!important}
+    main #tutti-i-servizi .astro-service-card > h2{font-size:30px!important}
+  }
+}
+@media screen and (max-width:640px) and (prefers-reduced-motion:reduce) {
+  main #tutti-i-servizi .astro-service-card,
+  main #tutti-i-servizi .astro-service-card *,
+  main #tutti-i-servizi .astro-service-art svg * {
+    animation:none!important;transition:none!important;transform:none!important;
+  }
+}
