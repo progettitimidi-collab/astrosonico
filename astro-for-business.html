@@ -988,15 +988,94 @@ main .afb-program-mobile-action{display:none}
     text-align:center;
   }
 }
+
+/* Astro for Business · mobile-only Celestial Business Atlas and Candidati buttons. */
+main .afb-hero .afb-business-atlas{display:none!important}
+main .afb-call-label-desktop,main .afb-next-step-desktop{display:inline}
+main .afb-call-label-mobile,main .afb-next-step-mobile{display:none}
+@media screen and (max-width:640px){
+  main .afb-call-label-desktop,main .afb-next-step-desktop{display:none!important}
+  main .afb-call-label-mobile,main .afb-next-step-mobile{display:inline!important}
+  main .afb-call-mobile-context{
+    position:absolute!important;width:1px!important;height:1px!important;
+    padding:0!important;margin:-1px!important;overflow:hidden!important;
+    clip:rect(0,0,0,0)!important;clip-path:inset(50%)!important;
+    white-space:nowrap!important;border:0!important;
+  }
+  main .afb-hero .afb-hero-grid > div:first-child > .afb-kicker{order:0}
+  main .afb-hero .afb-hero-grid > div:first-child > .afb-business-atlas{
+    display:block!important;flex:none;order:1;position:relative;
+    width:100%;max-width:460px;height:clamp(75px,23vw,101px);
+    margin:-3px 0 9px;overflow:hidden;pointer-events:none;user-select:none;
+  }
+  main .afb-hero .afb-business-atlas svg{
+    display:block;width:100%;height:100%;max-width:100%;overflow:hidden;
+  }
+  main .afb-hero .afb-hero-grid > div:first-child > h1{order:2}
+  main .afb-hero .afb-hero-grid > div:first-child > .afb-lead{order:3}
+  main .afb-hero .afb-hero-grid > div:first-child > .afb-actions{order:4}
+  main .afb-hero .afb-hero-grid > div:first-child > .afb-hero-next-step{order:5}
+  main .afb-hero .afb-hero-grid > div:first-child > .afb-hero-facts{order:6}
+  main .afb-hero .afb-hero-next-step{max-width:44ch}
+  main .afb-hero .afb-actions .button-primary,
+  main .afb-program .afb-program-mobile-action .button,
+  main .afb-cta .afb-cta-price .button{min-height:49px!important}
+}
+@media screen and (max-width:350px){
+  main .afb-hero .afb-hero-grid > div:first-child > .afb-business-atlas{
+    height:73px;margin:-5px 0 7px;
+  }
+}
+@media screen and (max-width:640px) and (prefers-reduced-motion:no-preference){
+  main .afb-hero .afb-business-atlas .afb-business-atlas-trace{
+    stroke-dasharray:1;stroke-dashoffset:1;
+    animation:afb-business-atlas-draw 1250ms cubic-bezier(.25,.66,.27,1) 80ms both;
+  }
+  main .afb-hero .afb-business-atlas .afb-business-atlas-trace--delay{animation-delay:280ms}
+  main .afb-hero .afb-business-atlas .afb-business-atlas-trace--route{animation-delay:430ms}
+  main .afb-hero .afb-business-atlas .afb-business-atlas-points{
+    animation:afb-business-atlas-appear 520ms ease-out 890ms both;
+  }
+  @keyframes afb-business-atlas-draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+  @keyframes afb-business-atlas-appear{from{opacity:0}to{opacity:1}}
+}
+@media screen and (max-width:640px) and (prefers-reduced-motion:reduce){
+  main .afb-hero .afb-business-atlas :is(path,ellipse,circle,g){
+    animation:none!important;stroke-dashoffset:0!important;
+  }
+}
 </style>
 </head><body><a class="skip-link" href="#contenuto">Vai al contenuto</a><header class="site-header"><div class="container nav-inner"><a class="brand" href="index.html" aria-label="AstroSonico, torna alla homepage"><img class="brand-logo" src="assets/img/astrosonico-logo.svg?v=20261022-logo-2" alt="AstroSonico" width="1839" height="750"></a><nav class="desktop-nav" aria-label="Navigazione principale"><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="sessioni.html">Sessioni individuali</a><a class="nav-link" href="astro-for-business.html" aria-current="page">Astro for Business</a><a class="nav-link" href="gift-card.html">Gift Card</a><a class="nav-link" href="ritiri.html">Ritiri</a><a class="nav-link" href="eventi.html">Eventi</a></nav><a class="nav-cta desktop-cta" href="mailto:cibosupersonico@gmail.com?subject=AstroSonico%20-%20richiesta%20informazioni">Scrivimi <span class="mobile-action-glyph" aria-hidden="true">↗</span></a><details class="mobile-menu"><summary aria-label="Apri il menu di navigazione"><span class="menu-glyph" aria-hidden="true">☰</span><span>Menu</span></summary><nav class="mobile-nav" aria-label="Navigazione mobile"><a href="index.html">Home</a><a href="sessioni.html">Sessioni individuali</a><a href="astro-for-business.html" aria-current="page">Astro for Business</a><a href="gift-card.html">Gift Card</a><a href="ritiri.html">Ritiri</a><a href="eventi.html">Eventi</a><a class="nav-cta" href="mailto:cibosupersonico@gmail.com?subject=AstroSonico%20-%20richiesta%20informazioni">Scrivimi <span class="mobile-action-glyph" aria-hidden="true">↗</span></a></nav></details></div></header><main id="contenuto">
 <section class="afb-hero" aria-labelledby="afb-title"><div class="container afb-hero-grid"><div>
 <p class="afb-kicker">ASTRO FOR BUSINESS · IMPRENDITRICI, FREELANCE E CREATIVE</p>
+<div class="afb-business-atlas" aria-hidden="true">
+  <svg viewBox="0 0 460 112" xmlns="http://www.w3.org/2000/svg" focusable="false" preserveAspectRatio="xMidYMid meet">
+    <g fill="none" stroke="#F7F4EF" stroke-width=".85" stroke-linecap="round" opacity=".42">
+      <path class="afb-business-atlas-trace" pathLength="1" d="M152 105C207 63 277 23 342 14C393 7 428 27 457 59"/>
+      <path class="afb-business-atlas-trace afb-business-atlas-trace--delay" pathLength="1" d="M211 109C221 55 273 5 333 2C394-1 433 30 458 77"/>
+    </g>
+    <g fill="none" stroke="#D8D1C7" stroke-width=".72" stroke-linecap="round" opacity=".43">
+      <path d="M185 84H455" stroke-dasharray="2 6"/>
+      <path d="M337 7V106" stroke-dasharray="2 8"/>
+      <path d="M200 41h15m-7.5-7.5v15M392 15h12m-6-6v12M278 93h14m-7-7v14M437 96h16"/>
+      <ellipse cx="358" cy="62" rx="99" ry="29" transform="rotate(-21 358 62)" stroke-dasharray="3 7"/>
+    </g>
+    <path class="afb-business-atlas-trace afb-business-atlas-trace--route" pathLength="1" d="M226 91C270 67 301 48 344 55S412 31 452 18" fill="none" stroke="#D8B6B0" stroke-width=".95" opacity=".76"/>
+    <path class="afb-business-atlas-trace afb-business-atlas-trace--delay" pathLength="1" d="M257 13C309 28 353 78 447 86" fill="none" stroke="#D8D1C7" stroke-width=".84" opacity=".55"/>
+    <g class="afb-business-atlas-points" fill="#D8B6B0">
+      <circle cx="226" cy="91" r="2.25"/><circle cx="344" cy="55" r="2.65"/><circle cx="452" cy="18" r="2.3"/>
+    </g>
+    <g class="afb-business-atlas-points" fill="#F7F4EF" opacity=".82">
+      <circle cx="257" cy="13" r="1.55"/><circle cx="353" cy="62" r="1.6"/><circle cx="447" cy="86" r="1.6"/>
+    </g>
+    <circle cx="344" cy="55" r="7.5" fill="none" stroke="#8E4B3E" stroke-width=".72" opacity=".78"/>
+  </svg>
+</div>
 <h1 id="afb-title">Anche il tuo business <em>ha un cielo.</em></h1>
 <p class="afb-lead reading-lead">Un percorso di dodici mesi per osservare il rapporto fra ciò che sei e ciò che costruisci. Attraverso astrologia, Tarocchi, Cabala e meditazione esploriamo i tuoi cicli, il rapporto con valore, visibilità, abbondanza e le domande che emergono quando devi scegliere.</p>
 <ul class="afb-hero-facts" aria-label="Il percorso in sintesi"><li><strong>12</strong> mesi</li><li><strong>7</strong> incontri individuali</li><li><strong>6</strong> meditazioni registrate</li></ul>
-<div class="afb-actions"><a class="button button-primary" href="prenota-call-business.html">Richiedi una call conoscitiva <span class="mobile-action-glyph" aria-hidden="true">↗</span></a><a class="afb-inline-link" href="#cosa-comprende">Scopri il programma <span class="mobile-action-glyph" aria-hidden="true">↓</span></a></div>
-<p class="afb-hero-next-step">Raccontami il tuo progetto. Ti risponderò personalmente via email per concordare un incontro.</p>
+<div class="afb-actions"><a class="button button-primary" href="prenota-call-business.html"><span class="afb-call-label-desktop">Richiedi una call conoscitiva</span><span class="afb-call-label-mobile">Candidati<span class="afb-call-mobile-context"> per una call conoscitiva</span></span> <span class="mobile-action-glyph" aria-hidden="true">↗</span></a><a class="afb-inline-link" href="#cosa-comprende">Scopri il programma <span class="mobile-action-glyph" aria-hidden="true">↓</span></a></div>
+<p class="afb-hero-next-step"><span class="afb-next-step-desktop">Raccontami il tuo progetto. Ti risponderò personalmente via email per concordare un incontro.</span><span class="afb-next-step-mobile">Raccontami il tuo progetto. Ti risponderò personalmente via email per concordare una call conoscitiva.</span></p>
 </div><aside class="afb-founder-panel"><span class="afb-founder-kicker">Una parola da Francesca</span><p class="afb-founder-quote">«Sono strumenti che utilizzo prima di tutto nella mia vita. Mi accompagnano nella crescita personale e spirituale, nella creatività e nel modo in cui porto avanti il mio lavoro.»</p><p class="afb-founder-small">Conosco bene la sensazione di mettere tutta sé stessa in un progetto. È da questa esperienza che nasce il desiderio di accompagnare altre donne che lavorano in proprio.</p><span class="afb-founder-sign">Francesca · AstroSonico</span><figure class="editorial-mobile-business-portrait"><img src="assets/img/francesca-editorial-sunglasses.webp" width="780" height="1170" loading="lazy" decoding="async" alt="Francesca in un ritratto editoriale in bianco e nero con occhiali"></figure><div class="afb-portraits" aria-label="Ritratti fotografici di Francesca"><img src="assets/img/ritratto-bn-occhiali-mini.webp" width="133" height="200" loading="lazy" alt="Ritratto in bianco e nero di Francesca con gli occhiali"><img src="assets/img/ritratto-caldo-mini.webp" width="158" height="200" loading="lazy" alt="Ritratto di Francesca con luce calda"><img src="assets/img/ritratto-bn-ritratto-mini.webp" width="133" height="200" loading="lazy" alt="Ritratto di Francesca a occhi chiusi"></div></aside></div></section>
 <section class="afb-section afb-fit" id="per-chi"><div class="container afb-for-grid">
 <div class="afb-fit-intro">
@@ -1042,7 +1121,7 @@ main .afb-program-mobile-action{display:none}
 </div>
 <div class="container afb-program-mobile-action" aria-label="Investimento e richiesta call">
   <p>Investimento promozionale: <strong>1.450 €</strong> <del>1.800 €</del><span> · Pagamento possibile in due rate.</span></p>
-  <a class="button button-primary" href="prenota-call-business.html">Richiedi una call conoscitiva <span aria-hidden="true">↗</span></a>
+  <a class="button button-primary" href="prenota-call-business.html"><span class="afb-call-label-desktop">Richiedi una call conoscitiva</span><span class="afb-call-label-mobile">Candidati<span class="afb-call-mobile-context"> per una call conoscitiva</span></span> <span aria-hidden="true">↗</span></a>
 </div>
 </section>
 <section class="afb-early-stage" id="la-tua-attivita" aria-labelledby="afb-early-stage-title">
@@ -1133,7 +1212,7 @@ main .afb-program-mobile-action{display:none}
 
 <section class="afb-cta" id="richiedi-informazioni"><div class="container afb-cta-grid">
 <div><span class="eyebrow">Richiedi una call conoscitiva</span><h2>Ti va di raccontarmi cosa stai costruendo?</h2><p>Raccontami il tuo progetto attraverso il modulo. Ti risponderò personalmente via email per concordare una call: potremo capire se il percorso è adatto a ciò che stai costruendo. Il giorno e l’orario non vengono prenotati automaticamente.</p><p>Gli incontri si svolgono online. È possibile suddividere il pagamento in due rate.</p></div>
-<div class="afb-cta-price"><span class="afb-promo">Promozione lancio</span><div class="afb-price-line"><del class="afb-old">1.800 €</del><strong class="afb-new">1.450 €</strong></div><p>12 mesi · 7 incontri individuali · 6 meditazioni registrate · supporto via email.</p><a class="button" href="prenota-call-business.html">Richiedi una call conoscitiva <span class="mobile-action-glyph" aria-hidden="true">↗</span></a></div>
+<div class="afb-cta-price"><span class="afb-promo">Promozione lancio</span><div class="afb-price-line"><del class="afb-old">1.800 €</del><strong class="afb-new">1.450 €</strong></div><p>12 mesi · 7 incontri individuali · 6 meditazioni registrate · supporto via email.</p><a class="button" href="prenota-call-business.html"><span class="afb-call-label-desktop">Richiedi una call conoscitiva</span><span class="afb-call-label-mobile">Candidati<span class="afb-call-mobile-context"> per una call conoscitiva</span></span> <span class="mobile-action-glyph" aria-hidden="true">↗</span></a></div>
 </div></section>
 <section class="afb-section"><div class="container afb-faq"><div class="afb-section-heading"><span class="eyebrow">Domande frequenti</span><h2 class="h-medium">Prima di iniziare.</h2></div>
 
