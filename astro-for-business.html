@@ -593,6 +593,117 @@ main .afb-history .afb-manifesto .afb-manifesto-line em{
     padding:.09em .12em .12em!important;
   }
 }
+
+/* Astro for Business · concise method cards with native, accessible disclosures.
+   Scope: #metodo only. Native details/summary works with keyboard and no JS. */
+main #metodo .afb-method-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:17px!important;
+  align-items:stretch;
+}
+main #metodo .afb-method-card.afb-method-reveal{
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  min-height:0!important;
+  padding:clamp(23px,2.9vw,37px)!important;
+  background:#F7F4EF!important;
+  border:1px solid #D8D1C7!important;
+  border-radius:12px!important;
+  box-shadow:none!important;
+}
+main #metodo .afb-method-reveal .afb-method-n{
+  color:#8E4B3E!important;
+  font:700 11px/1.45 var(--sans);
+  letter-spacing:.12em;
+  margin:0 0 clamp(18px,2.2vw,28px)!important;
+}
+main #metodo .afb-method-reveal h3{
+  font:400 clamp(26px,2.7vw,35px)/1.15 var(--serif);
+  letter-spacing:-.035em;
+  color:#111111!important;
+  margin:0 0 15px;
+  max-width:20ch;
+}
+main #metodo .afb-method-reveal > .afb-method-teaser{
+  font:400 15px/1.58 var(--sans);
+  color:#514D49!important;
+  margin:0 0 22px;
+  max-width:49ch;
+}
+main #metodo .afb-method-detail{
+  margin-top:auto;
+  border-top:1px solid #C6BFB7;
+  padding-top:0;
+  color:#111111;
+}
+main #metodo .afb-method-detail summary{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:14px;
+  min-height:48px;
+  padding:13px 0 5px;
+  color:#69372F;
+  font:700 12px/1.35 var(--sans);
+  letter-spacing:.07em;
+  text-transform:uppercase;
+  list-style:none;
+  cursor:pointer;
+  -webkit-tap-highlight-color:transparent;
+}
+main #metodo .afb-method-detail summary::-webkit-details-marker{display:none}
+main #metodo .afb-method-detail summary::marker{content:""}
+main #metodo .afb-method-detail summary:focus-visible{
+  outline:2px solid #8E4B3E;
+  outline-offset:3px;
+  border-radius:3px;
+}
+main #metodo .afb-method-detail .afb-method-plus{
+  display:inline-grid;
+  place-items:center;
+  flex:0 0 29px;
+  width:29px;
+  height:29px;
+  border:1px solid #AC8F88;
+  border-radius:50%;
+  color:#69372F;
+  font:400 22px/1 var(--sans);
+  transition:transform .2s ease,background-color .2s ease;
+}
+main #metodo .afb-method-detail[open] .afb-method-plus{
+  transform:rotate(45deg);
+  background:#D8B6B0;
+  border-color:#D8B6B0;
+}
+main #metodo .afb-method-close-label{display:none}
+main #metodo .afb-method-detail[open] .afb-method-open-label{display:none}
+main #metodo .afb-method-detail[open] .afb-method-close-label{display:inline}
+main #metodo .afb-method-expanded{padding:15px 0 5px}
+main #metodo .afb-method-expanded p{
+  font:400 15px/1.7 var(--sans);
+  color:#514D49!important;
+  margin:0;
+  max-width:60ch;
+}
+@media screen and (max-width:900px){
+  main #metodo .afb-method-grid{grid-template-columns:1fr!important;gap:12px!important}
+}
+@media screen and (max-width:640px){
+  main #metodo .afb-method-card.afb-method-reveal{padding:22px 20px 15px!important}
+  main #metodo .afb-method-reveal .afb-method-n{font-size:10px;margin-bottom:16px!important}
+  main #metodo .afb-method-reveal h3{font-size:28px;line-height:1.17;margin-bottom:12px}
+  main #metodo .afb-method-reveal > .afb-method-teaser{
+    font-size:14px!important;line-height:1.56!important;margin-bottom:15px
+  }
+  main #metodo .afb-method-detail summary{min-height:48px;font-size:11px;padding-top:10px}
+  main #metodo .afb-method-expanded{padding-top:14px}
+  main #metodo .afb-method-expanded p{font-size:14px!important;line-height:1.67!important}
+}
+@media(prefers-reduced-motion:reduce){
+  main #metodo .afb-method-detail .afb-method-plus{transition:none!important}
+}
 </style>
 </head><body><a class="skip-link" href="#contenuto">Vai al contenuto</a><header class="site-header"><div class="container nav-inner"><a class="brand" href="index.html" aria-label="AstroSonico, torna alla homepage"><img class="brand-logo" src="assets/img/astrosonico-logo.svg?v=20261022-logo-2" alt="AstroSonico" width="1839" height="750"></a><nav class="desktop-nav" aria-label="Navigazione principale"><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="sessioni.html">Sessioni individuali</a><a class="nav-link" href="astro-for-business.html" aria-current="page">Astro for Business</a><a class="nav-link" href="gift-card.html">Gift Card</a><a class="nav-link" href="ritiri.html">Ritiri</a><a class="nav-link" href="eventi.html">Eventi</a></nav><a class="nav-cta desktop-cta" href="mailto:cibosupersonico@gmail.com?subject=AstroSonico%20-%20richiesta%20informazioni">Scrivimi <span class="mobile-action-glyph" aria-hidden="true">↗</span></a><details class="mobile-menu"><summary aria-label="Apri il menu di navigazione"><span class="menu-glyph" aria-hidden="true">☰</span><span>Menu</span></summary><nav class="mobile-nav" aria-label="Navigazione mobile"><a href="index.html">Home</a><a href="sessioni.html">Sessioni individuali</a><a href="astro-for-business.html" aria-current="page">Astro for Business</a><a href="gift-card.html">Gift Card</a><a href="ritiri.html">Ritiri</a><a href="eventi.html">Eventi</a><a class="nav-cta" href="mailto:cibosupersonico@gmail.com?subject=AstroSonico%20-%20richiesta%20informazioni">Scrivimi <span class="mobile-action-glyph" aria-hidden="true">↗</span></a></nav></details></div></header><main id="contenuto">
 <section class="afb-hero" aria-labelledby="afb-title"><div class="container afb-hero-grid"><div>
@@ -681,12 +792,44 @@ main .afb-history .afb-manifesto .afb-manifesto-line em{
 </div></section>
 <section class="afb-section" id="metodo"><div class="container">
 <div class="afb-section-heading"><span class="eyebrow">Gli strumenti del percorso</span><h2 class="h-medium">Quattro linguaggi. Un unico sguardo su di te e sul tuo lavoro.</h2>
-<p>Il lavoro personale e quello professionale si influenzano a vicenda. Astrologia, Tarocco di Marsiglia, Cabala e meditazione diventano quattro modi complementari per osservare il tempo, ciò che accade adesso e la direzione che desideri dare al tuo progetto.</p></div>
+<p>Quattro strumenti complementari per esplorare il rapporto fra te e la tua attività. Ogni strumento offre un punto di vista diverso: apri quello che desideri approfondire.</p></div>
 <div class="afb-method-grid">
-<article class="afb-method-card"><span class="afb-method-n">01 / ASTROLOGIA</span><h3>Il tempo: agire, attendere, osservare</h3><p>Incrociamo la tua carta natale con i transiti personali e, quando possibile, con il cielo della tua attività. Osserviamo simbolicamente fasi di slancio, attesa e revisione: uno sguardo che può farti notare occasioni trascurate, anche quando rifletti su possibili date di lancio. Le scelte restano ancorate alle condizioni reali del tuo lavoro.</p></article>
-<article class="afb-method-card"><span class="afb-method-n">02 / TAROCCO DI MARSIGLIA</span><h3>Il presente e le scelte possibili</h3><p>Il Tarocco ci aiuta a dare immagini e parole a ciò che accade ora: decisioni da affrontare, rapporto con il valore e con il denaro, difficoltà a esporsi, disponibilità a ricevere e significato personale dell'abbondanza. Non sceglie al posto tuo: apre domande e prospettive.</p></article>
-<article class="afb-method-card"><span class="afb-method-n">03 / CABALA</span><h3>Visione, intuizione, struttura</h3><p>Attraverso un sistema di pensiero, archetipi e corrispondenze simboliche, esploriamo il dialogo fra intuizione e struttura. Una prospettiva da portare anche nelle domande su organizzazione, leadership e strategia, senza trasformarla in una formula di gestione aziendale.</p></article>
-<article class="afb-method-card"><span class="afb-method-n">04 / MEDITAZIONE</span><h3>Ampliare la consapevolezza</h3><p>Sei pratiche guidate, registrate e da utilizzare in autonomia. Uno spazio per rallentare, riconoscere gli automatismi, ampliare la visione e tornare alle tue scelte con maggiore presenza.</p></article>
+<article class="afb-method-card afb-method-reveal">
+  <span class="afb-method-n">01 / ASTROLOGIA</span>
+  <h3>Il tempo: agire, attendere, osservare</h3>
+  <p class="afb-method-teaser">Riconoscere i cicli e interrogarsi sui tempi delle proprie scelte.</p>
+  <details class="afb-method-detail">
+    <summary><span class="afb-method-open-label">Approfondisci</span><span class="afb-method-close-label">Riduci</span><span class="afb-method-plus" aria-hidden="true">+</span></summary>
+    <div class="afb-method-expanded"><p>Incrociamo la tua carta natale con i transiti personali e, quando possibile, con il cielo della tua attività. Osserviamo simbolicamente fasi di slancio, attesa e revisione: uno sguardo che può farti notare occasioni trascurate, anche quando rifletti su possibili date di lancio. Le scelte restano ancorate alle condizioni reali del tuo lavoro.</p></div>
+  </details>
+</article>
+<article class="afb-method-card afb-method-reveal">
+  <span class="afb-method-n">02 / TAROCCO DI MARSIGLIA</span>
+  <h3>Il presente e le scelte possibili</h3>
+  <p class="afb-method-teaser">Guardare ciò che accade ora, anche nel rapporto con valore e denaro.</p>
+  <details class="afb-method-detail">
+    <summary><span class="afb-method-open-label">Approfondisci</span><span class="afb-method-close-label">Riduci</span><span class="afb-method-plus" aria-hidden="true">+</span></summary>
+    <div class="afb-method-expanded"><p>Il Tarocco ci aiuta a dare immagini e parole a ciò che accade ora: decisioni da affrontare, rapporto con il valore e con il denaro, difficoltà a esporsi, disponibilità a ricevere e significato personale dell'abbondanza. Non sceglie al posto tuo: apre domande e prospettive.</p></div>
+  </details>
+</article>
+<article class="afb-method-card afb-method-reveal">
+  <span class="afb-method-n">03 / CABALA</span>
+  <h3>Visione, intuizione, struttura</h3>
+  <p class="afb-method-teaser">Mettere in dialogo intuizione, visione e organizzazione.</p>
+  <details class="afb-method-detail">
+    <summary><span class="afb-method-open-label">Approfondisci</span><span class="afb-method-close-label">Riduci</span><span class="afb-method-plus" aria-hidden="true">+</span></summary>
+    <div class="afb-method-expanded"><p>Attraverso un sistema di pensiero, archetipi e corrispondenze simboliche, esploriamo il dialogo fra intuizione e struttura. Una prospettiva da portare anche nelle domande su organizzazione, leadership e strategia, senza trasformarla in una formula di gestione aziendale.</p></div>
+  </details>
+</article>
+<article class="afb-method-card afb-method-reveal">
+  <span class="afb-method-n">04 / MEDITAZIONE</span>
+  <h3>Ampliare la consapevolezza</h3>
+  <p class="afb-method-teaser">Rallentare, ascoltarsi e dare spazio a nuove prospettive.</p>
+  <details class="afb-method-detail">
+    <summary><span class="afb-method-open-label">Approfondisci</span><span class="afb-method-close-label">Riduci</span><span class="afb-method-plus" aria-hidden="true">+</span></summary>
+    <div class="afb-method-expanded"><p>Sei pratiche guidate, registrate e da utilizzare in autonomia. Uno spazio per rallentare, riconoscere gli automatismi, ampliare la visione e tornare alle tue scelte con maggiore presenza.</p></div>
+  </details>
+</article>
 </div></div></section>
 
 
