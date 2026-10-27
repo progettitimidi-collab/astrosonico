@@ -589,115 +589,286 @@ main .afb-history .afb-manifesto .afb-manifesto-line em{
   }
 }
 
-/* Astro for Business · concise method cards with native, accessible disclosures.
-   Scope: #metodo only. Native details/summary works with keyboard and no JS. */
+/* Astro for Business · instrument-led editorial cards.
+   Four equal tools, no numerical rank: names lead, complementary colors follow.
+   Native details/summary remains usable by keyboard without JS. */
 main #metodo .afb-method-grid{
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr))!important;
-  gap:17px!important;
+  gap:clamp(14px,1.7vw,22px)!important;
   align-items:stretch;
 }
 main #metodo .afb-method-card.afb-method-reveal{
+  --method-surface:#F7F4EF;
+  --method-ink:#111111;
+  --method-muted:#514D49;
+  --method-accent:#8E4B3E;
+  --method-line:rgba(17,17,17,.28);
+  --method-geometry:rgba(17,17,17,.24);
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
   display:flex;
   flex-direction:column;
   min-width:0;
-  min-height:0!important;
-  padding:clamp(23px,2.9vw,37px)!important;
-  background:#F7F4EF!important;
-  border:1px solid #D8D1C7!important;
-  border-radius:12px!important;
+  min-height:350px!important;
+  padding:clamp(27px,3.1vw,42px)!important;
+  background:var(--method-surface)!important;
+  color:var(--method-ink)!important;
+  border:1px solid var(--method-line)!important;
+  border-radius:var(--method-corners,12px)!important;
   box-shadow:none!important;
 }
-main #metodo .afb-method-reveal .afb-method-n{
-  color:#8E4B3E!important;
-  font:700 11px/1.45 var(--sans);
-  letter-spacing:.12em;
-  margin:0 0 clamp(18px,2.2vw,28px)!important;
+main #metodo .afb-method-card.afb-method-reveal > *{
+  position:relative;
+  z-index:1;
+  min-width:0;
 }
-main #metodo .afb-method-reveal h3{
-  font:400 clamp(26px,2.7vw,35px)/1.15 var(--serif);
-  letter-spacing:-.035em;
-  color:#111111!important;
-  margin:0 0 15px;
-  max-width:20ch;
+main #metodo .afb-method-card.afb-method-reveal::before{
+  content:"";
+  position:absolute;
+  z-index:0;
+  right:-39px;
+  top:-79px;
+  width:205px;
+  height:205px;
+  border:1px solid var(--method-geometry);
+  border-radius:50%;
+  transform:rotate(33deg) scaleX(.73);
+  pointer-events:none;
+}
+main #metodo .afb-method-card.afb-method-reveal::after{
+  content:"";
+  position:absolute;
+  z-index:0;
+  top:28px;
+  right:28px;
+  width:7px;
+  height:7px;
+  border:1px solid var(--method-accent);
+  border-radius:50%;
+  pointer-events:none;
+}
+main #metodo .afb-method-card--astro{
+  --method-surface:#111111!important;
+  --method-ink:#F7F4EF!important;
+  --method-muted:#D8D1C7!important;
+  --method-accent:#D8B6B0!important;
+  --method-line:rgba(247,244,239,.29)!important;
+  --method-geometry:rgba(247,244,239,.22)!important;
+  --method-corners:6px 48px 6px 6px;
+}
+main #metodo .afb-method-card--tarot{
+  --method-surface:#D8B6B0!important;
+  --method-ink:#111111!important;
+  --method-muted:#352B29!important;
+  --method-accent:#69372F!important;
+  --method-line:rgba(76,42,37,.27)!important;
+  --method-geometry:rgba(76,42,37,.23)!important;
+  --method-corners:48px 6px 6px 6px;
+}
+main #metodo .afb-method-card--cabala{
+  --method-surface:#D8D1C7!important;
+  --method-ink:#111111!important;
+  --method-muted:#37312C!important;
+  --method-accent:#69372F!important;
+  --method-line:rgba(17,17,17,.28)!important;
+  --method-geometry:rgba(17,17,17,.19)!important;
+  --method-corners:6px 6px 48px 6px;
+}
+main #metodo .afb-method-card--meditation{
+  --method-surface:#F7F4EF!important;
+  --method-ink:#111111!important;
+  --method-muted:#514D49!important;
+  --method-accent:#8E4B3E!important;
+  --method-line:rgba(142,75,62,.4)!important;
+  --method-geometry:rgba(142,75,62,.29)!important;
+  --method-corners:6px 6px 6px 48px;
+}
+main #metodo .afb-method-card--tarot::before{
+  width:172px;
+  height:172px;
+  top:-68px;
+  right:-35px;
+  transform:rotate(25deg) scale(.85);
+  border-radius:16px;
+}
+main #metodo .afb-method-card--cabala::before{
+  width:215px;
+  height:215px;
+  top:-91px;
+  right:-44px;
+  border-radius:0;
+  transform:rotate(29deg) scale(.79);
+}
+main #metodo .afb-method-card--meditation::before{
+  width:188px;
+  height:188px;
+  top:-80px;
+  right:-40px;
+  border-radius:50%;
+  border-style:dashed;
+  transform:rotate(-25deg) scaleX(.87);
+}
+main #metodo .afb-method-reveal .afb-method-tool-name{
+  margin:clamp(38px,4.1vw,56px) 0 21px!important;
+  max-width:13ch;
+  overflow-wrap:normal;
+  font-family:var(--serif)!important;
+  font-size:clamp(39px,4vw,55px)!important;
+  line-height:1.04!important;
+  font-weight:400!important;
+  letter-spacing:-.05em!important;
+  color:var(--method-ink)!important;
+  text-wrap:balance;
+}
+main #metodo .afb-method-reveal .afb-method-line{
+  font-family:var(--serif)!important;
+  font-style:italic;
+  font-weight:400!important;
+  font-size:clamp(21px,2.05vw,27px)!important;
+  line-height:1.22!important;
+  letter-spacing:-.022em;
+  color:var(--method-accent)!important;
+  margin:0 0 17px!important;
+  max-width:27ch;
+}
+main #metodo .afb-method-card--tarot .afb-method-line,
+main #metodo .afb-method-card--cabala .afb-method-line{
+  color:#69372F!important;
 }
 main #metodo .afb-method-reveal > .afb-method-teaser{
-  font:400 15px/1.58 var(--sans);
-  color:#514D49!important;
-  margin:0 0 22px;
-  max-width:49ch;
+  font:400 15px/1.55 var(--sans)!important;
+  color:var(--method-muted)!important;
+  margin:0 0 26px!important;
+  max-width:45ch;
 }
-main #metodo .afb-method-detail{
+main #metodo .afb-method-reveal .afb-method-detail{
   margin-top:auto;
-  border-top:1px solid #C6BFB7;
-  padding-top:0;
-  color:#111111;
+  border:0;
+  border-top:1px solid var(--method-line)!important;
+  padding:0;
+  color:var(--method-ink)!important;
 }
-main #metodo .afb-method-detail summary{
+main #metodo .afb-method-detail > summary{
   display:flex;
   justify-content:space-between;
   align-items:center;
   gap:14px;
   min-height:48px;
-  padding:13px 0 5px;
-  color:#69372F;
-  font:700 12px/1.35 var(--sans);
+  padding:12px 0 4px;
+  color:var(--method-ink)!important;
+  font:700 12px/1.35 var(--sans)!important;
   letter-spacing:.07em;
   text-transform:uppercase;
-  list-style:none;
+  list-style:none!important;
   cursor:pointer;
   -webkit-tap-highlight-color:transparent;
 }
-main #metodo .afb-method-detail summary::-webkit-details-marker{display:none}
-main #metodo .afb-method-detail summary::marker{content:""}
-main #metodo .afb-method-detail summary:focus-visible{
-  outline:2px solid #8E4B3E;
+main #metodo .afb-method-detail > summary::-webkit-details-marker{display:none}
+main #metodo .afb-method-detail > summary::marker{content:""}
+main #metodo .afb-method-detail > summary:focus-visible{
+  outline:2px solid var(--method-accent);
   outline-offset:3px;
   border-radius:3px;
 }
 main #metodo .afb-method-detail .afb-method-plus{
   display:inline-grid;
   place-items:center;
-  flex:0 0 29px;
-  width:29px;
-  height:29px;
-  border:1px solid #AC8F88;
+  flex:0 0 33px;
+  width:33px;
+  height:33px;
+  border:1px solid var(--method-accent);
   border-radius:50%;
-  color:#69372F;
+  color:var(--method-ink)!important;
   font:400 22px/1 var(--sans);
   transition:transform .2s ease,background-color .2s ease;
 }
 main #metodo .afb-method-detail[open] .afb-method-plus{
   transform:rotate(45deg);
-  background:#D8B6B0;
-  border-color:#D8B6B0;
+  background:var(--method-accent)!important;
+  border-color:var(--method-accent)!important;
 }
 main #metodo .afb-method-close-label{display:none}
 main #metodo .afb-method-detail[open] .afb-method-open-label{display:none}
 main #metodo .afb-method-detail[open] .afb-method-close-label{display:inline}
-main #metodo .afb-method-expanded{padding:15px 0 5px}
+main #metodo .afb-method-expanded{padding:15px 0 8px}
 main #metodo .afb-method-expanded p{
-  font:400 15px/1.7 var(--sans);
-  color:#514D49!important;
+  color:var(--method-ink)!important;
+  font:400 15px/1.66 var(--sans)!important;
   margin:0;
   max-width:60ch;
 }
 @media screen and (max-width:900px){
-  main #metodo .afb-method-grid{grid-template-columns:1fr!important;gap:12px!important}
+  main #metodo .afb-method-grid{grid-template-columns:1fr!important;gap:16px!important}
 }
 @media screen and (max-width:640px){
-  main #metodo .afb-method-card.afb-method-reveal{padding:22px 20px 15px!important}
-  main #metodo .afb-method-reveal .afb-method-n{font-size:10px;margin-bottom:16px!important}
-  main #metodo .afb-method-reveal h3{font-size:28px;line-height:1.17;margin-bottom:12px}
-  main #metodo .afb-method-reveal > .afb-method-teaser{
-    font-size:14px!important;line-height:1.56!important;margin-bottom:15px
+  main #metodo .afb-method-card.afb-method-reveal{
+    min-height:0!important;
+    padding:clamp(24px,6vw,30px) clamp(22px,5.7vw,29px) 17px!important;
   }
-  main #metodo .afb-method-detail summary{min-height:48px;font-size:11px;padding-top:10px}
-  main #metodo .afb-method-expanded{padding-top:14px}
-  main #metodo .afb-method-expanded p{font-size:14px!important;line-height:1.67!important}
+  main #metodo .afb-method-card.afb-method-reveal::before{
+    width:155px;
+    height:155px;
+    right:-39px;
+    top:-66px;
+  }
+  main #metodo .afb-method-card.afb-method-reveal::after{top:21px;right:21px}
+  main #metodo .afb-method-reveal .afb-method-tool-name{
+    font-size:clamp(34px,9.25vw,45px)!important;
+    margin:29px 0 18px!important;
+    line-height:1.05!important;
+    max-width:13ch;
+  }
+  main #metodo .afb-method-reveal .afb-method-line{
+    font-size:clamp(21px,5.5vw,25px)!important;
+    line-height:1.2!important;
+    margin-bottom:15px!important;
+  }
+  main #metodo .afb-method-reveal > .afb-method-teaser{
+    font-size:14px!important;
+    line-height:1.52!important;
+    margin-bottom:19px!important;
+  }
+  main #metodo .afb-method-detail > summary{min-height:48px;font-size:11px!important}
+  main #metodo .afb-method-expanded p{font-size:14px!important;line-height:1.62!important}
 }
 @media(prefers-reduced-motion:reduce){
   main #metodo .afb-method-detail .afb-method-plus{transition:none!important}
+}
+
+/* Astro for Business · no native FAQ arrows/emoji on mobile: text-only +/− controls. */
+@media screen and (max-width:640px){
+  main .afb-faq details > summary{
+    display:flex!important;
+    justify-content:space-between!important;
+    align-items:center!important;
+    min-height:48px!important;
+    gap:18px!important;
+    list-style:none!important;
+    cursor:pointer;
+    padding:13px 1px!important;
+    font-size:15px!important;
+    line-height:1.42!important;
+    color:#111111!important;
+  }
+  main .afb-faq details > summary::-webkit-details-marker{display:none!important}
+  main .afb-faq details > summary::marker{content:""!important;font-size:0!important}
+  main .afb-faq details > summary::before{content:none!important;display:none!important}
+  main .afb-faq details > summary::after{
+    content:"+"!important;
+    flex:none;
+    display:inline-flex!important;
+    justify-content:center;
+    align-items:center;
+    width:26px;
+    height:26px;
+    border:1px solid #8E4B3E;
+    border-radius:50%;
+    font:400 21px/1 var(--sans);
+    color:#8E4B3E!important;
+  }
+  main .afb-faq details[open] > summary::after{content:"−"!important}
 }
 
 /* Astro for Business · prosperity editorial manifesto.
@@ -1170,36 +1341,36 @@ main .afb-call-label-mobile,main .afb-next-step-mobile{display:none}
 <div class="afb-section-heading"><span class="eyebrow">Gli strumenti del percorso</span><h2 class="h-medium">Quattro linguaggi. Un unico sguardo su di te e sul tuo lavoro.</h2>
 <p>Quattro prospettive complementari. Apri ciascuno strumento per scoprire come lo utilizziamo nel percorso.</p></div>
 <div class="afb-method-grid">
-<article class="afb-method-card afb-method-reveal">
-  <span class="afb-method-n">01 / ASTROLOGIA</span>
-  <h3>Il tempo: agire, attendere, osservare</h3>
+<article class="afb-method-card afb-method-reveal afb-method-card--astro">
+  <h3 class="afb-method-tool-name">Astrologia</h3>
+  <p class="afb-method-line">Il tempo: agire, attendere, osservare</p>
   <p class="afb-method-teaser">Riconoscere i cicli e interrogarsi sui tempi delle proprie scelte.</p>
   <details class="afb-method-detail">
     <summary><span class="afb-method-open-label">Approfondisci</span><span class="afb-method-close-label">Riduci</span><span class="afb-method-plus" aria-hidden="true">+</span></summary>
     <div class="afb-method-expanded"><p>Incrociamo la tua carta natale con i transiti personali e, quando possibile, con il cielo della tua attività. Osserviamo simbolicamente fasi di slancio, attesa e revisione: uno sguardo che può farti notare occasioni trascurate, anche quando rifletti su possibili date di lancio. Le scelte restano ancorate alle condizioni reali del tuo lavoro.</p></div>
   </details>
 </article>
-<article class="afb-method-card afb-method-reveal">
-  <span class="afb-method-n">02 / TAROCCO DI MARSIGLIA</span>
-  <h3>Il presente e le scelte possibili</h3>
+<article class="afb-method-card afb-method-reveal afb-method-card--tarot">
+  <h3 class="afb-method-tool-name">Tarocco di Marsiglia</h3>
+  <p class="afb-method-line">Il presente e le scelte possibili</p>
   <p class="afb-method-teaser">Guardare ciò che accade ora, anche nel rapporto con valore e denaro.</p>
   <details class="afb-method-detail">
     <summary><span class="afb-method-open-label">Approfondisci</span><span class="afb-method-close-label">Riduci</span><span class="afb-method-plus" aria-hidden="true">+</span></summary>
     <div class="afb-method-expanded"><p>Il Tarocco ci aiuta a dare immagini e parole a ciò che accade ora: decisioni da affrontare, rapporto con il valore e con il denaro, difficoltà a esporsi, disponibilità a ricevere e significato personale dell'abbondanza. Non sceglie al posto tuo: apre domande e prospettive.</p></div>
   </details>
 </article>
-<article class="afb-method-card afb-method-reveal">
-  <span class="afb-method-n">03 / CABALA</span>
-  <h3>Visione, intuizione, struttura</h3>
+<article class="afb-method-card afb-method-reveal afb-method-card--cabala">
+  <h3 class="afb-method-tool-name">Cabala</h3>
+  <p class="afb-method-line">Visione, intuizione, struttura</p>
   <p class="afb-method-teaser">Mettere in dialogo intuizione, visione e organizzazione.</p>
   <details class="afb-method-detail">
     <summary><span class="afb-method-open-label">Approfondisci</span><span class="afb-method-close-label">Riduci</span><span class="afb-method-plus" aria-hidden="true">+</span></summary>
     <div class="afb-method-expanded"><p>Attraverso un sistema di pensiero, archetipi e corrispondenze simboliche, esploriamo il dialogo fra intuizione e struttura. Una prospettiva da portare anche nelle domande su organizzazione, leadership e strategia, senza trasformarla in una formula di gestione aziendale.</p></div>
   </details>
 </article>
-<article class="afb-method-card afb-method-reveal">
-  <span class="afb-method-n">04 / MEDITAZIONE</span>
-  <h3>Ampliare la consapevolezza</h3>
+<article class="afb-method-card afb-method-reveal afb-method-card--meditation">
+  <h3 class="afb-method-tool-name">Meditazione</h3>
+  <p class="afb-method-line">Ampliare la consapevolezza</p>
   <p class="afb-method-teaser">Rallentare, ascoltarsi e dare spazio a nuove prospettive.</p>
   <details class="afb-method-detail">
     <summary><span class="afb-method-open-label">Approfondisci</span><span class="afb-method-close-label">Riduci</span><span class="afb-method-plus" aria-hidden="true">+</span></summary>
@@ -1211,7 +1382,7 @@ main .afb-call-label-mobile,main .afb-next-step-mobile{display:none}
 
 
 <section class="afb-cta" id="richiedi-informazioni"><div class="container afb-cta-grid">
-<div><span class="eyebrow">Richiedi una call conoscitiva</span><h2>Ti va di raccontarmi cosa stai costruendo?</h2><p>Raccontami il tuo progetto attraverso il modulo. Ti risponderò personalmente via email per concordare una call: potremo capire se il percorso è adatto a ciò che stai costruendo. Il giorno e l’orario non vengono prenotati automaticamente.</p><p>Gli incontri si svolgono online. È possibile suddividere il pagamento in due rate.</p></div>
+<div><span class="eyebrow">Richiedi una call conoscitiva</span><h2>Raccontami cosa stai costruendo.</h2><p>Raccontami il tuo progetto attraverso il modulo. Ti risponderò personalmente via email per concordare una call: potremo capire se il percorso è adatto a ciò che stai costruendo. Il giorno e l’orario non vengono prenotati automaticamente.</p><p>Gli incontri si svolgono online. È possibile suddividere il pagamento in due rate.</p></div>
 <div class="afb-cta-price"><span class="afb-promo">Promozione lancio</span><div class="afb-price-line"><del class="afb-old">1.800 €</del><strong class="afb-new">1.450 €</strong></div><p>12 mesi · 7 incontri individuali · 6 meditazioni registrate · supporto via email.</p><a class="button" href="prenota-call-business.html"><span class="afb-call-label-desktop">Richiedi una call conoscitiva</span><span class="afb-call-label-mobile">Candidati<span class="afb-call-mobile-context"> per una call conoscitiva</span></span> <span class="mobile-action-glyph" aria-hidden="true">↗</span></a></div>
 </div></section>
 <section class="afb-section"><div class="container afb-faq"><div class="afb-section-heading"><span class="eyebrow">Domande frequenti</span><h2 class="h-medium">Prima di iniziare.</h2></div>
