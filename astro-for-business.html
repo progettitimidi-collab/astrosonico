@@ -108,14 +108,96 @@
 .afb-history-sources{font-size:12px;line-height:1.9;color:#726577;margin:22px 0 0}
 .afb-history-sources a{text-decoration:underline;text-underline-offset:3px}
 @media(max-width:900px){.afb-history-layout{grid-template-columns:1fr}.afb-history-timeline{max-width:740px}}
-.afb-photo-spread{padding:clamp(22px,4vw,50px) 0 0;background:#fcfaf9}.afb-photo-spread figure{margin:0;overflow:hidden;border-radius:25px;background:#1b171b}.afb-photo-spread img{width:100%;height:auto;max-height:640px;object-fit:cover;display:block}@media(max-width:600px){.afb-photo-spread figure{border-radius:17px}.afb-photo-spread img{max-height:370px;object-fit:cover}}.afb-portraits{display:flex;gap:10px;margin-top:28px}.afb-portraits img{width:76px;height:110px;object-fit:cover;object-position:center 30%;border-radius:8px;border:2px solid #fff;box-shadow:0 6px 19px rgba(44,28,46,.13)}.afb-portraits img:nth-child(2){width:86px}.afb-manifesto{background:#241a2d;color:#fff;border-radius:24px;padding:clamp(32px,6vw,72px);margin-bottom:65px;position:relative;overflow:hidden}.afb-manifesto:after{content:"";position:absolute;border:1px solid rgba(236,213,180,.2);width:370px;height:370px;border-radius:50%;right:-100px;top:-130px;pointer-events:none}.afb-manifesto-line{position:relative;z-index:1;font-family:Georgia,serif;font-size:clamp(34px,5.7vw,75px);line-height:1.13;letter-spacing:-.035em;margin:0;max-width:1030px;text-wrap:balance}.afb-manifesto-line em{color:#e5c5a9}.afb-history-layout>div>p strong{color:#2e2032}@media(max-width:600px){.afb-manifesto{padding:32px 24px;margin-bottom:40px}.afb-manifesto-line{font-size:clamp(32px,8.4vw,44px)}}</style><style>.editorial-mobile-business-portrait{display:none}</style><link rel="stylesheet" media="screen and (max-width: 640px)" href="assets/css/mobile-editorial.css?v=20261026-4"><link rel="stylesheet" media="screen and (min-width: 641px)" href="assets/css/desktop-editorial.css?v=20261026-2"></head><body><a class="skip-link" href="#contenuto">Vai al contenuto</a><header class="site-header"><div class="container nav-inner"><a class="brand" href="index.html" aria-label="AstroSonico, torna alla homepage"><img class="brand-logo" src="assets/img/astrosonico-logo.svg?v=20261022-logo-2" alt="AstroSonico" width="1839" height="750"></a><nav class="desktop-nav" aria-label="Navigazione principale"><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="sessioni.html">Sessioni individuali</a><a class="nav-link" href="astro-for-business.html" aria-current="page">Astro for Business</a><a class="nav-link" href="gift-card.html">Gift Card</a><a class="nav-link" href="ritiri.html">Ritiri</a><a class="nav-link" href="eventi.html">Eventi</a></nav><a class="nav-cta desktop-cta" href="mailto:cibosupersonico@gmail.com?subject=AstroSonico%20-%20richiesta%20informazioni">Scrivimi <span class="mobile-action-glyph" aria-hidden="true">↗</span></a><details class="mobile-menu"><summary aria-label="Apri il menu di navigazione"><span class="menu-glyph" aria-hidden="true">☰</span><span>Menu</span></summary><nav class="mobile-nav" aria-label="Navigazione mobile"><a href="index.html">Home</a><a href="sessioni.html">Sessioni individuali</a><a href="astro-for-business.html" aria-current="page">Astro for Business</a><a href="gift-card.html">Gift Card</a><a href="ritiri.html">Ritiri</a><a href="eventi.html">Eventi</a><a class="nav-cta" href="mailto:cibosupersonico@gmail.com?subject=AstroSonico%20-%20richiesta%20informazioni">Scrivimi <span class="mobile-action-glyph" aria-hidden="true">↗</span></a></nav></details></div></header><main id="contenuto">
+.afb-photo-spread{padding:clamp(22px,4vw,50px) 0 0;background:#fcfaf9}.afb-photo-spread figure{margin:0;overflow:hidden;border-radius:25px;background:#1b171b}.afb-photo-spread img{width:100%;height:auto;max-height:640px;object-fit:cover;display:block}@media(max-width:600px){.afb-photo-spread figure{border-radius:17px}.afb-photo-spread img{max-height:370px;object-fit:cover}}.afb-portraits{display:flex;gap:10px;margin-top:28px}.afb-portraits img{width:76px;height:110px;object-fit:cover;object-position:center 30%;border-radius:8px;border:2px solid #fff;box-shadow:0 6px 19px rgba(44,28,46,.13)}.afb-portraits img:nth-child(2){width:86px}.afb-manifesto{background:#241a2d;color:#fff;border-radius:24px;padding:clamp(32px,6vw,72px);margin-bottom:65px;position:relative;overflow:hidden}.afb-manifesto:after{content:"";position:absolute;border:1px solid rgba(236,213,180,.2);width:370px;height:370px;border-radius:50%;right:-100px;top:-130px;pointer-events:none}.afb-manifesto-line{position:relative;z-index:1;font-family:Georgia,serif;font-size:clamp(34px,5.7vw,75px);line-height:1.13;letter-spacing:-.035em;margin:0;max-width:1030px;text-wrap:balance}.afb-manifesto-line em{color:#e5c5a9}.afb-history-layout>div>p strong{color:#2e2032}@media(max-width:600px){.afb-manifesto{padding:32px 24px;margin-bottom:40px}.afb-manifesto-line{font-size:clamp(32px,8.4vw,44px)}}</style><style>.editorial-mobile-business-portrait{display:none}</style><link rel="stylesheet" media="screen and (max-width: 640px)" href="assets/css/mobile-editorial.css?v=20261026-4"><link rel="stylesheet" media="screen and (min-width: 641px)" href="assets/css/desktop-editorial.css?v=20261026-2">
+<style>
+/* Astro for Business · approved Hero B. Scoped to the hero at every viewport. */
+main .afb-hero .afb-lead.reading-lead{
+  max-width:660px;
+  margin:0 0 24px;
+  color:#D8D1C7;
+  font-size:clamp(17px,1.45vw,19px);
+  line-height:1.59;
+  font-weight:400;
+}
+main .afb-hero .afb-kicker{color:#D8B6B0}
+main .afb-hero .afb-hero-facts{
+  display:flex;flex-wrap:wrap;align-items:center;
+  gap:9px;list-style:none;padding:0;margin:0 0 27px;
+}
+main .afb-hero .afb-hero-facts li{
+  display:inline-flex;align-items:baseline;gap:5px;
+  margin:0;padding:10px 13px;
+  border:1px solid rgba(216,209,199,.44);
+  border-radius:999px;color:#F7F4EF;
+  background:rgba(247,244,239,.035);
+  font:600 12px/1.35 var(--sans);
+  letter-spacing:.01em;
+}
+main .afb-hero .afb-hero-facts strong{
+  font:400 19px/1 var(--serif);
+  color:#D8B6B0;
+}
+main .afb-hero .afb-hero-next-step{
+  max-width:570px;margin:17px 0 0;
+  color:#D8D1C7;
+  font:400 13px/1.55 var(--sans);
+}
+main .afb-hero .afb-actions .button-primary:focus-visible,
+main .afb-hero .afb-inline-link:focus-visible{
+  outline:3px solid #D8B6B0;outline-offset:4px;
+}
+@media screen and (max-width:640px){
+  main .afb-hero .afb-kicker{
+    font-size:10px!important;line-height:1.45!important;
+    margin-bottom:14px!important;
+  }
+  main .afb-hero h1{
+    font-size:clamp(40px,10.6vw,48px)!important;
+    line-height:1.04!important;
+    margin-bottom:19px!important;
+  }
+  main .afb-hero .afb-lead.reading-lead{
+    color:#F7F4EF!important;
+    font-size:16.5px!important;
+    font-weight:400!important;
+    line-height:1.52!important;
+    margin:0 0 19px!important;
+    letter-spacing:0!important;
+  }
+  main .afb-hero .afb-hero-facts{gap:8px;margin:0 0 20px}
+  main .afb-hero .afb-hero-facts li{
+    gap:5px;padding:9px 11px;font-size:11px;line-height:1.4;
+  }
+  main .afb-hero .afb-hero-facts strong{font-size:18px}
+  main .afb-hero .afb-actions{gap:12px}
+  main .afb-hero .afb-actions .button-primary{
+    background:#F7F4EF!important;color:#111111!important;
+    border-color:#F7F4EF!important;
+    min-height:49px!important;
+    white-space:normal!important;
+  }
+  main .afb-hero .afb-inline-link{font-size:12px}
+  main .afb-hero .afb-hero-next-step{
+    display:block!important;
+    font-size:12px!important;
+    line-height:1.55!important;
+    margin:16px 0 0!important;
+    color:#D8D1C7!important;
+  }
+}
+@media (prefers-reduced-motion:reduce){
+  main .afb-hero .afb-hero-facts *,
+  main .afb-hero .afb-actions *{animation:none!important;transition:none!important}
+}
+</style>
+</head><body><a class="skip-link" href="#contenuto">Vai al contenuto</a><header class="site-header"><div class="container nav-inner"><a class="brand" href="index.html" aria-label="AstroSonico, torna alla homepage"><img class="brand-logo" src="assets/img/astrosonico-logo.svg?v=20261022-logo-2" alt="AstroSonico" width="1839" height="750"></a><nav class="desktop-nav" aria-label="Navigazione principale"><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="sessioni.html">Sessioni individuali</a><a class="nav-link" href="astro-for-business.html" aria-current="page">Astro for Business</a><a class="nav-link" href="gift-card.html">Gift Card</a><a class="nav-link" href="ritiri.html">Ritiri</a><a class="nav-link" href="eventi.html">Eventi</a></nav><a class="nav-cta desktop-cta" href="mailto:cibosupersonico@gmail.com?subject=AstroSonico%20-%20richiesta%20informazioni">Scrivimi <span class="mobile-action-glyph" aria-hidden="true">↗</span></a><details class="mobile-menu"><summary aria-label="Apri il menu di navigazione"><span class="menu-glyph" aria-hidden="true">☰</span><span>Menu</span></summary><nav class="mobile-nav" aria-label="Navigazione mobile"><a href="index.html">Home</a><a href="sessioni.html">Sessioni individuali</a><a href="astro-for-business.html" aria-current="page">Astro for Business</a><a href="gift-card.html">Gift Card</a><a href="ritiri.html">Ritiri</a><a href="eventi.html">Eventi</a><a class="nav-cta" href="mailto:cibosupersonico@gmail.com?subject=AstroSonico%20-%20richiesta%20informazioni">Scrivimi <span class="mobile-action-glyph" aria-hidden="true">↗</span></a></nav></details></div></header><main id="contenuto">
 <section class="afb-hero" aria-labelledby="afb-title"><div class="container afb-hero-grid"><div>
-<p class="afb-kicker">ASTROLOGY FOR BUSINESS · Donne imprenditrici e freelance</p>
+<p class="afb-kicker">ASTRO FOR BUSINESS · IMPRENDITRICI, FREELANCE E CREATIVE</p>
 <h1 id="afb-title">Anche il tuo business <em>ha un cielo.</em></h1>
-<p class="afb-lead reading-lead">Ogni attività ha un ritmo. Ci sono momenti per seminare, esporsi, raccogliere, rivedere la rotta. Ho pensato questo percorso soprattutto per le donne che lavorano in proprio e desiderano ascoltare anche ciò che accade dentro di loro mentre costruiscono un’impresa, una professione o un progetto.</p>
-<p class="afb-lead-secondary reading-detail">Insieme osserviamo la tua carta natale, il cielo della tua attività, i transiti di entrambi e il modo in cui vivi denaro, valore, visibilità e decisioni. Ci accompagnano anche il Tarocco di Marsiglia, i cicli della Cabala e la meditazione.</p>
-<div class="afb-actions"><a class="button button-primary" href="prenota-call-business.html">Prenota una call conoscitiva <span class="mobile-action-glyph" aria-hidden="true">↗</span></a><a class="afb-inline-link" href="#metodo">Come funziona il metodo <span class="mobile-action-glyph" aria-hidden="true">↓</span></a></div>
-<p class="afb-hero-note">Un percorso personale, online, con Francesca Fariello.</p>
+<p class="afb-lead reading-lead">Un percorso di dodici mesi per osservare il rapporto fra ciò che sei e ciò che costruisci. Attraverso astrologia, Tarocchi, Cabala e meditazione esploriamo i tuoi cicli, il rapporto con valore, visibilità, abbondanza e le domande che emergono quando devi scegliere.</p>
+<ul class="afb-hero-facts" aria-label="Il percorso in sintesi"><li><strong>12</strong> mesi</li><li><strong>7</strong> incontri individuali</li><li><strong>6</strong> meditazioni registrate</li></ul>
+<div class="afb-actions"><a class="button button-primary" href="prenota-call-business.html">Richiedi una call conoscitiva <span class="mobile-action-glyph" aria-hidden="true">↗</span></a><a class="afb-inline-link" href="#metodo">Come funziona il metodo <span class="mobile-action-glyph" aria-hidden="true">↓</span></a></div>
+<p class="afb-hero-next-step">Raccontami il tuo progetto. Ti risponderò personalmente via email per concordare un incontro.</p>
 </div><aside class="afb-founder-panel"><span class="afb-founder-kicker">Una parola da Francesca</span><p class="afb-founder-quote">«Sono strumenti che utilizzo prima di tutto nella mia vita. Mi accompagnano nella crescita personale e spirituale, nella creatività e nel modo in cui porto avanti il mio lavoro.»</p><p class="afb-founder-small">Conosco bene la sensazione di mettere tutta sé stessa in un progetto. È da questa esperienza che nasce il desiderio di accompagnare altre donne che lavorano in proprio.</p><span class="afb-founder-sign">Francesca · AstroSonico</span><figure class="editorial-mobile-business-portrait"><img src="assets/img/francesca-editorial-sunglasses.webp" width="780" height="1170" loading="lazy" decoding="async" alt="Francesca in un ritratto editoriale in bianco e nero con occhiali"></figure><div class="afb-portraits" aria-label="Ritratti fotografici di Francesca"><img src="assets/img/ritratto-bn-occhiali-mini.webp" width="133" height="200" loading="lazy" alt="Ritratto in bianco e nero di Francesca con gli occhiali"><img src="assets/img/ritratto-caldo-mini.webp" width="158" height="200" loading="lazy" alt="Ritratto di Francesca con luce calda"><img src="assets/img/ritratto-bn-ritratto-mini.webp" width="133" height="200" loading="lazy" alt="Ritratto di Francesca a occhi chiusi"></div></aside></div></section>
 <section class="afb-photo-spread" aria-label="Astro for Business, ritratto di Francesca"><div class="container"><figure><img src="assets/img/astro-business-editoriale.webp" loading="lazy" alt="Francesca nel progetto editoriale Astrology for Business: timing, visione e prosperità per il lavoro" width="1672" height="941"></figure></div></section>
 <section class="afb-section afb-history" id="storia-e-origini"><div class="container">
