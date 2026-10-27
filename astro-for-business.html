@@ -377,6 +377,71 @@ main .afb-fit .afb-fit-list li strong{color:#111111;font-weight:700}
   }
   main .afb-fit .afb-fit-list li strong{display:block;color:#111111}
 }
+
+/* Astro for Business: lightweight editorial note for projects not yet launched. */
+main .afb-early-stage {
+  padding:0 0 clamp(42px,5vw,70px);
+  background:#F7F4EF;
+}
+main .afb-early-stage .afb-early-stage-inner {
+  display:grid;
+  grid-template-columns:minmax(0,0.9fr) minmax(0,1.1fr);
+  gap:clamp(26px,5vw,78px);
+  align-items:start;
+  padding:clamp(26px,3.8vw,48px);
+  background:#EEE9E2;
+  border-left:3px solid #8E4B3E;
+}
+main .afb-early-stage .afb-early-stage-kicker {
+  display:block;
+  margin:0 0 13px;
+  color:#8E4B3E;
+  font:700 11px/1.4 var(--sans);
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+main .afb-early-stage h2 {
+  font:400 clamp(29px,3.2vw,45px)/1.12 var(--serif);
+  letter-spacing:-.032em;
+  color:#111111;
+  margin:0;
+  max-width:17ch;
+}
+main .afb-early-stage .afb-early-stage-copy p {
+  margin:0 0 15px;
+  color:#514D49;
+  font:400 16px/1.65 var(--sans);
+  max-width:64ch;
+}
+main .afb-early-stage .afb-early-stage-copy p:last-child {margin-bottom:0}
+@media screen and (max-width:900px){
+  main .afb-early-stage .afb-early-stage-inner {
+    grid-template-columns:1fr;
+    gap:19px;
+  }
+}
+@media screen and (max-width:640px){
+  main .afb-early-stage {padding:0 0 42px}
+  main .afb-early-stage .afb-early-stage-inner {
+    padding:23px 20px 25px;
+    gap:15px;
+    border-left-width:3px;
+  }
+  main .afb-early-stage .afb-early-stage-kicker {
+    font-size:10px;
+    margin-bottom:11px;
+  }
+  main .afb-early-stage h2 {
+    font-size:clamp(29px,8.1vw,36px);
+    line-height:1.15;
+    max-width:none;
+  }
+  main .afb-early-stage .afb-early-stage-copy p {
+    font-size:15px;
+    line-height:1.59;
+    margin:0 0 12px;
+  }
+}
 </style>
 </head><body><a class="skip-link" href="#contenuto">Vai al contenuto</a><header class="site-header"><div class="container nav-inner"><a class="brand" href="index.html" aria-label="AstroSonico, torna alla homepage"><img class="brand-logo" src="assets/img/astrosonico-logo.svg?v=20261022-logo-2" alt="AstroSonico" width="1839" height="750"></a><nav class="desktop-nav" aria-label="Navigazione principale"><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="sessioni.html">Sessioni individuali</a><a class="nav-link" href="astro-for-business.html" aria-current="page">Astro for Business</a><a class="nav-link" href="gift-card.html">Gift Card</a><a class="nav-link" href="ritiri.html">Ritiri</a><a class="nav-link" href="eventi.html">Eventi</a></nav><a class="nav-cta desktop-cta" href="mailto:cibosupersonico@gmail.com?subject=AstroSonico%20-%20richiesta%20informazioni">Scrivimi <span class="mobile-action-glyph" aria-hidden="true">↗</span></a><details class="mobile-menu"><summary aria-label="Apri il menu di navigazione"><span class="menu-glyph" aria-hidden="true">☰</span><span>Menu</span></summary><nav class="mobile-nav" aria-label="Navigazione mobile"><a href="index.html">Home</a><a href="sessioni.html">Sessioni individuali</a><a href="astro-for-business.html" aria-current="page">Astro for Business</a><a href="gift-card.html">Gift Card</a><a href="ritiri.html">Ritiri</a><a href="eventi.html">Eventi</a><a class="nav-cta" href="mailto:cibosupersonico@gmail.com?subject=AstroSonico%20-%20richiesta%20informazioni">Scrivimi <span class="mobile-action-glyph" aria-hidden="true">↗</span></a></nav></details></div></header><main id="contenuto">
 <section class="afb-hero" aria-labelledby="afb-title"><div class="container afb-hero-grid"><div>
@@ -416,6 +481,20 @@ main .afb-fit .afb-fit-list li strong{color:#111111;font-weight:700}
 <article class="afb-program-item"><span class="afb-num">06</span><div><h3>Supporto via email per dodici mesi</h3><p>Uno spazio di confronto per brevi domande e consulti collegati ai temi affrontati nel percorso, tra un incontro e il successivo.</p></div></article>
 </div><p class="afb-program-mini">Il calendario dei sette incontri si concorda con Francesca in funzione del percorso. Le sei meditazioni guidate sono fruibili come registrazioni; non sono sei sessioni live aggiuntive.</p></div>
 </div></section>
+<section class="afb-early-stage" id="la-tua-attivita" aria-labelledby="afb-early-stage-title">
+  <div class="container">
+    <div class="afb-early-stage-inner">
+      <div class="afb-early-stage-heading">
+        <span class="afb-early-stage-kicker">Per chi sta iniziando</span>
+        <h2 id="afb-early-stage-title">E se la tua attività non fosse ancora nata?</h2>
+      </div>
+      <div class="afb-early-stage-copy">
+        <p>Non è necessario avere già una partita IVA. Possiamo partire dalla tua carta natale e osservare i transiti del periodo, esplorando anche possibili date per l'avvio del tuo progetto.</p>
+        <p>L'astrologia offre una prospettiva simbolica da affiancare alle valutazioni economiche, fiscali e organizzative.</p>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="afb-section afb-history" id="storia-e-origini"><div class="container">
 <div class="afb-manifesto"><p class="afb-manifesto-line">Il cielo è sempre stato di tutti.<br><em>La conoscenza, no.</em></p></div>
 <div class="afb-history-layout">
@@ -446,17 +525,7 @@ main .afb-fit .afb-fit-list li strong{color:#111111;font-weight:700}
 <div class="afb-stat"><strong>06</strong><span>meditazioni guidate<br>registrate</span></div>
 <div class="afb-stat"><strong>12</strong><span>mesi di supporto<br>via email</span></div>
 </div></div>
-<section class="afb-section" id="la-tua-attivita"><div class="container">
-<div class="afb-section-heading"><span class="eyebrow">Un nuovo modo di osservare il lavoro</span><h2 class="h-medium">Ogni fase chiede qualcosa di diverso.</h2>
-<p>A volte vorresti lanciare un progetto mentre una parte di te sente il bisogno di ricalibrare. Altre volte il desiderio di crescere arriva insieme alla paura di esporti, di sbagliare o di perdere stabilità. Il tuo business porta in superficie molti aspetti della tua storia personale: ciò che desideri, quello che temi, il rapporto con i soldi e il riconoscimento.</p></div>
-<div class="afb-two-col">
-<div class="afb-text-block"><h3 class="h-card">Tu e la tua attività: due carte da mettere in relazione.</h3><p>Cominciamo dalla tua carta natale e dalla relazione che hai con lavoro, talento, denaro, visibilità, rischio e sicurezza. Se hai già un’attività, leggiamo anche il suo cielo di nascita: la data in cui l’hai avviata diventa il riferimento per osservare simbolicamente il suo carattere e i suoi transiti.</p><p>La sinastria tra la tua carta e quella dell’attività è una parte centrale del percorso. Ci permette di esplorare il rapporto tra le tue inclinazioni personali e ciò che stai costruendo, comprese le fasi in cui potresti sentire maggiore spinta o fatica.</p></div>
-<div class="afb-two-cards">
-<article class="afb-card"><span class="afb-card-symbol" aria-hidden="true">☉</span><h3>Il tuo cielo</h3><p>Vocazione, ambizioni, rapporto con il valore, paure legate alla visibilità, capacità di scegliere e di dare forma ai talenti.</p></article>
-<article class="afb-card"><span class="afb-card-symbol" aria-hidden="true">✳</span><h3>Il cielo del business</h3><p>La carta simbolica dell’attività, la sinastria con la tua e la lettura dei transiti annuali del progetto o dell’azienda.</p></article>
-</div></div>
-<div class="afb-synastry-callout"><strong>Stai per aprire una partita IVA o avviare un’impresa?</strong><p>Possiamo osservare il periodo che stai attraversando e valutare astrologicamente alcune date per l’avvio o il lancio, anche se la tua attività non ha ancora una carta di nascita. La scelta definitiva terrà conto anche degli aspetti fiscali, legali, economici e organizzativi del progetto.</p></div>
-</div></section>
+
 <section class="afb-section afb-deep"><div class="container afb-season">
 <div class="afb-season-orbit" aria-hidden="true"><span class="afb-center">Tempi di semina,<br>tempi di raccolta.</span><span class="afb-orbit-point"></span></div>
 <div class="afb-text-block"><span class="eyebrow">I transiti del tuo business</span><h2 class="h-medium">Quando espandere, quando attendere, quando cambiare rotta.</h2><p>Ogni attività attraversa cicli. Osservare i transiti della tua carta e quelli del tuo business durante l’anno ci offre una prospettiva sui temi che potrebbero diventare più presenti nelle diverse fasi.</p>
