@@ -378,68 +378,168 @@ main .afb-fit .afb-fit-list li strong{color:#111111;font-weight:700}
   main .afb-fit .afb-fit-list li strong{display:block;color:#111111}
 }
 
-/* Astro for Business: lightweight editorial note for projects not yet launched. */
+/* Astro for Business · rose-antique editorial interlude for future founders.
+   Full-width band (not a card); decorative circle is CSS-only and non-interactive. */
 main .afb-early-stage {
-  padding:0 0 clamp(42px,5vw,70px);
-  background:#F7F4EF;
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  padding:clamp(53px,6.3vw,96px) 0;
+  background:#D8B6B0;
+  color:#111111;
+}
+main .afb-early-stage::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  pointer-events:none;
+  width:clamp(290px,43vw,600px);
+  aspect-ratio:1;
+  top:-38%;
+  right:-12%;
+  border:1px solid rgba(85,46,43,.25);
+  border-radius:50%;
+  transform:rotate(-18deg) scaleX(.77);
+}
+main .afb-early-stage::after{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  pointer-events:none;
+  width:clamp(235px,34vw,485px);
+  aspect-ratio:1;
+  top:-26%;
+  right:-7%;
+  border:1px solid rgba(85,46,43,.13);
+  border-radius:50%;
+  transform:rotate(-18deg) scaleX(.77);
 }
 main .afb-early-stage .afb-early-stage-inner {
   display:grid;
-  grid-template-columns:minmax(0,0.9fr) minmax(0,1.1fr);
-  gap:clamp(26px,5vw,78px);
-  align-items:start;
-  padding:clamp(26px,3.8vw,48px);
-  background:#EEE9E2;
-  border-left:3px solid #8E4B3E;
+  grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);
+  align-items:center;
+  gap:clamp(28px,5.5vw,96px);
+  background:transparent;
+  padding:0;
+  border:0;
+  max-width:none;
 }
-main .afb-early-stage .afb-early-stage-kicker {
-  display:block;
-  margin:0 0 13px;
-  color:#8E4B3E;
+main .afb-early-stage .afb-early-stage-heading{
+  min-width:0;
+}
+main .afb-early-stage .afb-early-stage-kicker{
+  display:flex;
+  align-items:center;
+  gap:13px;
+  margin:0 0 clamp(21px,3vw,34px);
+  color:#292121;
   font:700 11px/1.4 var(--sans);
-  letter-spacing:.12em;
+  letter-spacing:.14em;
   text-transform:uppercase;
 }
-main .afb-early-stage h2 {
-  font:400 clamp(29px,3.2vw,45px)/1.12 var(--serif);
-  letter-spacing:-.032em;
+main .afb-early-stage .afb-early-stage-kicker::before{
+  content:"";
+  width:39px;
+  height:1px;
+  flex:none;
+  background:#60352E;
+}
+main .afb-early-stage h2{
+  font:400 clamp(44px,5.2vw,78px)/1.04 var(--serif);
+  letter-spacing:-.052em;
+  text-wrap:balance;
   color:#111111;
   margin:0;
-  max-width:17ch;
+  max-width:15ch;
 }
-main .afb-early-stage .afb-early-stage-copy p {
-  margin:0 0 15px;
-  color:#514D49;
-  font:400 16px/1.65 var(--sans);
-  max-width:64ch;
+main .afb-early-stage h2 em{
+  display:block;
+  font-style:italic;
+  font-weight:400;
+  color:#69372F;
 }
-main .afb-early-stage .afb-early-stage-copy p:last-child {margin-bottom:0}
+main .afb-early-stage .afb-early-stage-copy{
+  position:relative;
+  padding:8px 0 8px clamp(22px,2.5vw,35px);
+  border-left:1px solid rgba(85,46,43,.52);
+  max-width:540px;
+}
+main .afb-early-stage .afb-early-stage-copy p{
+  color:#2F2827;
+  font:400 clamp(15px,1.24vw,17px)/1.67 var(--sans);
+  max-width:55ch;
+  margin:0 0 16px;
+}
+main .afb-early-stage .afb-early-stage-copy .afb-early-stage-intro{
+  color:#111111;
+  font-weight:600;
+  font-size:clamp(18px,1.75vw,23px);
+  line-height:1.45;
+  letter-spacing:-.016em;
+  margin-bottom:19px;
+}
+main .afb-early-stage .afb-early-stage-copy .afb-early-stage-note{
+  border-top:1px solid rgba(85,46,43,.38);
+  padding-top:16px;
+  margin:22px 0 0;
+  font-size:13px;
+  line-height:1.57;
+  color:#3B2E2B;
+}
 @media screen and (max-width:900px){
-  main .afb-early-stage .afb-early-stage-inner {
+  main .afb-early-stage .afb-early-stage-inner{
     grid-template-columns:1fr;
-    gap:19px;
+    gap:32px;
+  }
+  main .afb-early-stage .afb-early-stage-copy{
+    padding:0;
+    border-left:0;
   }
 }
 @media screen and (max-width:640px){
-  main .afb-early-stage {padding:0 0 42px}
-  main .afb-early-stage .afb-early-stage-inner {
-    padding:23px 20px 25px;
-    gap:15px;
-    border-left-width:3px;
+  main .afb-early-stage{padding:49px 0 51px!important}
+  main .afb-early-stage::before{
+    width:280px;
+    top:-120px;
+    right:-178px;
+    opacity:.6;
   }
-  main .afb-early-stage .afb-early-stage-kicker {
+  main .afb-early-stage::after{display:none}
+  main .afb-early-stage .afb-early-stage-inner{
+    gap:25px;
+  }
+  main .afb-early-stage .afb-early-stage-kicker{
     font-size:10px;
-    margin-bottom:11px;
+    margin-bottom:18px;
+    gap:10px;
   }
-  main .afb-early-stage h2 {
-    font-size:clamp(29px,8.1vw,36px);
-    line-height:1.15;
+  main .afb-early-stage .afb-early-stage-kicker::before{width:29px}
+  main .afb-early-stage h2{
+    font-size:clamp(39px,10.6vw,48px);
+    line-height:1.07;
+    letter-spacing:-.047em;
+    max-width:14ch;
+  }
+  main .afb-early-stage .afb-early-stage-copy{
+    padding-top:22px;
+    border-top:1px solid rgba(85,46,43,.48);
     max-width:none;
   }
-  main .afb-early-stage .afb-early-stage-copy p {
+  main .afb-early-stage .afb-early-stage-copy p{
     font-size:15px;
-    line-height:1.59;
-    margin:0 0 12px;
+    line-height:1.62;
+    margin-bottom:14px;
+  }
+  main .afb-early-stage .afb-early-stage-copy .afb-early-stage-intro{
+    font-size:19px;
+    line-height:1.43;
+    margin-bottom:16px;
+  }
+  main .afb-early-stage .afb-early-stage-copy .afb-early-stage-note{
+    font-size:12px;
+    line-height:1.56;
+    margin-top:17px;
+    padding-top:14px;
   }
 }
 </style>
@@ -486,11 +586,12 @@ main .afb-early-stage .afb-early-stage-copy p:last-child {margin-bottom:0}
     <div class="afb-early-stage-inner">
       <div class="afb-early-stage-heading">
         <span class="afb-early-stage-kicker">Per chi sta iniziando</span>
-        <h2 id="afb-early-stage-title">E se la tua attività non fosse ancora nata?</h2>
+        <h2 id="afb-early-stage-title">Non hai ancora una partita IVA? <em>Puoi partire da qui.</em></h2>
       </div>
       <div class="afb-early-stage-copy">
-        <p>Non è necessario avere già una partita IVA. Possiamo partire dalla tua carta natale e osservare i transiti del periodo, esplorando anche possibili date per l'avvio del tuo progetto.</p>
-        <p>L'astrologia offre una prospettiva simbolica da affiancare alle valutazioni economiche, fiscali e organizzative.</p>
+        <p class="afb-early-stage-intro">Astro for Business è anche per chi sta ancora dando forma alla propria attività.</p>
+        <p>Partiamo dalla tua carta natale e dai transiti del periodo per osservare simbolicamente i cicli e riflettere anche su possibili date di avvio.</p>
+        <p class="afb-early-stage-note">Una prospettiva da affiancare alle valutazioni economiche, fiscali e organizzative.</p>
       </div>
     </div>
   </div>
