@@ -819,6 +819,175 @@ main .afb-prosperity-manifesto .afb-prosperity-quote{
     margin-top:2px!important;
   }
 }
+
+/* Astro for Business · 2026-10-27 mobile reading + qualified-call audit.
+   Scoped to this page; desktop appearance stays unchanged except deduplicated
+   editorial copy, redundant FAQ and the duplicated transits section. */
+main .afb-program-mobile-action{display:none}
+@media screen and (max-width:640px){
+  /* First action follows the essential promise instead of the repeated figures. */
+  main .afb-hero .afb-hero-grid > div:first-child{
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    min-width:0;
+  }
+  main .afb-hero .afb-hero-grid > div:first-child > .afb-kicker{order:0}
+  main .afb-hero .afb-hero-grid > div:first-child > h1{order:1}
+  main .afb-hero .afb-hero-grid > div:first-child > .afb-lead{order:2}
+  main .afb-hero .afb-hero-grid > div:first-child > .afb-actions{
+    order:3;
+    width:100%;
+    margin:2px 0 0;
+  }
+  main .afb-hero .afb-hero-grid > div:first-child > .afb-hero-next-step{
+    order:4;
+    margin:13px 0 0!important;
+    font-size:12px!important;
+    line-height:1.48!important;
+  }
+  main .afb-hero .afb-hero-grid > div:first-child > .afb-hero-facts{
+    order:5;
+    margin:20px 0 0!important;
+  }
+  main .afb-hero .afb-founder-panel{
+    padding:21px 19px 20px!important;
+    border-radius:10px!important;
+  }
+  main .afb-hero .afb-founder-panel .afb-founder-kicker{
+    font-size:10px!important;
+    margin-bottom:12px!important;
+  }
+  main .afb-hero .afb-founder-panel .afb-founder-quote{
+    font-size:clamp(20px,5.2vw,23px)!important;
+    line-height:1.32!important;
+    margin-bottom:13px!important;
+  }
+  main .afb-hero .afb-founder-panel .afb-founder-small,
+  main .afb-hero .afb-founder-panel .afb-portraits,
+  main .afb-hero .afb-founder-panel .editorial-mobile-business-portrait{
+    display:none!important;
+  }
+  main .afb-hero .afb-founder-panel .afb-founder-sign{
+    display:block;
+    font-size:11px;
+  }
+  /* Short, scannable fit statements instead of paragraphs masquerading as list items. */
+  main .afb-fit .afb-fit-list li{
+    padding-top:12px!important;
+    padding-bottom:12px!important;
+    line-height:1.53!important;
+    font-size:14px!important;
+  }
+  main .afb-fit .afb-fit-list li strong{
+    display:block;
+    margin-bottom:2px;
+    color:#111111;
+  }
+  /* Program already repeats the hero quantities: keep the six deliverables,
+     but remove the 4 numerical cards and duplicate clarification on mobile. */
+  main .afb-program .afb-program-index,
+  main .afb-program .afb-program-mini{display:none!important}
+  main .afb-program .afb-program-aside{
+    margin-bottom:5px;
+  }
+  main .afb-program .afb-program-aside > p{
+    margin:0!important;
+    font-size:15px!important;
+    line-height:1.58!important;
+  }
+  main .afb-program .afb-program-items{border-top:1px solid #C5BAB1}
+  main .afb-program .afb-program-item{
+    padding:17px 0!important;
+    grid-template-columns:31px minmax(0,1fr)!important;
+    gap:11px!important;
+  }
+  main .afb-program .afb-program-item h3{
+    font-size:18px!important;
+    line-height:1.27!important;
+    margin-bottom:8px!important;
+  }
+  main .afb-program .afb-program-item p{
+    font-size:14px!important;
+    line-height:1.55!important;
+  }
+  main .afb-program .afb-program-mobile-action{
+    display:block!important;
+    margin-top:25px;
+    border-top:1px solid #BDB4AA;
+    padding-top:21px;
+  }
+  main .afb-program .afb-program-mobile-action p{
+    margin:0 0 15px!important;
+    color:#292725!important;
+    font:400 14px/1.55 var(--sans)!important;
+  }
+  main .afb-program .afb-program-mobile-action strong{
+    font:400 23px/1 var(--serif);
+    letter-spacing:-.03em;
+    color:#111;
+    white-space:nowrap;
+  }
+  main .afb-program .afb-program-mobile-action del{
+    color:#70655C;
+    white-space:nowrap;
+    margin-left:5px;
+  }
+  main .afb-program .afb-program-mobile-action p span{
+    display:block;
+    color:#514D49;
+    font-size:12px;
+    margin-top:6px;
+  }
+  main .afb-program .afb-program-mobile-action .button{
+    width:100%!important;
+    min-height:49px!important;
+    display:flex!important;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:#111111!important;
+    color:#F7F4EF!important;
+    border:1px solid #111111!important;
+    border-radius:7px!important;
+    white-space:normal!important;
+    padding:13px 15px!important;
+  }
+  main .afb-program .afb-program-mobile-action a:focus-visible{
+    outline:3px solid #8E4B3E;
+    outline-offset:3px;
+  }
+  /* A rose editorial interlude, not a second oversized hero. */
+  main .afb-early-stage{padding:41px 0 45px!important}
+  main .afb-early-stage h2{
+    font-size:clamp(34px,9.5vw,42px)!important;
+    line-height:1.11!important;
+  }
+  main .afb-early-stage .afb-early-stage-inner{gap:20px!important}
+  main .afb-early-stage .afb-early-stage-copy{padding-top:18px!important}
+  /* Sources remain available through the native disclosure. */
+  main .afb-history .afb-history-story > p{
+    line-height:1.57!important;
+  }
+  main .afb-history .afb-history-details summary{
+    min-height:46px;
+  }
+  main #metodo .afb-section-heading{margin-bottom:20px!important}
+  main .afb-faq details summary{
+    min-height:44px;
+    line-height:1.4;
+    display:list-item;
+  }
+  main .afb-cta .afb-cta-grid > div:first-child > p{
+    font-size:15px!important;
+    line-height:1.55!important;
+  }
+  main .afb-cta .afb-cta-price .button{
+    min-height:49px;
+    white-space:normal;
+    text-align:center;
+  }
+}
 </style>
 </head><body><a class="skip-link" href="#contenuto">Vai al contenuto</a><header class="site-header"><div class="container nav-inner"><a class="brand" href="index.html" aria-label="AstroSonico, torna alla homepage"><img class="brand-logo" src="assets/img/astrosonico-logo.svg?v=20261022-logo-2" alt="AstroSonico" width="1839" height="750"></a><nav class="desktop-nav" aria-label="Navigazione principale"><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="sessioni.html">Sessioni individuali</a><a class="nav-link" href="astro-for-business.html" aria-current="page">Astro for Business</a><a class="nav-link" href="gift-card.html">Gift Card</a><a class="nav-link" href="ritiri.html">Ritiri</a><a class="nav-link" href="eventi.html">Eventi</a></nav><a class="nav-cta desktop-cta" href="mailto:cibosupersonico@gmail.com?subject=AstroSonico%20-%20richiesta%20informazioni">Scrivimi <span class="mobile-action-glyph" aria-hidden="true">↗</span></a><details class="mobile-menu"><summary aria-label="Apri il menu di navigazione"><span class="menu-glyph" aria-hidden="true">☰</span><span>Menu</span></summary><nav class="mobile-nav" aria-label="Navigazione mobile"><a href="index.html">Home</a><a href="sessioni.html">Sessioni individuali</a><a href="astro-for-business.html" aria-current="page">Astro for Business</a><a href="gift-card.html">Gift Card</a><a href="ritiri.html">Ritiri</a><a href="eventi.html">Eventi</a><a class="nav-cta" href="mailto:cibosupersonico@gmail.com?subject=AstroSonico%20-%20richiesta%20informazioni">Scrivimi <span class="mobile-action-glyph" aria-hidden="true">↗</span></a></nav></details></div></header><main id="contenuto">
 <section class="afb-hero" aria-labelledby="afb-title"><div class="container afb-hero-grid"><div>
@@ -839,10 +1008,10 @@ main .afb-prosperity-manifesto .afb-prosperity-quote{
 <div class="afb-fit-situations">
   <p class="afb-fit-list-title">Potresti riconoscerti se…</p>
   <ul class="afb-fit-list">
-    <li><strong>Stai iniziando qualcosa.</strong> Vuoi riflettere sul momento in cui partire, incrociando i transiti con la tua carta natale e valutando anche gli aspetti concreti del progetto.</li>
-    <li><strong>Sei in una fase di passaggio.</strong> Ti domandi quando dare più spazio a un'idea, quando attendere e quando rivedere la direzione.</li>
-    <li><strong>Il rapporto con il denaro ti interroga.</strong> Vuoi esplorare valore, visibilità, capacità di ricevere e ciò che per te significa abbondanza.</li>
-    <li><strong>Desideri uno sguardo più ampio.</strong> Vuoi affiancare alle decisioni quotidiane uno spazio di osservazione personale, intuizione e ascolto.</li>
+    <li><strong>Stai iniziando qualcosa.</strong> Vuoi esplorare il momento dell’avvio, senza perdere di vista le scelte pratiche.</li>
+    <li><strong>Sei in una fase di passaggio.</strong> Vuoi capire a quali idee dare spazio e quali direzioni rivedere.</li>
+    <li><strong>Il rapporto con il denaro ti interroga.</strong> Vuoi esplorare valore, visibilità e capacità di ricevere.</li>
+    <li><strong>Desideri uno sguardo più ampio.</strong> Vuoi affiancare alle scelte ascolto e riflessione.</li>
   </ul>
 </div>
 </div></section>
@@ -861,7 +1030,7 @@ main .afb-prosperity-manifesto .afb-prosperity-quote{
 </section>
 <section class="afb-photo-spread" aria-label="Astro for Business, ritratto di Francesca"><figure><img src="assets/img/astro-business-editoriale.webp" loading="lazy" alt="Francesca nel progetto editoriale Astrology for Business: timing, visione e prosperità per il lavoro" width="1672" height="941"></figure></section>
 <section class="afb-section afb-program" id="cosa-comprende"><div class="container afb-program-outer">
-<aside class="afb-program-aside"><span class="eyebrow">Cosa faremo insieme</span><h2 class="h-medium">Un anno per accompagnare la tua attività.</h2><p>Gli incontri individuali si svolgono online. Tra una sessione e l’altra avrai a disposizione le meditazioni registrate e un supporto via email per brevi confronti legati al percorso.</p><div class="afb-program-index"><div><strong>7</strong><span>incontri personali</span></div><div><strong>6</strong><span>meditazioni registrate</span></div><div><strong>12</strong><span>mesi di percorso</span></div><div><strong>1:1</strong><span>lavoro personalizzato</span></div></div></aside>
+<aside class="afb-program-aside"><span class="eyebrow">Cosa faremo insieme</span><h2 class="h-medium">Un anno per accompagnare la tua attività.</h2><p>Dodici mesi permettono di tornare sulle domande mentre il lavoro e le priorità cambiano. I sette incontri individuali sono online; tra una sessione e l’altra avrai meditazioni registrate e brevi confronti via email.</p><div class="afb-program-index"><div><strong>7</strong><span>incontri personali</span></div><div><strong>6</strong><span>meditazioni registrate</span></div><div><strong>12</strong><span>mesi di percorso</span></div><div><strong>1:1</strong><span>lavoro personalizzato</span></div></div></aside>
 <div><div class="afb-program-items">
 <article class="afb-program-item"><span class="afb-num">01</span><div><h3>Una sessione iniziale: tu, il lavoro e la tua attività</h3><p>Lettura approfondita della tua carta natale, con attenzione a lavoro, denaro, vocazione e visibilità. Sinastria con il cielo della tua attività oppure osservazione del periodo e delle date da valutare se devi ancora avviarla.</p></div></article>
 <article class="afb-program-item"><span class="afb-num">02</span><div><h3>Una roadmap astrologica annuale</h3><p>Visione dei transiti dell’anno: tuoi e dell’attività. Osserviamo le fasi di possibile espansione, revisione o cambiamento e i cicli della Cabala come ulteriore strumento di riflessione.</p></div></article>
@@ -870,7 +1039,12 @@ main .afb-prosperity-manifesto .afb-prosperity-quote{
 <article class="afb-program-item"><span class="afb-num">05</span><div><h3>Sei meditazioni guidate, registrate</h3><p>Pratiche che potrai ripetere in autonomia per ritrovare centratura e ascolto durante il percorso. Sono contenuti registrati, distinti dai sette incontri individuali.</p></div></article>
 <article class="afb-program-item"><span class="afb-num">06</span><div><h3>Supporto via email per dodici mesi</h3><p>Uno spazio di confronto per brevi domande e consulti collegati ai temi affrontati nel percorso, tra un incontro e il successivo.</p></div></article>
 </div><p class="afb-program-mini">Il calendario dei sette incontri si concorda con Francesca in funzione del percorso. Le sei meditazioni guidate sono fruibili come registrazioni; non sono sei sessioni live aggiuntive.</p></div>
-</div></section>
+</div>
+<div class="container afb-program-mobile-action" aria-label="Investimento e richiesta call">
+  <p>Investimento promozionale: <strong>1.450 €</strong> <del>1.800 €</del><span> · Pagamento possibile in due rate.</span></p>
+  <a class="button button-primary" href="prenota-call-business.html">Richiedi una call conoscitiva <span aria-hidden="true">↗</span></a>
+</div>
+</section>
 <section class="afb-early-stage" id="la-tua-attivita" aria-labelledby="afb-early-stage-title">
   <div class="container">
     <div class="afb-early-stage-inner">
@@ -912,15 +1086,10 @@ main .afb-prosperity-manifesto .afb-prosperity-quote{
   </aside>
 </div></div></section>
 
-<section class="afb-section afb-deep"><div class="container afb-season">
-<div class="afb-season-orbit" aria-hidden="true"><span class="afb-center">Tempi di semina,<br>tempi di raccolta.</span><span class="afb-orbit-point"></span></div>
-<div class="afb-text-block"><span class="eyebrow">I transiti del tuo business</span><h2 class="h-medium">Quando espandere, quando attendere, quando cambiare rotta.</h2><p>Ogni attività attraversa cicli. Osservare i transiti della tua carta e quelli del tuo business durante l’anno ci offre una prospettiva sui temi che potrebbero diventare più presenti nelle diverse fasi.</p>
-<ul class="afb-season-list"><li>Periodi da dedicare a nuovi progetti e visibilità.</li><li>Momenti utili per rivedere collaborazioni, risorse e priorità.</li><li>Passaggi in cui interrogarti sul rapporto tra crescita e sostenibilità personale.</li><li>Fasi in cui esplorare una nuova direzione professionale.</li></ul>
-<p>Accanto all’astrologia, osserviamo anche il ciclo della Cabala, integrandone il linguaggio simbolico nella lettura dell’anno e delle decisioni.</p></div>
-</div></section>
+
 <section class="afb-section" id="metodo"><div class="container">
 <div class="afb-section-heading"><span class="eyebrow">Gli strumenti del percorso</span><h2 class="h-medium">Quattro linguaggi. Un unico sguardo su di te e sul tuo lavoro.</h2>
-<p>Quattro strumenti complementari per esplorare il rapporto fra te e la tua attività. Ogni strumento offre un punto di vista diverso: apri quello che desideri approfondire.</p></div>
+<p>Quattro prospettive complementari. Apri ciascuno strumento per scoprire come lo utilizziamo nel percorso.</p></div>
 <div class="afb-method-grid">
 <article class="afb-method-card afb-method-reveal">
   <span class="afb-method-n">01 / ASTROLOGIA</span>
@@ -963,11 +1132,11 @@ main .afb-prosperity-manifesto .afb-prosperity-quote{
 
 
 <section class="afb-cta" id="richiedi-informazioni"><div class="container afb-cta-grid">
-<div><span class="eyebrow">Prenota una call conoscitiva</span><h2>Ti va di raccontarmi cosa stai costruendo?</h2><p>Compila il modulo dedicato con nome, cognome, telefono, email e tipologia di attività. Riceverò la richiesta via email e ti proporrò la mia prima disponibilità per una call conoscitiva. Concorderemo direttamente via email giorno e orario, senza prenotazione automatica.</p><p>Gli incontri si svolgono online. È possibile suddividere il pagamento in due rate.</p></div>
-<div class="afb-cta-price"><span class="afb-promo">Promozione lancio</span><div class="afb-price-line"><del class="afb-old">1.800 €</del><strong class="afb-new">1.450 €</strong></div><p>12 mesi · 7 incontri individuali · 6 meditazioni registrate · supporto via email.</p><a class="button" href="prenota-call-business.html">Prenota una call conoscitiva <span class="mobile-action-glyph" aria-hidden="true">↗</span></a></div>
+<div><span class="eyebrow">Richiedi una call conoscitiva</span><h2>Ti va di raccontarmi cosa stai costruendo?</h2><p>Raccontami il tuo progetto attraverso il modulo. Ti risponderò personalmente via email per concordare una call: potremo capire se il percorso è adatto a ciò che stai costruendo. Il giorno e l’orario non vengono prenotati automaticamente.</p><p>Gli incontri si svolgono online. È possibile suddividere il pagamento in due rate.</p></div>
+<div class="afb-cta-price"><span class="afb-promo">Promozione lancio</span><div class="afb-price-line"><del class="afb-old">1.800 €</del><strong class="afb-new">1.450 €</strong></div><p>12 mesi · 7 incontri individuali · 6 meditazioni registrate · supporto via email.</p><a class="button" href="prenota-call-business.html">Richiedi una call conoscitiva <span class="mobile-action-glyph" aria-hidden="true">↗</span></a></div>
 </div></section>
 <section class="afb-section"><div class="container afb-faq"><div class="afb-section-heading"><span class="eyebrow">Domande frequenti</span><h2 class="h-medium">Prima di iniziare.</h2></div>
-<details><summary>Non ho ancora aperto la partita IVA. Posso partecipare?</summary><p>Sì. Possiamo leggere il tuo Tema Natale in relazione al lavoro e osservare, sul piano astrologico, possibili date per l’avvio dell’attività o di un progetto. Per stabilire la data effettiva restano importanti valutazioni fiscali, legali e organizzative.</p></details>
+
 <details><summary>Come si studia il cielo di un’azienda già avviata?</summary><p>Utilizziamo una data significativa per la nascita o l’avvio dell’attività come riferimento simbolico. Su quella carta osserviamo la sinastria con il tuo Tema Natale e i transiti dell’anno. Concorderemo insieme quali dati utilizzare.</p></details>
 <details><summary>Le meditazioni sono incontri dal vivo?</summary><p>No. Il programma comprende sette incontri individuali online e sei meditazioni guidate registrate, da praticare in autonomia quando preferisci.</p></details>
 <details><summary>Che cosa comprende il supporto via email?</summary><p>Per dodici mesi puoi scrivere a Francesca per brevi consulti e domande relative ai temi del percorso. Il supporto è pensato per accompagnare gli incontri programmati.</p></details>
