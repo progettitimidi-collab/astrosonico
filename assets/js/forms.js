@@ -52,7 +52,7 @@
         }else if(next){window.location.assign(next)}
         else {submit.textContent='RICHIESTA INVIATA';}
       }catch(err){
-        message('L’invio non è riuscito: non considerare la richiesta confermata. Riprova o scrivi a cibosupersonico@gmail.com.','error');
+        message('L’invio non è riuscito: non considerare la richiesta confermata. Riprova o scrivi a astrosonico.frasonica@gmail.com.','error');
       }finally{
         clearTimeout(timeout);busy=false;submit.disabled=false;submit.removeAttribute('aria-busy');
         if(submit.textContent==='INVIO IN CORSO…')submit.textContent=baseText;
