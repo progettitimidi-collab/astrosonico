@@ -1,0 +1,51 @@
+/* AstroSonico | approfondimenti editoriali per i cinque servizi individuali. */
+#tutti-i-servizi .astro-card-more{display:inline-flex;align-items:center;gap:9px;width:max-content;max-width:100%;margin:8px 0 19px;color:#8e4b3e;border-bottom:1px solid rgba(142,75,62,.45);padding:5px 0;font-weight:750;font-size:13px;line-height:1.4;text-decoration:none;transition:gap .2s ease,color .2s ease}
+#tutti-i-servizi .astro-card-more:hover{gap:15px;color:#111}
+#tutti-i-servizi .astro-card-more:focus-visible{outline:3px solid #8e4b3e;outline-offset:5px;border-radius:2px}
+.astro-depth{padding:clamp(74px,8vw,118px) 0;background:#f7f4ef;position:relative;overflow:hidden}
+.astro-depth:before{content:"";position:absolute;right:-210px;top:-250px;width:570px;height:570px;border:1px solid rgba(142,75,62,.13);border-radius:50%;pointer-events:none}
+.astro-depth-head{max-width:810px;margin-bottom:38px;position:relative}
+.astro-depth-eyebrow{display:block;color:#8e4b3e;text-transform:uppercase;font-size:11px;font-weight:800;letter-spacing:.19em;margin-bottom:15px}
+.astro-depth-head h2{font:400 clamp(38px,5.5vw,69px)/1.1 var(--serif,Georgia,serif);letter-spacing:-.056em;color:#111;margin:0 0 21px}
+.astro-depth-head h2 em{color:#8e4b3e;font-style:italic;font-weight:400}
+.astro-depth-head p{max-width:670px;margin:0;color:#554b46;font-size:clamp(15px,1.3vw,17px);line-height:1.77}
+.astro-depth-list{display:grid;gap:13px;position:relative}
+.astro-depth-item{--depth-accent:#8e4b3e;--depth-surface:#fff;border:1px solid #dbd2c9;background:var(--depth-surface);border-radius:23px;overflow:hidden;scroll-margin-top:110px;box-shadow:0 10px 30px rgba(34,21,25,.035)}
+.astro-depth-item--natal{--depth-accent:#8e4b3e;--depth-surface:#fffaf6}
+.astro-depth-item--tarot{--depth-accent:#76506b;--depth-surface:#f8f1f3}
+.astro-depth-item--transits{--depth-accent:#47635d;--depth-surface:#eff3ee}
+.astro-depth-item--synastry{--depth-accent:#91564a;--depth-surface:#f6e6e0}
+.astro-depth-item--year{--depth-accent:#bda394;--depth-surface:#201d20;color:#fff7f0;border-color:#201d20}
+.astro-depth-item summary{list-style:none;display:grid;grid-template-columns:45px minmax(0,1fr) 54px;gap:clamp(12px,2vw,27px);align-items:center;padding:clamp(21px,3vw,32px) clamp(20px,3vw,36px);cursor:pointer}
+.astro-depth-item summary::-webkit-details-marker{display:none}
+.astro-depth-item summary::marker{content:""}
+.astro-depth-item summary:focus-visible{outline:3px solid var(--depth-accent);outline-offset:-6px;border-radius:18px}
+.astro-depth-num{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;border:1px solid currentColor;opacity:.62;font:600 12px var(--sans,Arial,sans-serif)}
+.astro-depth-summary-eyebrow{display:block;color:var(--depth-accent);text-transform:uppercase;font-size:11px;font-weight:800;letter-spacing:.12em;margin-bottom:6px}
+.astro-depth-item--year .astro-depth-summary-eyebrow{color:#d8b6b0}
+.astro-depth-question{display:block;font:400 clamp(23px,2.7vw,35px)/1.2 var(--serif,Georgia,serif);letter-spacing:-.035em}
+.astro-depth-plus{display:grid;place-items:center;width:47px;height:47px;justify-self:end;border-radius:50%;border:1px solid currentColor;color:var(--depth-accent);font:300 28px/1 var(--sans,Arial,sans-serif);transition:transform .24s ease,background .24s ease}
+.astro-depth-item--year .astro-depth-plus{color:#f7f4ef}
+.astro-depth-item[open] .astro-depth-plus{transform:rotate(45deg);background:rgba(142,75,62,.08)}
+.astro-depth-item[open]>summary{border-bottom:1px solid rgba(91,76,71,.19)}
+.astro-depth-body{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(260px,.8fr);gap:clamp(24px,5vw,74px);padding:clamp(27px,4.5vw,51px) clamp(22px,4vw,56px) clamp(35px,4.5vw,53px)}
+.astro-depth-copy{max-width:690px}
+.astro-depth-copy p{font-size:16px;line-height:1.85;margin:0 0 16px;color:inherit}
+.astro-depth-copy h3{font:400 clamp(25px,2.8vw,34px)/1.17 var(--serif,Georgia,serif);letter-spacing:-.035em;margin:24px 0 17px}
+.astro-depth-copy ul{list-style:none;margin:0;padding:0;display:grid;gap:13px}
+.astro-depth-copy li{position:relative;padding-left:25px;line-height:1.64;font-size:15px}
+.astro-depth-copy li:before{content:"✳";position:absolute;left:0;top:0;color:var(--depth-accent);font-size:15px}
+.astro-depth-item--year .astro-depth-copy li:before{color:#d8b6b0}
+.astro-depth-facts{align-self:start;padding:clamp(22px,3vw,31px);border-radius:18px;background:rgba(255,255,255,.66);border:1px solid rgba(90,65,54,.12)}
+.astro-depth-item--year .astro-depth-facts{background:#352e34;border-color:#6e555f}
+.astro-depth-facts .astro-depth-facts-label{display:block;text-transform:uppercase;color:var(--depth-accent);font-size:11px;font-weight:800;letter-spacing:.13em;margin-bottom:17px}
+.astro-depth-item--year .astro-depth-facts .astro-depth-facts-label{color:#e4c6bc}
+.astro-depth-facts ul{list-style:none;margin:0 0 25px;padding:0;display:grid;gap:12px}
+.astro-depth-facts li{font-size:14px;line-height:1.65;padding-bottom:11px;border-bottom:1px solid rgba(94,76,75,.16)}
+.astro-depth-facts li:last-child{border-bottom:0;padding-bottom:0}
+.astro-depth-facts .button{width:100%;text-align:center;justify-content:center;min-height:48px}
+.astro-depth-item--year .astro-depth-facts .button{background:#f7f4ef;color:#111;border-color:#f7f4ef}
+.astro-depth-footnote{font-size:12px!important;line-height:1.65!important;opacity:.78;margin:17px 0 0!important}
+@media(max-width:830px){.astro-depth-body{grid-template-columns:1fr}.astro-depth-facts{max-width:620px;width:100%}}
+@media(max-width:640px){.astro-depth{padding:70px 0 88px}.astro-depth-head{margin-bottom:27px}.astro-depth-item{border-radius:18px;scroll-margin-top:90px}.astro-depth-item summary{grid-template-columns:29px minmax(0,1fr) 37px;padding:20px 18px;gap:12px}.astro-depth-num{height:28px;width:28px;font-size:10px}.astro-depth-plus{height:35px;width:35px;font-size:25px}.astro-depth-summary-eyebrow{font-size:10px}.astro-depth-question{font-size:clamp(22px,6vw,28px)}.astro-depth-body{padding:24px 21px 30px;gap:24px}.astro-depth-copy p{font-size:15px}.astro-depth-copy li{font-size:14px}.astro-depth-facts{padding:23px}.astro-depth-head h2{font-size:clamp(38px,9vw,53px)}}
+@media(prefers-reduced-motion:reduce){#tutti-i-servizi .astro-card-more,.astro-depth-plus{transition:none}}
