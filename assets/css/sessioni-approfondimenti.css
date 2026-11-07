@@ -36,6 +36,13 @@
 .astro-depth-copy li{position:relative;padding-left:25px;line-height:1.64;font-size:15px}
 .astro-depth-copy li:before{content:"✳";position:absolute;left:0;top:0;color:var(--depth-accent);font-size:15px}
 .astro-depth-item--year .astro-depth-copy li:before{color:#d8b6b0}
+/* Keep the annual panel legible despite the global desktop heading color. */
+.astro-depth-item--year .astro-depth-copy h3,
+.astro-depth-item--year .astro-depth-copy p,
+.astro-depth-item--year .astro-depth-copy li,
+.astro-depth-item--year .astro-depth-facts li{color:#fff7f0}
+.astro-depth-item--year .astro-depth-question{color:#fff7f0}
+
 .astro-depth-facts{align-self:start;padding:clamp(22px,3vw,31px);border-radius:18px;background:rgba(255,255,255,.66);border:1px solid rgba(90,65,54,.12)}
 .astro-depth-item--year .astro-depth-facts{background:#352e34;border-color:#6e555f}
 .astro-depth-facts .astro-depth-facts-label{display:block;text-transform:uppercase;color:var(--depth-accent);font-size:11px;font-weight:800;letter-spacing:.13em;margin-bottom:17px}
