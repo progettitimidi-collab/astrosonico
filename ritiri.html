@@ -182,7 +182,180 @@
  main .radici-fields{gap:12px!important}
  main .radici-inline-cta{min-height:50px!important}
 }
+</style>
+<style id="radici-mobile-redesign">
+/* Un percorso di lettura dedicato agli schermi piccoli; contenuto desktop invariato. */
+.radici-mobile-landing{display:none}
+@media(max-width:780px){
+  main > .radici-hero,
+  main > .radici-data-strip,
+  main > .radici-section,
+  main > .radici-photo-story{display:none!important}
+  main .radici-mobile-landing{display:block!important;color:#111;background:#F7F4EF;overflow:hidden}
+  main .radici-mobile-landing *{box-sizing:border-box}
+  main .rm-wrap{width:min(calc(100% - 38px),520px);margin:0 auto}
+  main .rm-overline{font-family:var(--sans);font-size:10px!important;font-weight:800;letter-spacing:.14em;line-height:1.5;text-transform:uppercase;margin:0 0 13px;color:#8E4B3E}
+  main .rm-section-title{font-family:var(--serif)!important;font-weight:400!important;font-size:clamp(34px,9.6vw,48px)!important;letter-spacing:-.05em!important;line-height:1.08!important;margin:0 0 20px!important;color:#111}
+  main .rm-cta{display:flex;min-height:54px;align-items:center;justify-content:space-between;gap:16px;text-decoration:none;font-family:var(--sans);font-size:14px!important;letter-spacing:.01em;font-weight:750;padding:14px 20px;border-radius:100px;margin-top:23px;max-width:100%;transition:filter .2s}
+  main .rm-cta:focus-visible{outline:3px solid #8E4B3E;outline-offset:4px}
+  main .rm-cta span{font-size:21px;line-height:1}
+  main .rm-cta-dark{color:#F7F4EF!important;background:#111}
+  main .rm-cta-light{color:#111!important;background:#F7F4EF}
+  main .rm-hero{background:#F7F4EF;padding:31px 0 0}
+  main .rm-hero-title{font-family:var(--serif)!important;font-size:clamp(73px,20vw,108px)!important;line-height:.94!important;letter-spacing:-.09em!important;font-weight:400!important;margin:6px 0 19px!important;color:#111}
+  main .rm-hero-title span{color:#8E4B3E}
+  main .rm-hero-statement{font-family:var(--serif);font-size:clamp(30px,8.7vw,41px)!important;line-height:1.1!important;letter-spacing:-.045em;max-width:450px;font-weight:400;margin:0 0 15px!important;color:#111}
+  main .rm-hero-intro{font-size:15px!important;line-height:1.6!important;color:#514D49;margin:0 0 22px!important;max-width:450px}
+  main .rm-essentials{border-top:1px solid #c8c0b5;padding-top:13px}
+  main .rm-essentials p{font-size:13px!important;line-height:1.55!important;margin:0 0 5px!important;color:#222}
+  main .rm-essentials strong{font-weight:750}
+  main .rm-essentials .rm-hero-price{margin-top:9px!important}
+  main .rm-hero-visual{position:relative;margin:29px 0 0;height:260px;background:#D8D1C7;overflow:hidden}
+  main .rm-hero-visual img{display:block;width:100%;height:100%!important;object-fit:cover!important;object-position:50% 46%!important}
+  main .rm-hero-visual:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(to bottom,transparent,rgba(0,0,0,.47));pointer-events:none}
+  main .rm-hero-visual figcaption{position:absolute;bottom:17px;left:20px;z-index:1;color:white;font-size:10px;font-weight:750;letter-spacing:.1em;text-transform:uppercase}
+  main .rm-guide{padding:45px 0 43px;background:#fff}
+  main .rm-guide-portrait{width:min(100%,390px);margin:0 0 22px}
+  main .rm-guide-portrait img{width:100%;height:auto;aspect-ratio:4/5;max-height:440px;object-fit:cover;object-position:50% 31%;border-radius:11px;background:#28221e}
+  main .rm-guide .rm-section-title{margin-bottom:14px!important}
+  main .rm-guide p:not(.rm-overline){font-size:15px!important;line-height:1.64!important;color:#4b4743;margin:0 0 12px!important}
+  main .rm-why{padding:52px 0 55px;background:#111;color:#F7F4EF}
+  main .rm-why .rm-overline{color:#D8B6B0}
+  main .rm-why .rm-section-title{color:#F7F4EF!important;font-size:clamp(40px,10.6vw,54px)!important;margin-bottom:22px!important}
+  main .rm-why p:not(.rm-overline){font-size:15px!important;line-height:1.7!important;color:#E9E5DF;margin:0 0 15px!important}
+  main .rm-why .rm-why-emphasis{font-family:var(--serif);font-size:clamp(26px,7.2vw,34px)!important;line-height:1.2!important;letter-spacing:-.025em;color:#fff!important;margin:25px 0 0!important}
+  main .rm-why .rm-cta{margin-top:27px}
+  main .rm-experience{padding:47px 0 53px;background:#F7F4EF}
+  main .rm-experience .rm-section-title{max-width:510px;margin-bottom:24px!important}
+  main .rm-steps{border-top:1px solid #cfc7be}
+  main .rm-step{display:grid;grid-template-columns:40px minmax(0,1fr);gap:12px;align-items:start;padding:18px 0;border-bottom:1px solid #cfc7be}
+  main .rm-step-no{font-size:11px;line-height:1.7;color:#8E4B3E;font-weight:800;letter-spacing:.1em}
+  main .rm-step h3{font-family:var(--serif)!important;font-size:27px!important;line-height:1.15!important;letter-spacing:-.02em;font-weight:400!important;margin:0 0 7px!important;color:#111}
+  main .rm-step p{font-size:14px!important;line-height:1.57!important;margin:0!important;color:#57514d}
+  main .rm-experience .rm-cta{margin-top:26px}
+  main .rm-fit{padding:47px 0 49px;background:#D8D1C7}
+  main .rm-fit .rm-section-title{margin-bottom:22px!important}
+  main .rm-fit-list{list-style:none;padding:0;margin:0}
+  main .rm-fit-list li{padding:12px 0 13px 24px;position:relative;font-size:15px!important;line-height:1.57!important;margin:0;border-bottom:1px solid rgba(17,17,17,.17);color:#24211f}
+  main .rm-fit-list li:first-child{border-top:1px solid rgba(17,17,17,.17)}
+  main .rm-fit-list li:before{content:"✳";position:absolute;left:0;top:12px;font-size:12px;color:#8E4B3E}
+  main .rm-info{padding:0 0 49px;background:#fff}
+  main .rm-place-photo{margin:0 0 38px;height:235px;overflow:hidden;background:#D8D1C7}
+  main .rm-place-photo img{width:100%;height:100%!important;object-fit:cover!important;object-position:50% 48%!important;display:block}
+  main .rm-info .rm-section-title{margin-bottom:21px!important}
+  main .rm-specs{margin:0}
+  main .rm-specs>div{padding:12px 0;border-bottom:1px solid #ded8d2}
+  main .rm-specs dt{font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:#8E4B3E;margin-bottom:4px}
+  main .rm-specs dd{font-size:15px;line-height:1.5;color:#252321;margin:0}
+  main .rm-price-row{display:flex;align-items:flex-end;justify-content:space-between;gap:15px;margin-top:22px;padding:18px 0;border-block:1px solid #d3cbc4}
+  main .rm-price-row span{font-size:13px;color:#4c4643}
+  main .rm-price-row strong{font:400 57px/.95 var(--serif);letter-spacing:-.06em;color:#111;white-space:nowrap}
+  main .rm-meals{font-size:13px!important;line-height:1.6!important;color:#514D49;margin:17px 0 0!important}
+  main .rm-info .rm-cta{margin-top:23px}
+  main .rm-note{font-size:12px!important;line-height:1.5!important;color:#77706b;margin:12px 0 0!important}
+  main #richiedi-radici{padding:44px 0 56px!important;background:#F7F4EF!important;scroll-margin-top:78px}
+  main #richiedi-radici .radici-form-intro h2{font-size:clamp(35px,10vw,45px)!important;line-height:1.07!important;margin:0 0 14px!important}
+  main #richiedi-radici .radici-form-intro .eyebrow{color:#8E4B3E}
+  main #richiedi-radici .radici-form-intro>p:first-of-type{font-size:14px!important;line-height:1.62!important}
+  main #richiedi-radici .radici-form-intro .radici-form-steps,main #richiedi-radici .radici-form-intro>p:last-of-type{display:none!important}
+  main #richiedi-radici .radici-form h3{display:none!important}
+  main #richiedi-radici .radici-form{padding:20px!important;border-radius:15px!important}
+  main #richiedi-radici .radici-form .description{font-size:12px!important;line-height:1.55!important;color:#514D49!important;margin-bottom:18px!important}
+  main #richiedi-radici .radici-fields{gap:10px!important}
+  main #richiedi-radici .radici-form label{font-size:13px!important}
+  main #richiedi-radici .radici-submit{width:100%;min-height:52px!important}
+}
+@media(min-width:781px){
+  .radici-mobile-landing{display:none!important}
+}
 </style></head><body><a class="skip-link" href="#contenuto">Vai al contenuto</a><header class="site-header"><div class="container nav-inner"><a class="brand" href="index.html" aria-label="AstroSonico, torna alla homepage"><img class="brand-logo" src="assets/img/astrosonico-logo.svg?v=20261022-logo-2" alt="AstroSonico" width="1839" height="750"></a><nav class="desktop-nav" aria-label="Navigazione principale"><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="sessioni.html">Sessioni individuali</a><a class="nav-link" href="astro-for-business.html">Astro for Business</a><a class="nav-link" href="gift-card.html">Gift Card</a><a class="nav-link" href="ritiri.html" aria-current="page">Ritiri</a><a class="nav-link" href="eventi.html">Eventi</a></nav><a class="nav-cta desktop-cta" href="mailto:astrosonico.frasonica@gmail.com?subject=AstroSonico%20-%20richiesta%20informazioni">Scrivimi <span class="mobile-action-glyph" aria-hidden="true">↗</span></a><details class="mobile-menu"><summary aria-label="Apri il menu di navigazione"><span class="menu-glyph" aria-hidden="true">☰</span><span>Menu</span></summary><nav class="mobile-nav" aria-label="Navigazione mobile"><a href="index.html">Home</a><a href="sessioni.html">Sessioni individuali</a><a href="astro-for-business.html">Astro for Business</a><a href="gift-card.html">Gift Card</a><a href="ritiri.html" aria-current="page">Ritiri</a><a href="eventi.html">Eventi</a><a class="nav-cta" href="mailto:astrosonico.frasonica@gmail.com?subject=AstroSonico%20-%20richiesta%20informazioni">Scrivimi <span class="mobile-action-glyph" aria-hidden="true">↗</span></a></nav></details></div></header><main id="contenuto">
+<div class="radici-mobile-landing" aria-label="RADICI, ritiro di una giornata">
+
+  <section class="rm-hero" aria-labelledby="rm-title">
+    <div class="rm-wrap">
+      <p class="rm-overline">AstroSonico · Ritiro esperienziale</p>
+      <h1 class="rm-hero-title" id="rm-title">RADICI<span aria-hidden="true">.</span></h1>
+      <p class="rm-hero-statement">Non tutto ciò che portiamo ci appartiene.</p>
+      <p class="rm-hero-intro">Una giornata per tornare alle origini e osservare come vivono ancora nelle relazioni di oggi.</p>
+      <div class="rm-essentials">
+        <p><strong>Domenica 20 dicembre 2026</strong></p>
+        <p>Ayre Yoga · Oggiono (LC) <span aria-hidden="true">·</span> 9.30–21.30</p>
+        <p class="rm-hero-price"><strong>150 €</strong> a persona <span aria-hidden="true">·</span> pasti esclusi</p>
+      </div>
+      <a class="rm-cta rm-cta-dark" href="#richiedi-radici">Richiedi il tuo posto <span aria-hidden="true">↗</span></a>
+    </div>
+    <figure class="rm-hero-visual">
+      <img src="assets/img/ayre-shala.webp" width="840" height="1061" loading="eager" fetchpriority="high" alt="La shala di Ayre Yoga a Oggiono, dove si svolgerà RADICI">
+      <figcaption>Ayre Yoga · Oggiono</figcaption>
+    </figure>
+  </section>
+
+  <section class="rm-guide" aria-labelledby="rm-guide-title">
+    <div class="rm-wrap">
+      <figure class="rm-guide-portrait"><img src="assets/img/francesca-radici.jpg" width="1000" height="1265" loading="lazy" decoding="async" alt="Francesca Fariello, ideatrice e guida del ritiro RADICI"></figure>
+      <p class="rm-overline">Chi conduce la giornata</p>
+      <h2 class="rm-section-title" id="rm-guide-title">Con Francesca Fariello.</h2>
+      <p>RADICI è una giornata di lavoro simbolico attraverso astrologia evolutiva, Tarocchi di Marsiglia, metagenealogia, meditazione e pratiche di ascolto.</p>
+      <p>Uno spazio per osservare le proprie origini e il modo in cui continuano a vivere nelle relazioni.</p>
+    </div>
+  </section>
+
+  <section class="rm-why" aria-labelledby="rm-why-title">
+    <div class="rm-wrap">
+      <p class="rm-overline">Perché RADICI</p>
+      <h2 class="rm-section-title" id="rm-why-title">Le relazioni non iniziano oggi.</h2>
+      <p>Prima dei legami che scegliamo, ci sono quelli dentro cui siamo cresciute. È lì che impariamo qualcosa sull'amore, sulla distanza, sulla fiducia e sui confini.</p>
+      <p class="rm-why-emphasis">Possiamo osservare ciò che abbiamo imparato. E scegliere cosa farne, oggi.</p>
+      <a class="rm-cta rm-cta-light" href="#richiedi-radici">Richiedi il tuo posto <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+
+  <section class="rm-experience" aria-labelledby="rm-experience-title">
+    <div class="rm-wrap">
+      <p class="rm-overline">Il lavoro della giornata</p>
+      <h2 class="rm-section-title" id="rm-experience-title">Quattro movimenti. Un'unica domanda: cosa scelgo adesso?</h2>
+      <div class="rm-steps">
+        <article class="rm-step"><span class="rm-step-no">01</span><div><h3>Osservare.</h3><p>Ciò che abbiamo ereditato e ciò che continua a ripetersi nelle relazioni.</p></div></article>
+        <article class="rm-step"><span class="rm-step-no">02</span><div><h3>Distinguere.</h3><p>La nostra voce dai ruoli e dalle aspettative che abbiamo imparato a portare.</p></div></article>
+        <article class="rm-step"><span class="rm-step-no">03</span><div><h3>Riconoscere.</h3><p>Le risorse ricevute, oltre ai pesi che la nostra storia ci ha lasciato.</p></div></article>
+        <article class="rm-step"><span class="rm-step-no">04</span><div><h3>Scegliere.</h3><p>Che cosa desideriamo custodire e cosa non vogliamo più ripetere.</p></div></article>
+      </div>
+      <a class="rm-cta rm-cta-dark" href="#richiedi-radici">Richiedi il tuo posto <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+
+  <section class="rm-fit" aria-labelledby="rm-fit-title">
+    <div class="rm-wrap">
+      <p class="rm-overline">A chi si rivolge</p>
+      <h2 class="rm-section-title" id="rm-fit-title">Forse è il momento di guardare da dove arrivi.</h2>
+      <ul class="rm-fit-list">
+        <li>Alcune dinamiche continuano a ripetersi nelle tue relazioni.</li>
+        <li>La storia familiare pesa ancora sulle scelte di oggi.</li>
+        <li>Stai imparando a mettere confini senza sentirti in colpa.</li>
+        <li>Vuoi comprendere cosa portare avanti e cosa lasciare andare.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="rm-info" aria-labelledby="rm-info-title">
+    <figure class="rm-place-photo"><img src="assets/img/ayre-studio.webp" width="840" height="1260" loading="lazy" decoding="async" alt="Interno dello studio Ayre Yoga a Oggiono, con tappetini, luce naturale e piante"></figure>
+    <div class="rm-wrap">
+      <p class="rm-overline">Le informazioni</p>
+      <h2 class="rm-section-title" id="rm-info-title">Una giornata. Tutto essenziale.</h2>
+      <dl class="rm-specs">
+        <div><dt>Quando</dt><dd>Domenica 20 dicembre 2026</dd></div>
+        <div><dt>Orario</dt><dd>9.30–21.30</dd></div>
+        <div><dt>Dove</dt><dd>Ayre Yoga · Oggiono (LC)</dd></div>
+        <div><dt>La quota comprende</dt><dd>La giornata e le pratiche guidate da Francesca Fariello.</dd></div>
+      </dl>
+      <div class="rm-price-row"><span>Quota a persona</span><strong>150 €</strong></div>
+      <p class="rm-meals"><strong>Pranzo e cena non inclusi.</strong> Durante la giornata sono previste pause; i pasti sono liberi e a carico di ciascuno, nei locali vicini alla shala. Trasporto escluso.</p>
+      <a class="rm-cta rm-cta-dark" href="#richiedi-radici">Richiedi il tuo posto <span aria-hidden="true">↗</span></a>
+      <p class="rm-note">La richiesta non è una prenotazione confermata. Riceverai via email i prossimi passaggi.</p>
+    </div>
+  </section>
+</div>
+
 <section class="radici-hero"><div class="container radici-hero-grid"><div>
 <span class="radici-eyebrow">Ritiro esperienziale · Domenica 20 dicembre 2026 · Ayre Yoga, Oggiono</span>
 <h1 class="radici-title">RADICI.</h1><p class="radici-mobile-only radici-mobile-hook">Da dove arrivo? Che cosa continuo a ripetere? Che cosa scelgo oggi?</p>
