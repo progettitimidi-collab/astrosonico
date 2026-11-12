@@ -102,14 +102,94 @@
 .radici-guide-content p{font-size:17px;line-height:1.88;color:#524955;margin:0 0 18px}
 @media(max-width:920px){.radici-guide-grid{grid-template-columns:1fr;gap:29px}.radici-guide-photo{max-width:425px}.radici-guide-content .h-medium{margin-top:12px}}
 @media(max-width:620px){.radici-guide-photo{max-width:100%}.radici-guide-content p{font-size:16px;line-height:1.8}}
-</style><link rel="stylesheet" media="screen and (max-width: 640px)" href="assets/css/mobile-editorial.css?v=20261026-4"><link rel="stylesheet" media="screen and (min-width: 641px)" href="assets/css/desktop-editorial.css?v=20261026-2"></head><body><a class="skip-link" href="#contenuto">Vai al contenuto</a><header class="site-header"><div class="container nav-inner"><a class="brand" href="index.html" aria-label="AstroSonico, torna alla homepage"><img class="brand-logo" src="assets/img/astrosonico-logo.svg?v=20261022-logo-2" alt="AstroSonico" width="1839" height="750"></a><nav class="desktop-nav" aria-label="Navigazione principale"><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="sessioni.html">Sessioni individuali</a><a class="nav-link" href="astro-for-business.html">Astro for Business</a><a class="nav-link" href="gift-card.html">Gift Card</a><a class="nav-link" href="ritiri.html" aria-current="page">Ritiri</a><a class="nav-link" href="eventi.html">Eventi</a></nav><a class="nav-cta desktop-cta" href="mailto:astrosonico.frasonica@gmail.com?subject=AstroSonico%20-%20richiesta%20informazioni">Scrivimi <span class="mobile-action-glyph" aria-hidden="true">↗</span></a><details class="mobile-menu"><summary aria-label="Apri il menu di navigazione"><span class="menu-glyph" aria-hidden="true">☰</span><span>Menu</span></summary><nav class="mobile-nav" aria-label="Navigazione mobile"><a href="index.html">Home</a><a href="sessioni.html">Sessioni individuali</a><a href="astro-for-business.html">Astro for Business</a><a href="gift-card.html">Gift Card</a><a href="ritiri.html" aria-current="page">Ritiri</a><a href="eventi.html">Eventi</a><a class="nav-cta" href="mailto:astrosonico.frasonica@gmail.com?subject=AstroSonico%20-%20richiesta%20informazioni">Scrivimi <span class="mobile-action-glyph" aria-hidden="true">↗</span></a></nav></details></div></header><main id="contenuto">
+</style><link rel="stylesheet" media="screen and (max-width: 640px)" href="assets/css/mobile-editorial.css?v=20261026-4"><link rel="stylesheet" media="screen and (min-width: 641px)" href="assets/css/desktop-editorial.css?v=20261026-2">
+<style id="radici-mobile-streamline">
+/* RADICI: mobile-first reading path without modifying the expanded desktop story. */
+.radici-mobile-only{display:none}
+.radici-inline-cta{margin-top:18px;min-height:48px}
+.radici-cost-cta{margin-top:20px}
+@media(max-width:680px){
+ main .radici-mobile-only{display:block}
+ main .radici-hero{padding:24px 0 29px!important}
+ main .radici-hero-grid{gap:0!important}
+ main .radici-title{font-size:clamp(65px,18vw,90px)!important;line-height:.94!important;letter-spacing:-.075em!important;margin:8px 0 13px!important}
+ main .radici-mobile-hook{max-width:350px;font-family:var(--serif);font-size:clamp(25px,7.1vw,32px);line-height:1.16;letter-spacing:-.025em;color:#161616;margin:0 0 15px}
+ main .radici-subtitle,main .radici-intro{display:none!important}
+ main .radici-hero .radici-eyebrow{line-height:1.45!important;letter-spacing:.1em!important}
+ main .radici-key{margin:8px 0 17px!important;max-width:355px;font-size:13px!important;line-height:1.63!important;letter-spacing:0!important;color:#252525!important}
+ main .radici-key strong{font-weight:750}
+ main .radici-key-break{display:block;height:0;visibility:hidden}
+ main .radici-buttons{display:block}
+ main .radici-buttons .button,main .radici-inline-cta{display:flex;width:100%;max-width:none;justify-content:center;text-align:center}
+ main .radici-buttons .radici-link{display:none}
+ main .radici-hero-photo{height:205px!important;margin-top:24px!important;border-radius:13px!important}
+ main .radici-hero-photo img:first-child{object-position:50% 39%!important}
+ main .radici-hero-photo .radici-francesca-mini{display:none!important}
+ main .radici-photo-caption{bottom:13px;left:15px;font-size:10px}
+ main .radici-data-strip{display:none!important}
+ main .radici-section{padding:30px 0!important}
+ main .radici-guide{padding:28px 0 24px!important}
+ main .radici-guide-grid{gap:19px!important}
+ main .radici-guide-photo{max-width:none!important;width:100%}
+ main .radici-guide-photo img{height:235px!important;aspect-ratio:auto!important;object-fit:cover!important;object-position:50% 24%!important;border-radius:11px!important}
+ main .radici-guide-content .eyebrow{display:block;margin-top:0}
+ main .radici-guide-content .h-medium{font-size:clamp(28px,7.6vw,34px)!important;line-height:1.15!important;margin:8px 0 10px!important}
+ main .radici-guide-content p:first-of-type{display:none!important}
+ main .radici-guide-content p{font-size:15px!important;line-height:1.58!important;margin:0!important}
+ main #il-ritiro .radici-copy-layout{gap:13px!important}
+ main #il-ritiro .radici-text-note,main #il-ritiro .radici-divider-line{display:none}
+ main #il-ritiro .radici-body p.reading-detail,
+ main #il-ritiro .radici-body>p:not(.reading-lead):not(.radici-mobile-only){display:none!important}
+ main #il-ritiro .radici-body p.reading-lead{font-size:15px!important;line-height:1.65!important;margin:0 0 13px!important}
+ main #il-ritiro .radici-verse{font-size:clamp(25px,6.8vw,32px)!important;line-height:1.25!important;margin:14px 0!important}
+ main .radici-punch{font-size:20px!important;line-height:1.35!important;font-weight:700!important;color:#111!important;margin:0 0 12px!important}
+ main #il-ritiro .radici-inline-cta{margin-top:17px!important}
+ main .radici-location-grid{gap:16px!important}
+ main .radici-location-grid p:not(:first-of-type){display:none!important}
+ main .radici-location-grid p:first-of-type{font-size:15px!important;line-height:1.6!important;margin:0!important}
+ main .radici-location-img{height:205px!important;border-radius:12px!important}
+ main .radici-gallery,main .radici-photo-story{display:none!important}
+ main .radici-themes-grid{gap:16px!important}
+ main .radici-themes-grid p.reading-detail,
+ main .radici-themes-grid>div:first-child>p:not(.reading-lead):not(.radici-questions){display:none!important}
+ main .radici-themes-grid .radici-questions,main .radici-ritual-photo{display:none!important}
+ main .radici-themes-grid p.reading-lead{font-size:15px!important;line-height:1.65!important;margin:0!important}
+ main .radici-benefits li{font-size:15px!important;line-height:1.52!important;padding:10px 0 10px 26px!important}
+ main .radici-benefits li:nth-child(3),main .radici-benefits li:nth-child(4){display:none!important}
+ main .radici-time-note{font-size:14px!important;line-height:1.5!important;font-weight:650!important;margin:17px 0 0!important}
+ main .radici-transition,main .radici-for{display:none!important}
+ main .radici-included{padding:29px 0!important}
+ main .radici-included-grid{gap:11px!important}
+ main .radici-included-card{padding:18px 19px!important;border-radius:13px!important}
+ main .radici-included-card h3{font-size:24px!important;margin:0 0 12px!important}
+ main .radici-included-card li{font-size:14px!important;line-height:1.55!important;margin:0 0 7px!important}
+ main .radici-included-card:first-child li:first-child,
+ main .radici-included-card:first-child li:last-child,
+ main .radici-included-card:last-child li:first-child,
+ main .radici-included-card:last-child li:nth-child(2){display:none!important}
+ main .radici-included-card li:last-child{margin-bottom:0!important}
+ main .radici-cost{padding-top:19px!important;margin-top:19px!important}
+ main .radici-cost strong{font-size:47px!important}
+ main .radici-details-note{font-size:13px!important;line-height:1.5!important;margin:9px 0 0!important}
+ main .radici-form-section{padding:31px 0 45px!important}
+ main .radici-form-grid{gap:17px!important}
+ main .radici-form-intro h2{font-size:clamp(31px,8vw,37px)!important;line-height:1.12!important;margin:4px 0 11px!important}
+ main .radici-form-intro .radici-form-steps,main .radici-form-intro>p:last-child{display:none!important}
+ main .radici-form-intro p{font-size:14px!important;line-height:1.53!important;margin:0!important}
+ main .radici-form{padding:18px!important}
+ main .radici-form h3{font-size:24px!important;line-height:1.2!important;margin-bottom:7px!important}
+ main .radici-form .description{font-size:13px!important;line-height:1.5!important}
+ main .radici-fields{gap:12px!important}
+ main .radici-inline-cta{min-height:50px!important}
+}
+</style></head><body><a class="skip-link" href="#contenuto">Vai al contenuto</a><header class="site-header"><div class="container nav-inner"><a class="brand" href="index.html" aria-label="AstroSonico, torna alla homepage"><img class="brand-logo" src="assets/img/astrosonico-logo.svg?v=20261022-logo-2" alt="AstroSonico" width="1839" height="750"></a><nav class="desktop-nav" aria-label="Navigazione principale"><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="sessioni.html">Sessioni individuali</a><a class="nav-link" href="astro-for-business.html">Astro for Business</a><a class="nav-link" href="gift-card.html">Gift Card</a><a class="nav-link" href="ritiri.html" aria-current="page">Ritiri</a><a class="nav-link" href="eventi.html">Eventi</a></nav><a class="nav-cta desktop-cta" href="mailto:astrosonico.frasonica@gmail.com?subject=AstroSonico%20-%20richiesta%20informazioni">Scrivimi <span class="mobile-action-glyph" aria-hidden="true">↗</span></a><details class="mobile-menu"><summary aria-label="Apri il menu di navigazione"><span class="menu-glyph" aria-hidden="true">☰</span><span>Menu</span></summary><nav class="mobile-nav" aria-label="Navigazione mobile"><a href="index.html">Home</a><a href="sessioni.html">Sessioni individuali</a><a href="astro-for-business.html">Astro for Business</a><a href="gift-card.html">Gift Card</a><a href="ritiri.html" aria-current="page">Ritiri</a><a href="eventi.html">Eventi</a><a class="nav-cta" href="mailto:astrosonico.frasonica@gmail.com?subject=AstroSonico%20-%20richiesta%20informazioni">Scrivimi <span class="mobile-action-glyph" aria-hidden="true">↗</span></a></nav></details></div></header><main id="contenuto">
 <section class="radici-hero"><div class="container radici-hero-grid"><div>
 <span class="radici-eyebrow">Ritiro esperienziale · Domenica 20 dicembre 2026 · Ayre Yoga, Oggiono</span>
-<h1 class="radici-title">RADICI.</h1>
+<h1 class="radici-title">RADICI.</h1><p class="radici-mobile-only radici-mobile-hook">Da dove arrivo? Che cosa continuo a ripetere? Che cosa scelgo oggi?</p>
 <p class="radici-subtitle">Una giornata per osservare le nostre radici, riconoscere ciò che abbiamo ereditato e scegliere come stare nelle relazioni.</p>
 <p class="radici-intro">Famiglia. Infanzia. Appartenenza. Relazioni. Separazioni. Memoria. Eredità. Ci sono storie che continuiamo a portare con noi, anche quando siamo convinte di averle lasciate lontano.</p>
+<p class="radici-key"><strong>20 dicembre · 9.30–21.30</strong><span class="radici-key-break"> · </span>Ayre Yoga, Oggiono · <strong>150 €</strong> · pasti esclusi</p>
 <div class="radici-buttons"><a class="button button-primary" href="#richiedi-radici">Richiedi il tuo posto <span class="mobile-action-glyph" aria-hidden="true">↗</span></a><a class="radici-link" href="#il-ritiro">Leggi il racconto del ritiro <span class="mobile-action-glyph" aria-hidden="true">↓</span></a></div>
-<p class="radici-key">Domenica 20 dicembre · 9.30–21.30 · Ayre Yoga, Oggiono · 150 € a persona · pasti esclusi</p>
 </div><div class="radici-hero-photo"><img src="assets/img/ayre-shala.webp" loading="eager" fetchpriority="high" width="840" height="1061" alt="La shala luminosa di Ayre Yoga a Oggiono, con tappetini e piante"><img class="radici-francesca-mini" src="assets/img/albero-francesca-mini.webp" loading="lazy" width="133" height="200" alt="Francesca accanto al tronco di un albero, dalla campagna fotografica RADICI"><span class="radici-photo-caption">Ayre Yoga · Oggiono</span></div>
 </div></section>
 <div class="radici-data-strip"><div class="container radici-data-grid">
@@ -132,8 +212,9 @@
 <p class="reading-detail">E osservando, semplicemente osservando, abbiamo assorbito. Abbiamo imparato cosa significasse sentirci amate, viste, accolte. Ma anche cosa significasse non esserlo.</p>
 <p>Molto prima di poter decidere chi eravamo, qualcosa aveva già cominciato a mettere radici dentro di noi.</p>
 <p>Queste radici continuano a vivere nel modo in cui oggi entriamo nelle relazioni: nelle persone che scegliamo, in ciò che cerchiamo negli altri, nelle paure che ritornano, nella facilità o nella fatica di restare, andare via, fidarci, mettere un confine.</p>
-<div class="radici-verse">RADICI nasce dal desiderio di <em>osservare quel campo</em> su cui poggiamo i piedi da sempre.</div>
+<div class="radici-verse">RADICI nasce dal desiderio di <em>osservare quel campo</em> su cui poggiamo i piedi da sempre.</div><p class="radici-mobile-only radici-punch">Non tutto ciò che abbiamo imparato a portare ci appartiene.</p>
 <p>Possiamo allontanarci da ciò che è stato. Possiamo cambiare città, relazioni, abitudini, vita. Eppure qualcosa rimane. Dedicheremo una giornata a prestargli attenzione.</p>
+<a class="button button-primary radici-inline-cta" href="#richiedi-radici">Richiedi il tuo posto <span aria-hidden="true">↗</span></a>
 </div>
 </div></section>
 <section class="radici-section radici-location" id="luogo"><div class="container">
@@ -158,12 +239,12 @@
 </div>
 <div><span class="eyebrow">A cosa dedicheremo attenzione</span>
 <ul class="radici-benefits">
-<li>Riconoscere ciò che abbiamo ereditato dalla storia familiare e che ancora influenza le nostre relazioni.</li>
-<li>Osservare gli schemi che tendono a ripetersi, anche quando cambiano le persone.</li>
-<li>Comprendere il nostro rapporto con appartenenza, distanza, paura della separazione e bisogno di riconoscimento.</li>
-<li>Distinguere ciò che ci appartiene da ruoli, responsabilità e aspettative che abbiamo imparato a portare.</li>
-<li>Riconoscere nelle nostre radici anche le risorse, la forza e ciò che desideriamo continuare a nutrire.</li>
-</ul></div>
+<li>Riconoscere ciò che abbiamo ereditato e come influenza i legami di oggi.</li>
+<li>Osservare gli schemi che tornano, anche quando cambiano le persone.</li>
+<li>Esplorare il rapporto con appartenenza, distanza e paura della separazione.</li>
+<li>Distinguere ciò che ci appartiene dalle aspettative e dai ruoli ereditati.</li>
+<li>Riconoscere nelle nostre radici anche le risorse da continuare a nutrire.</li>
+</ul><p class="radici-mobile-only radici-time-note">Raccogliere il 2026. Scegliere cosa portare nel 2027.</p><a class="button button-primary radici-inline-cta" href="#richiedi-radici">Richiedi il tuo posto <span aria-hidden="true">↗</span></a></div>
 </div></section>
 <section class="radici-section radici-transition"><div class="container radici-transition-layout">
 <div><span class="eyebrow">Il tempo astrologico</span><h2 class="h-medium">Raccogliere il 2026. Prepararsi al 2027.</h2>
@@ -197,10 +278,10 @@
 <li>Sono previste pause per il pranzo e la cena, liberi e a carico di ogni partecipante, nei locali nei dintorni della shala.</li>
 </ul></article>
 </div><div class="radici-cost"><strong>150 €</strong><span>quota a persona · pasti esclusi</span></div>
-<p class="radici-details-note">Compila il modulo per richiedere la partecipazione. Riceverai via email le informazioni per confermare il tuo posto e le modalità di pagamento. La richiesta non equivale a un'iscrizione definitiva.</p>
+<p class="radici-details-note">Compila il modulo per richiedere la partecipazione. Riceverai via email le informazioni per confermare il tuo posto e le modalità di pagamento. La richiesta non equivale a un'iscrizione definitiva.</p><a class="button button-primary radici-inline-cta radici-cost-cta" href="#richiedi-radici">Richiedi il tuo posto <span aria-hidden="true">↗</span></a>
 </div></section>
 <section class="radici-form-section" id="richiedi-radici"><div class="container radici-form-grid">
-<div class="radici-form-intro"><span class="eyebrow">Richiedi la partecipazione</span><h2>Se senti che questo tempo ti chiama, scrivimi.</h2>
+<div class="radici-form-intro"><span class="eyebrow">Richiedi la partecipazione</span><h2>Richiedi il tuo posto.</h2>
 <p>Compila il modulo per richiedere la partecipazione. Riceverò la tua richiesta e ti risponderò personalmente via email con le modalità di conferma e pagamento.</p>
 <ul class="radici-form-steps"><li><b>01</b><span>Invia la richiesta con i dati necessari per la fatturazione.</span></li><li><b>02</b><span>Riceverai via email le indicazioni per confermare la partecipazione.</span></li><li><b>03</b><span>Il posto sarà confermato con una mia comunicazione, secondo le modalità indicate.</span></li></ul>
 <p>Nessun calendario da consultare, nessun pagamento immediato sul sito.</p></div>
