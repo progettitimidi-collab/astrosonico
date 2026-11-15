@@ -62,7 +62,7 @@
      .astro-gallery-item img,.portrait-frame,.portrait-frame img,
      .radici-gallery img,.radici-location-img,.radici-location-img img,
      .ev-cover,.ev-cover img,.gift-preview--photographic,
-     .afb-photo-spread img,.radici-photo-story img,.annual-image-pause img,
+     .afb-photo-spread img,.annual-image-pause img,
      .ast-ribbon-grid img,.page-hero.has-image img){
     border-radius:16px;
   }
