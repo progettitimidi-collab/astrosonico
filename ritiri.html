@@ -295,34 +295,60 @@
 }
 </style>
 <style id="radici-photo-questions">
-/* RADICI — composizione editoriale dedicata: fotografia e domande, senza testo sovrapposto all'immagine. */
+/* RADICI — intermezzo tipografico: manifesto in dialogo con Astro for Business,
+   fotografia originale a lato, parole prima dell'immagine. */
 @media (min-width:781px) {
-  main > .radici-transition { padding-top:clamp(55px,6vw,92px);padding-bottom:clamp(55px,6vw,92px); }
-  main > .radici-transition .radici-transition-layout {
-    display:grid;grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);
-    gap:clamp(30px,6vw,108px);align-items:center;
+  main > .radici-transition {
+    background:#111111!important;color:#F7F4EF!important;
+    padding:clamp(70px,8vw,130px) 0!important;
   }
-  main > .radici-transition .radici-transition-media {margin:0;min-width:0;overflow:hidden;border-radius:16px;background:#27160D;}
-  main > .radici-transition .radici-transition-media img {
-    display:block;width:100%;height:clamp(440px,47vw,660px);
-    object-fit:cover;object-position:50% 52%;
+  main > .radici-transition .radici-transition-layout {
+    display:grid;
+    grid-template-columns:minmax(0,1.8fr) minmax(210px,.8fr);
+    gap:clamp(26px,4.5vw,76px);
+    align-items:center;
   }
   main > .radici-transition .radici-transition-copy {min-width:0;}
+  main > .radici-transition .radici-transition-copy .eyebrow {
+    display:block;color:#D8B6B0!important;margin:0 0 15px;
+    font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+  }
   main > .radici-transition .radici-transition-copy .h-medium {
-    font-size:clamp(34px,3.8vw,57px);line-height:1.08;letter-spacing:-.042em;
-    max-width:690px;margin:16px 0 clamp(27px,3vw,46px);
+    color:#F7F4EF!important;font-family:var(--serif)!important;
+    font-size:clamp(29px,2.65vw,42px)!important;line-height:1.17!important;
+    font-weight:400;letter-spacing:-.035em!important;
+    max-width:700px;margin:0 0 clamp(32px,4vw,58px)!important;
   }
   main > .radici-transition .radici-transition-quote {
-    margin:0;padding:0 0 0 clamp(17px,2vw,27px);border-left:2px solid #D8B6B0;
-    font-family:var(--serif);font-size:clamp(26px,2.65vw,42px);
-    font-weight:400;letter-spacing:-.029em;line-height:1.23;color:#F7F4EF;
-    max-width:720px;
+    padding:0!important;border:0!important;margin:0!important;
+    font-family:var(--serif),Georgia,serif;
+    font-size:clamp(40px,4.75vw,76px)!important;
+    line-height:1.12!important;letter-spacing:-.044em!important;
+    font-weight:400!important;color:#F7F4EF!important;max-width:860px;
+    text-wrap:pretty;
   }
-  main > .radici-transition .radici-transition-quote span {display:block;margin-bottom:.34em;}
-  main > .radici-transition .radici-transition-quote span:last-child {margin-bottom:0;}
+  main > .radici-transition .radici-transition-quote > span {
+    display:block;margin:0 0 .29em;max-width:100%;
+  }
+  main > .radici-transition .radici-transition-quote > span:last-child {margin-bottom:0;}
+  main > .radici-transition .radici-transition-quote em {
+    display:inline;max-width:100%;
+    padding:.025em .13em .09em;
+    background:#D8B6B0;color:#111111!important;
+    box-decoration-break:clone;-webkit-box-decoration-break:clone;
+    font-style:normal;font-weight:500;
+  }
+  main > .radici-transition .radici-transition-media {
+    margin:0;width:100%;max-width:410px;justify-self:end;
+    overflow:hidden;border-radius:10px;background:#27160D;
+  }
+  main > .radici-transition .radici-transition-media img {
+    display:block;width:100%;height:auto;aspect-ratio:9/16;
+    object-fit:contain;object-position:50% 50%;
+  }
 }
 @media (max-width:780px) {
-  main .radici-mobile-landing .rm-why {padding-top:43px;padding-bottom:48px;}
+  main .radici-mobile-landing .rm-why {padding-top:43px;padding-bottom:48px;background:#111111;}
   main .radici-mobile-landing .rm-why .rm-section-title {
     font-size:clamp(35px,9.7vw,48px)!important;line-height:1.08!important;
     margin-bottom:25px!important;letter-spacing:-.045em;
@@ -335,12 +361,18 @@
     display:block;width:100%;height:100%;object-fit:cover;object-position:50% 57%;
   }
   main .radici-mobile-landing .rm-why-questions {
-    margin:0;padding:0 0 0 18px;border-left:2px solid #D8B6B0;
-    font-family:var(--serif);font-size:clamp(26px,7.8vw,35px);
-    line-height:1.25;letter-spacing:-.028em;color:#F7F4EF;
+    margin:0;padding:0;border:0;
+    font-family:var(--serif);font-size:clamp(27px,8.2vw,37px);
+    line-height:1.17;letter-spacing:-.036em;color:#F7F4EF;
   }
-  main .radici-mobile-landing .rm-why-questions span {display:block;margin-bottom:.44em;}
-  main .radici-mobile-landing .rm-why-questions span:last-child {margin-bottom:0;}
+  main .radici-mobile-landing .rm-why-questions > span {display:block;margin-bottom:.43em;}
+  main .radici-mobile-landing .rm-why-questions > span:last-child {margin-bottom:0;}
+  main .radici-mobile-landing .rm-why-questions em {
+    display:inline;padding:.035em .12em .11em;
+    background:#D8B6B0;color:#111111;
+    box-decoration-break:clone;-webkit-box-decoration-break:clone;
+    font-style:normal;font-weight:500;
+  }
   main .radici-mobile-landing .rm-why .rm-cta {margin-top:28px;}
 }
 </style></head><body><a class="skip-link" href="#contenuto">Vai al contenuto</a><header class="site-header"><div class="container nav-inner"><a class="brand" href="index.html" aria-label="AstroSonico, torna alla homepage"><img class="brand-logo" src="assets/img/astrosonico-logo.svg?v=20261022-logo-2" alt="AstroSonico" width="1839" height="750"></a><nav class="desktop-nav" aria-label="Navigazione principale"><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="sessioni.html">Sessioni individuali</a><a class="nav-link" href="astro-for-business.html">Astro for Business</a><a class="nav-link" href="gift-card.html">Gift Card</a><a class="nav-link" href="ritiri.html" aria-current="page">Ritiri</a><a class="nav-link" href="eventi.html">Eventi</a></nav><a class="nav-cta desktop-cta" href="https://wa.me/393458156966" target="_blank" rel="noopener noreferrer" aria-label="Scrivimi su WhatsApp">Scrivimi <span class="mobile-action-glyph" aria-hidden="true">↗</span></a><details class="mobile-menu"><summary aria-label="Apri il menu di navigazione"><span class="menu-glyph" aria-hidden="true">☰</span><span>Menu</span></summary><nav class="mobile-nav" aria-label="Navigazione mobile"><a href="index.html">Home</a><a href="sessioni.html">Sessioni individuali</a><a href="astro-for-business.html">Astro for Business</a><a href="gift-card.html">Gift Card</a><a href="ritiri.html" aria-current="page">Ritiri</a><a href="eventi.html">Eventi</a><a class="nav-cta" href="https://wa.me/393458156966" target="_blank" rel="noopener noreferrer" aria-label="Scrivimi su WhatsApp">Scrivimi <span class="mobile-action-glyph" aria-hidden="true">↗</span></a></nav></details></div></header><main id="contenuto">
@@ -385,7 +417,7 @@
       <blockquote class="rm-why-questions">
         <span>«Da dove arrivo?</span>
         <span>Cosa sto ripetendo?</span>
-        <span>Cosa appartiene alla mia storia e cosa scelgo oggi?»</span>
+        <span>Cosa appartiene alla mia storia e <em>cosa scelgo oggi?»</em></span>
       </blockquote>
       <a class="rm-cta rm-cta-light" href="#richiedi-radici">Richiedi il tuo posto <span aria-hidden="true">↗</span></a>
     </div>
@@ -501,18 +533,18 @@
 </div></section>
 <section class="radici-section radici-transition" aria-labelledby="radici-transition-title">
 <div class="container radici-transition-layout">
-  <figure class="radici-transition-media">
-    <img src="assets/img/radici-cerchi-luce-originale.jpg?v=20261115-original" width="1152" height="2048" loading="lazy" decoding="async" alt="Francesca sotto un'installazione luminosa circolare, immersa in una luce ambrata">
-  </figure>
   <div class="radici-transition-copy">
     <span class="eyebrow">Il tempo astrologico</span>
     <h2 class="h-medium" id="radici-transition-title">Raccogliere il 2026. Prepararsi al 2027.</h2>
     <blockquote class="radici-transition-quote">
       <span>«Da dove arrivo?</span>
       <span>Cosa sto ripetendo?</span>
-      <span>Cosa appartiene alla mia storia e cosa scelgo oggi?»</span>
+      <span>Cosa appartiene alla mia storia e <em>cosa scelgo oggi?»</em></span>
     </blockquote>
   </div>
+  <figure class="radici-transition-media">
+    <img src="assets/img/radici-cerchi-luce-originale.jpg?v=20261115-original" width="1152" height="2048" loading="lazy" decoding="async" alt="Francesca sotto un'installazione luminosa circolare, immersa in una luce ambrata">
+  </figure>
 </div></section>
 <section class="radici-section radici-for"><div class="container radici-for-grid">
 <div><span class="eyebrow">Questo ritiro è per te</span><h2 class="h-medium">Se senti che è arrivato il momento di guardare alle tue origini.</h2><p>Per scegliere con maggiore libertà dove andare.</p></div>
