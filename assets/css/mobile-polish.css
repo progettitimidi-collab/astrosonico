@@ -110,8 +110,6 @@
   main .radici-transition-quote { font-size: 23px !important; line-height: 1.27 !important;
     margin: 18px 0; padding: 19px 20px; border-left: 3px solid #97799e;
     border-radius: 15px; background: #f0e7f1; }
-  main .radici-photo-story { padding-top: 20px; padding-bottom: 10px; }
-  main .radici-photo-story figure img { height: 112px; }
   main .radici-benefits li, main .radici-for-list li { padding-top: 11px; padding-bottom: 11px; }
   main .radici-included-card { padding: 21px; }
   main .radici-form { padding: 20px; }
