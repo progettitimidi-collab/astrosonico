@@ -31,6 +31,7 @@
 /* Newsletter AstroSonico · modulo Wix incorporato */
 .astro-newsletter{background:#f7f4ef;border-top:1px solid #ded5cb;border-bottom:1px solid #ded5cb;padding:clamp(56px,7vw,104px) 0}
 .astro-newsletter__grid{display:grid;grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);gap:clamp(28px,5vw,74px);align-items:center}
+.astro-newsletter__art{display:block;width:min(350px,100%);height:auto;margin:15px 0 2px}
 .astro-newsletter__eyebrow{font:700 11px/1.5 var(--sans,Arial,sans-serif);letter-spacing:.18em;text-transform:uppercase;color:#8e4b3e}
 .astro-newsletter__title{font-family:Georgia,serif;font-weight:400;letter-spacing:-.055em;line-height:1.08;font-size:clamp(40px,5vw,68px);color:#111;margin:22px 0 24px}
 .astro-newsletter__title em{font-weight:400;color:#8e4b3e}
@@ -344,13 +345,37 @@ body.astro-newsletter-popup-open{overflow:hidden}
 <section class="astro-newsletter" id="newsletter" aria-labelledby="astro-newsletter-heading">
   <div class="container astro-newsletter__grid">
     <div>
-      <span class="astro-newsletter__eyebrow">ASTROSONICO · LETTERE DAL CIELO</span>
-      <h2 class="astro-newsletter__title" id="astro-newsletter-heading">Il cielo non manda notifiche.<br><em>Ma ogni tanto scrive.</em></h2>
-      <p class="astro-newsletter__text">Riflessioni astrologiche, pratiche di ascolto e nuovi modi di attraversare ciò che cambia. Iscriviti per ricevere le mie lettere dal cielo e, prossimamente, una meditazione guidata gratuita.</p>
-      <p class="astro-newsletter__caption">Scrivo solo quando ho qualcosa da condividere. Potrai annullare l'iscrizione in qualsiasi momento.</p>
+      <span class="astro-newsletter__eyebrow">ASTROSONICO · ASTROLETTERA</span>
+      <svg class="astro-newsletter__art" viewBox="0 0 350 160" role="img" aria-labelledby="astro-newsletter-art-title" xmlns="http://www.w3.org/2000/svg">
+        <title id="astro-newsletter-art-title">Illustrazione editoriale di una lettera aperta attraversata da orbite, luna e piccoli astri</title>
+        <defs>
+          <linearGradient id="astro-letter-paper" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7F4EF"/><stop offset="1" stop-color="#E9DFD6"/></linearGradient>
+        </defs>
+        <g fill="none" stroke="#8E4B3E" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round">
+          <ellipse cx="176" cy="75" rx="153" ry="43" transform="rotate(-14 176 75)" opacity=".48"/>
+          <path d="M19 114c74-91 184-116 304-65" stroke-dasharray="2 7" opacity=".42"/>
+          <circle cx="254" cy="32" r="23" opacity=".82"/>
+          <path d="M264 13a23 23 0 1 0 15 35 23 23 0 0 1-15-35Z" fill="#D8B6B0" stroke="none"/>
+          <path d="M79 70l8-8 8 8-8 8-8-8Z" fill="#D8D1C7"/>
+          <path d="M102 117h151v-75l-76 52-75-52v75Z" fill="url(#astro-letter-paper)" stroke="#111111" stroke-width="1.4"/>
+          <path d="M103 43l74 55 75-55M103 117l55-44M253 117l-56-44" stroke="#111111" stroke-width="1.2"/>
+          <path d="M137 64V35h80v29" fill="#F7F4EF" stroke="#111111"/>
+          <path d="M150 47h56M150 54h43" stroke="#8E4B3E" opacity=".55"/>
+          <path d="M49 27v16m-8-8h16M300 109v20m-10-10h20" stroke="#8E4B3E"/>
+          <path d="M310 28l3 7 7 3-7 3-3 7-3-7-7-3 7-3Z" fill="#D8B6B0"/>
+          <circle cx="58" cy="132" r="2.5" fill="#8E4B3E"/>
+          <circle cx="279" cy="88" r="2.5" fill="#8E4B3E"/>
+          <circle cx="114" cy="20" r="1.5" fill="#8E4B3E"/>
+        </g>
+      </svg>
+
+      <h2 class="astro-newsletter__title" id="astro-newsletter-heading">Anticipazioni astrologiche,<br><em>una volta al mese.</em></h2>
+      <p class="astro-newsletter__text">Riflessioni, anticipazioni e appuntamenti per attraversare ogni momento con più ascolto.</p>
+      <p class="astro-newsletter__text">Nell’Astrolettera ricevi anche le date delle live gratuite e gli aggiornamenti sui percorsi in anteprima, oltre ad alcune pratiche da portare nella tua vita.</p>
+      <p class="astro-newsletter__caption">Una lettera al mese, essenziale e senza rumore. Potrai annullare l'iscrizione in qualsiasi momento.</p>
     </div>
     <div class="astro-newsletter__embed">
-      <iframe class="astro-newsletter__frame" title="Modulo iscrizione newsletter AstroSonico su Wix" src="https://cibosupersonico.wixforms.com/f/7530640993356350488" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      <iframe class="astro-newsletter__frame" title="Modulo iscrizione all’Astrolettera AstroSonico su Wix" src="https://cibosupersonico.wixforms.com/f/7530640993356350488" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
       <p class="astro-newsletter__fallback">Se il modulo non si visualizza correttamente, <a href="https://cibosupersonico.wixforms.com/f/7530640993356350488" target="_blank" rel="noopener noreferrer">apri il modulo Wix in una nuova scheda</a>.</p>
     </div>
   </div>
@@ -360,10 +385,10 @@ body.astro-newsletter-popup-open{overflow:hidden}
   <div class="astro-newsletter-popup__panel" role="dialog" aria-modal="true" aria-labelledby="astro-newsletter-popup-heading" aria-describedby="astro-newsletter-popup-description">
     <button class="astro-newsletter-popup__close" type="button" aria-label="Chiudi l'invito alla newsletter" data-newsletter-dismiss>&times;</button>
     <span class="astro-newsletter-popup__mark" aria-hidden="true">✳</span>
-    <span class="astro-newsletter__eyebrow">LETTERE DAL CIELO</span>
-    <h2 class="astro-newsletter-popup__title" id="astro-newsletter-popup-heading">Il cielo non manda notifiche.<br><em>Ma ogni tanto scrive.</em></h2>
-    <p class="astro-newsletter-popup__text" id="astro-newsletter-popup-description">Iscriviti alla newsletter di AstroSonico. Riflessioni, pratiche di ascolto e una meditazione guidata gratuita in arrivo.</p>
-    <button class="astro-newsletter-popup__action" type="button" id="astro-newsletter-popup-go">Iscriviti alle lettere dal cielo</button>
+    <span class="astro-newsletter__eyebrow">ASTROLETTERA</span>
+    <h2 class="astro-newsletter-popup__title" id="astro-newsletter-popup-heading">Anticipazioni astrologiche,<br><em>una volta al mese.</em></h2>
+    <p class="astro-newsletter-popup__text" id="astro-newsletter-popup-description">Riflessioni, anticipazioni e appuntamenti per attraversare ogni momento con più ascolto. Nell’Astrolettera ricevi anche le date delle live gratuite e gli aggiornamenti sui percorsi in anteprima, oltre ad alcune pratiche da portare nella tua vita.</p>
+    <button class="astro-newsletter-popup__action" type="button" id="astro-newsletter-popup-go">Iscriviti all’Astrolettera</button>
     <button class="astro-newsletter-popup__later" type="button" data-newsletter-dismiss>Non ora</button>
   </div>
 </div>
